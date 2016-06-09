@@ -1,6 +1,7 @@
-# Rob
-https://github.com/gesteves/snarkov
+# Rob slack bot
 
+Basé sur https://github.com/gesteves/snarkov
+Snarkov is a Sinatra-based Markov bot for Slack.
 
 ## **MAN DE ROB**
 
