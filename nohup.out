@@ -1,0 +1,2324 @@
+16:43:50 web.1  | started with pid 30772
+16:43:50 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+16:43:50 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+16:43:50 web.1  | Maximum connections set to 1024
+16:43:50 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+16:43:50 web.1  | Stopping ...
+16:43:50 web.1  | == Sinatra has ended his set (crowd applauds)
+16:43:50 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+16:43:50 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+16:43:50 web.1  | exited with code 1
+16:43:50 system | sending SIGTERM to all processes
+18:43:45 web.1  | started with pid 32329
+18:43:46 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+18:43:46 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+18:43:46 web.1  | Maximum connections set to 1024
+18:43:46 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+18:43:51 web.1  | [LOG] Replying: tu vois des erreurs?
+18:43:51 web.1  | 54.89.92.4 - - [04/Jun/2016 18:43:51] "POST /markov HTTP/1.1" 200 46 0.0044
+18:43:53 web.1  | 52.90.33.223 - - [04/Jun/2016 18:43:53] "POST /markov HTTP/1.1" 200 - 0.0005
+18:45:10 web.1  | [LOG] Replying: y'a une ptite erreur au lancement du srv
+18:45:10 web.1  | 54.209.231.248 - - [04/Jun/2016 18:45:10] "POST /markov HTTP/1.1" 200 66 0.0013
+18:45:11 web.1  | 54.174.33.17 - - [04/Jun/2016 18:45:11] "POST /markov HTTP/1.1" 200 - 0.0004
+15:58:56 web.1  | Invalid request: Invalid HTTP format, parsing fails.
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/request.rb:84:in `execute'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/request.rb:84:in `parse'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+15:58:56 web.1  | 	/usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+15:58:56 web.1  | 
+19:57:05 web.1  | [LOG] Replying: redis 127.0.0.1:6379 keys ça marche pas chez moi
+19:57:05 web.1  | 54.174.33.17 - - [05/Jun/2016 19:57:05] "POST /markov HTTP/1.1" 200 75 0.0016
+19:57:06 web.1  | 54.209.231.248 - - [05/Jun/2016 19:57:06] "POST /markov HTTP/1.1" 200 - 0.0003
+21:35:30 web.1  | [LOG] Storing: damien si tu te souviens de la petite melissandre, tu risques d'apprécier
+21:35:30 web.1  | 52.90.146.42 - - [05/Jun/2016 21:35:30] "POST /markov HTTP/1.1" 200 - 0.7093
+21:36:04 web.1  | 52.90.146.42 - - [05/Jun/2016 21:36:04] "POST /markov HTTP/1.1" 200 - 0.0004
+07:06:57 web.1  | [LOG] Storing: 9h06 encore chez moi
+07:06:57 web.1  | 52.90.146.42 - - [06/Jun/2016 07:06:57] "POST /markov HTTP/1.1" 200 - 0.0010
+07:07:04 web.1  | [LOG] Storing: jabuse un peu la
+07:07:04 web.1  | 52.91.184.228 - - [06/Jun/2016 07:07:04] "POST /markov HTTP/1.1" 200 - 0.0008
+07:07:07 web.1  | [LOG] Replying: google it magueule
+07:07:07 web.1  | 52.91.184.228 - - [06/Jun/2016 07:07:07] "POST /markov HTTP/1.1" 200 44 0.0008
+07:07:08 web.1  | 54.174.33.17 - - [06/Jun/2016 07:07:08] "POST /markov HTTP/1.1" 200 - 0.0003
+07:07:24 web.1  | [LOG] Storing: je sais pas si google va pouvoir grand chose pour mon
+07:07:24 web.1  | 52.91.184.228 - - [06/Jun/2016 07:07:24] "POST /markov HTTP/1.1" 200 - 0.0008
+07:07:27 web.1  | [LOG] Storing: bon allez j'y vais
+07:07:27 web.1  | 54.165.241.61 - - [06/Jun/2016 07:07:27] "POST /markov HTTP/1.1" 200 - 0.0007
+07:07:30 web.1  | [LOG] Replying: faut tous recommencerr
+07:07:30 web.1  | 54.209.231.248 - - [06/Jun/2016 07:07:30] "POST /markov HTTP/1.1" 200 48 0.0009
+07:07:30 web.1  | 52.90.146.42 - - [06/Jun/2016 07:07:30] "POST /markov HTTP/1.1" 200 - 0.0004
+07:10:21 web.1  | [LOG] Storing: bof, faut savoir prendre du temps pour soi
+07:10:21 web.1  | 54.174.114.150 - - [06/Jun/2016 07:10:21] "POST /markov HTTP/1.1" 200 - 0.0008
+07:10:45 web.1  | [LOG] Storing: toute façon , je suis dans une optique de laisser une mauvaise impression à cdiscount
+07:10:45 web.1  | 52.90.33.223 - - [06/Jun/2016 07:10:45] "POST /markov HTTP/1.1" 200 - 0.0008
+07:10:51 web.1  | 52.90.146.42 - - [06/Jun/2016 07:10:51] "POST /markov HTTP/1.1" 200 - 0.0006
+07:10:56 web.1  | [LOG] Storing: il me reste un mois alors je m'en branle complet maintenant
+07:10:56 web.1  | 54.209.231.248 - - [06/Jun/2016 07:10:56] "POST /markov HTTP/1.1" 200 - 0.0007
+07:10:59 web.1  | [LOG] Storing: donc autant vraiment faire dla merde
+07:10:59 web.1  | 54.174.114.150 - - [06/Jun/2016 07:10:59] "POST /markov HTTP/1.1" 200 - 0.0006
+07:11:18 web.1  | [LOG] Storing: fais des guessing games
+07:11:18 web.1  | [LOG] Replying: your ruby version is 1.9.3, but your gemfile specified 2.2.3 bundler::rubyversionmismatch
+07:11:18 web.1  | 54.174.33.17 - - [06/Jun/2016 07:11:18] "POST /markov HTTP/1.1" 200 115 0.0013
+07:11:19 web.1  | 52.91.184.228 - - [06/Jun/2016 07:11:19] "POST /markov HTTP/1.1" 200 - 0.0003
+07:11:21 web.1  | [LOG] Storing: si il me reparle de cisco je l'envoi chié
+07:11:21 web.1  | 54.89.92.4 - - [06/Jun/2016 07:11:21] "POST /markov HTTP/1.1" 200 - 0.0008
+07:11:30 web.1  | [LOG] Storing: non je vais améliorer le bot
+07:11:30 web.1  | 54.174.114.150 - - [06/Jun/2016 07:11:30] "POST /markov HTTP/1.1" 200 - 0.0008
+07:11:42 web.1  | [LOG] Storing: par contre je veux pas me faire virer je compte sur les 700€ du mois
+07:11:42 web.1  | 54.89.92.4 - - [06/Jun/2016 07:11:42] "POST /markov HTTP/1.1" 200 - 0.0009
+07:11:44 web.1  | [LOG] Storing: tu lui dis que ton chien a mangé ton fichier
+07:11:44 web.1  | 54.89.92.4 - - [06/Jun/2016 07:11:44] "POST /markov HTTP/1.1" 200 - 0.0008
+07:11:56 web.1  | [LOG] Storing: bah je lui dis juste que je m'en branle
+07:11:56 web.1  | 54.174.33.17 - - [06/Jun/2016 07:11:56] "POST /markov HTTP/1.1" 200 - 0.0008
+07:11:59 web.1  | [LOG] Storing: et puis voila
+07:11:59 web.1  | 54.209.231.248 - - [06/Jun/2016 07:11:59] "POST /markov HTTP/1.1" 200 - 0.0007
+07:12:00 web.1  | [LOG] Storing: qu'il faut tout refaire
+07:12:00 web.1  | [LOG] Replying: redis 127.0.0.1:6379 keys ça marche pas chez moi
+07:12:00 web.1  | 54.174.114.150 - - [06/Jun/2016 07:12:00] "POST /markov HTTP/1.1" 200 75 0.0014
+07:12:01 web.1  | 54.209.231.248 - - [06/Jun/2016 07:12:01] "POST /markov HTTP/1.1" 200 - 0.0004
+07:12:06 web.1  | [LOG] Storing: il me laisse tranquille 1 mois de plus
+07:12:06 web.1  | 52.90.33.223 - - [06/Jun/2016 07:12:06] "POST /markov HTTP/1.1" 200 - 0.0011
+07:12:13 web.1  | [LOG] Storing: la semaine pro t'es malade ?
+07:12:13 web.1  | 54.165.241.61 - - [06/Jun/2016 07:12:13] "POST /markov HTTP/1.1" 200 - 0.0007
+07:12:22 web.1  | [LOG] Storing: bah malade je perds de l'argent
+07:12:22 web.1  | 52.91.184.228 - - [06/Jun/2016 07:12:22] "POST /markov HTTP/1.1" 200 - 0.0008
+07:12:24 web.1  | [LOG] Storing: alors je sais pas
+07:12:24 web.1  | 52.91.184.228 - - [06/Jun/2016 07:12:24] "POST /markov HTTP/1.1" 200 - 0.0007
+07:12:29 web.1  | [LOG] Storing: même si justifié ?
+07:12:29 web.1  | [LOG] Replying: salut le peuple
+07:12:29 web.1  | 54.174.114.150 - - [06/Jun/2016 07:12:29] "POST /markov HTTP/1.1" 200 41 0.0012
+07:12:30 web.1  | 54.209.231.248 - - [06/Jun/2016 07:12:30] "POST /markov HTTP/1.1" 200 - 0.0004
+07:12:32 web.1  | 54.209.231.248 - - [06/Jun/2016 07:12:32] "POST /markov HTTP/1.1" 200 - 0.0005
+07:12:37 web.1  | 54.174.114.150 - - [06/Jun/2016 07:12:37] "POST /markov HTTP/1.1" 200 - 0.0006
+07:12:45 web.1  | [LOG] Storing: jai pas le droit moi au absences payé
+07:12:45 web.1  | 54.174.33.17 - - [06/Jun/2016 07:12:45] "POST /markov HTTP/1.1" 200 - 0.0007
+07:12:47 web.1  | [LOG] Replying: salut le peuple
+07:12:47 web.1  | 54.174.33.17 - - [06/Jun/2016 07:12:47] "POST /markov HTTP/1.1" 200 41 0.0010
+07:12:48 web.1  | 54.89.92.4 - - [06/Jun/2016 07:12:48] "POST /markov HTTP/1.1" 200 - 0.0003
+07:12:52 web.1  | [LOG] Replying: jai pas le droit moi au absences payé
+07:12:52 web.1  | 54.174.114.150 - - [06/Jun/2016 07:12:52] "POST /markov HTTP/1.1" 200 64 0.0015
+07:12:54 web.1  | 52.90.33.223 - - [06/Jun/2016 07:12:54] "POST /markov HTTP/1.1" 200 - 0.0004
+07:13:01 web.1  | [LOG] Storing: ducoup je vais y aller comme aujourdhui et faire du 10h/17h
+07:13:01 web.1  | 52.91.184.228 - - [06/Jun/2016 07:13:01] "POST /markov HTTP/1.1" 200 - 0.0007
+07:13:03 web.1  | [LOG] Replying: jabuse un peu la
+07:13:03 web.1  | 54.89.92.4 - - [06/Jun/2016 07:13:03] "POST /markov HTTP/1.1" 200 42 0.0009
+07:13:03 web.1  | 52.90.146.42 - - [06/Jun/2016 07:13:03] "POST /markov HTTP/1.1" 200 - 0.0004
+07:13:08 web.1  | [LOG] Replying: admin pq il rep plus?
+07:13:08 web.1  | 54.174.114.150 - - [06/Jun/2016 07:13:08] "POST /markov HTTP/1.1" 200 47 0.0013
+07:13:08 web.1  | 54.89.92.4 - - [06/Jun/2016 07:13:08] "POST /markov HTTP/1.1" 200 - 0.0003
+07:13:10 web.1  | [LOG] Storing: ta reset  la base ?
+07:13:10 web.1  | 52.90.33.223 - - [06/Jun/2016 07:13:10] "POST /markov HTTP/1.1" 200 - 0.0006
+07:13:17 web.1  | [LOG] Storing: pq il dis que des trucs d'aujourd'hui
+07:13:17 web.1  | 54.165.241.61 - - [06/Jun/2016 07:13:17] "POST /markov HTTP/1.1" 200 - 0.0008
+07:13:18 web.1  | 52.90.146.42 - - [06/Jun/2016 07:13:18] "POST /markov HTTP/1.1" 200 - 0.0006
+07:13:21 web.1  | [LOG] Replying: j'ai lancé le serv
+07:13:21 web.1  | 52.91.184.228 - - [06/Jun/2016 07:13:21] "POST /markov HTTP/1.1" 200 45 0.0009
+07:13:21 web.1  | 54.165.241.61 - - [06/Jun/2016 07:13:21] "POST /markov HTTP/1.1" 200 - 0.0003
+07:13:24 web.1  | [LOG] Replying: tu fais comment pour accèder au cli redis?
+07:13:24 web.1  | 54.174.114.150 - - [06/Jun/2016 07:13:24] "POST /markov HTTP/1.1" 200 69 0.0013
+07:13:24 web.1  | 52.91.184.228 - - [06/Jun/2016 07:13:24] "POST /markov HTTP/1.1" 200 - 0.0003
+07:13:27 web.1  | [LOG] Replying: bof, faut savoir prendre du temps pour soi
+07:13:27 web.1  | 54.89.92.4 - - [06/Jun/2016 07:13:27] "POST /markov HTTP/1.1" 200 68 0.0015
+07:13:28 web.1  | 54.165.241.61 - - [06/Jun/2016 07:13:28] "POST /markov HTTP/1.1" 200 - 0.0002
+07:13:33 web.1  | [LOG] Replying: avant de faire
+07:13:33 web.1  | 54.174.33.17 - - [06/Jun/2016 07:13:33] "POST /markov HTTP/1.1" 200 40 0.0010
+07:13:33 web.1  | 52.90.33.223 - - [06/Jun/2016 07:13:33] "POST /markov HTTP/1.1" 200 - 0.0004
+07:13:47 web.1  | [LOG] Storing: tain je vais devoir le feed à nouveau
+07:13:47 web.1  | 54.209.231.248 - - [06/Jun/2016 07:13:47] "POST /markov HTTP/1.1" 200 - 0.0007
+07:13:51 web.1  | [LOG] Replying: pq il dis que des trucs d'aujourd'hui
+07:13:51 web.1  | 54.174.114.150 - - [06/Jun/2016 07:13:51] "POST /markov HTTP/1.1" 200 63 0.0013
+07:13:52 web.1  | 52.90.146.42 - - [06/Jun/2016 07:13:52] "POST /markov HTTP/1.1" 200 - 0.0004
+07:14:08 web.1  | [LOG] Storing: tu me demande un travail énorme, rends toi en bien compte
+07:14:08 web.1  | 52.91.184.228 - - [06/Jun/2016 07:14:08] "POST /markov HTTP/1.1" 200 - 0.0009
+07:14:18 web.1  | [LOG] Storing: À cause de toi je peux pas faire de cisco
+07:14:18 web.1  | 54.209.231.248 - - [06/Jun/2016 07:14:18] "POST /markov HTTP/1.1" 200 - 0.0008
+07:14:22 web.1  | [LOG] Storing: elle a l'air assez pleine
+07:14:22 web.1  | 54.165.241.61 - - [06/Jun/2016 07:14:22] "POST /markov HTTP/1.1" 200 - 0.0007
+07:14:25 web.1  | 54.174.33.17 - - [06/Jun/2016 07:14:25] "POST /markov HTTP/1.1" 200 - 0.0006
+07:14:26 web.1  | 54.209.231.248 - - [06/Jun/2016 07:14:26] "POST /markov HTTP/1.1" 200 - 0.0005
+07:14:29 web.1  | [LOG] Storing: ouais cest rien
+07:14:29 web.1  | 54.165.241.61 - - [06/Jun/2016 07:14:29] "POST /markov HTTP/1.1" 200 - 0.0007
+07:14:31 web.1  | [LOG] Storing: quand t'as reset le srv
+07:14:31 web.1  | 54.174.114.150 - - [06/Jun/2016 07:14:31] "POST /markov HTTP/1.1" 200 - 0.0008
+07:14:38 web.1  | [LOG] Storing: elle etait à 10 000
+07:14:38 web.1  | 54.174.33.17 - - [06/Jun/2016 07:14:38] "POST /markov HTTP/1.1" 200 - 0.0007
+07:14:38 web.1  | [LOG] Storing: y'a du se passer pleins de trucs
+07:14:38 web.1  | 54.89.92.4 - - [06/Jun/2016 07:14:38] "POST /markov HTTP/1.1" 200 - 0.0006
+07:14:40 web.1  | [LOG] Storing: un truc du genre
+07:14:40 web.1  | 54.174.33.17 - - [06/Jun/2016 07:14:40] "POST /markov HTTP/1.1" 200 - 0.0008
+07:14:45 web.1  | [LOG] Storing: non mais meme
+07:14:45 web.1  | 52.90.33.223 - - [06/Jun/2016 07:14:45] "POST /markov HTTP/1.1" 200 - 0.0007
+07:14:51 web.1  | [LOG] Shutting up: 60 minutes
+07:14:51 web.1  | [LOG] Replying: ok ff .. je la ferme pendant 60 minutes
+07:14:51 web.1  | 54.89.92.4 - - [06/Jun/2016 07:14:51] "POST /markov HTTP/1.1" 200 65 0.0008
+07:14:51 web.1  | 52.91.184.228 - - [06/Jun/2016 07:14:51] "POST /markov HTTP/1.1" 200 - 0.0003
+07:14:55 web.1  | [LOG] Storing: quand je l'avais feed avec la quantique est tout
+07:14:55 web.1  | 54.165.241.61 - - [06/Jun/2016 07:14:55] "POST /markov HTTP/1.1" 200 - 0.0008
+07:14:58 web.1  | [LOG] Ok merci thug
+07:14:58 web.1  | [LOG] Replying: merci bg
+07:14:58 web.1  | 54.89.92.4 - - [06/Jun/2016 07:14:58] "POST /markov HTTP/1.1" 200 34 0.0007
+07:14:58 web.1  | 52.91.184.228 - - [06/Jun/2016 07:14:58] "POST /markov HTTP/1.1" 200 - 0.0003
+07:15:00 web.1  | [LOG] Storing: ca y est plus à
+07:15:00 web.1  | 52.90.33.223 - - [06/Jun/2016 07:15:00] "POST /markov HTTP/1.1" 200 - 0.0008
+07:15:05 web.1  | [LOG] Storing: je verrais ça apres
+07:15:05 web.1  | 54.89.92.4 - - [06/Jun/2016 07:15:05] "POST /markov HTTP/1.1" 200 - 0.0007
+07:15:05 web.1  | 52.91.184.228 - - [06/Jun/2016 07:15:05] "POST /markov HTTP/1.1" 200 - 0.0004
+07:15:14 web.1  | 52.90.33.223 - - [06/Jun/2016 07:15:14] "POST /markov HTTP/1.1" 200 - 0.0006
+07:15:22 web.1  | [LOG] Storing: il fait beau toute la semaine et ça fait plaisir
+07:15:22 web.1  | 54.209.231.248 - - [06/Jun/2016 07:15:22] "POST /markov HTTP/1.1" 200 - 0.0008
+07:15:31 web.1  | [LOG] Storing: je vais proposer à cdiscount dallez bosser au jardin public
+07:15:31 web.1  | 54.174.33.17 - - [06/Jun/2016 07:15:31] "POST /markov HTTP/1.1" 200 - 0.0007
+07:15:40 web.1  | [LOG] Storing: jvoulais y aller hier
+07:15:40 web.1  | 52.90.33.223 - - [06/Jun/2016 07:15:40] "POST /markov HTTP/1.1" 200 - 0.0008
+07:15:42 web.1  | [LOG] Storing: mais j'étais solo
+07:15:42 web.1  | 54.174.114.150 - - [06/Jun/2016 07:15:42] "POST /markov HTTP/1.1" 200 - 0.0007
+07:15:50 web.1  | [LOG] Replying: ouais cest rien
+07:15:50 web.1  | 54.174.33.17 - - [06/Jun/2016 07:15:50] "POST /markov HTTP/1.1" 200 41 0.0011
+07:15:51 web.1  | 54.89.92.4 - - [06/Jun/2016 07:15:51] "POST /markov HTTP/1.1" 200 - 0.0003
+07:15:59 web.1  | [LOG] Shutting up: 60 minutes
+07:15:59 web.1  | [LOG] Replying: ok ff .. je la ferme pendant 60 minutes
+07:15:59 web.1  | 54.89.92.4 - - [06/Jun/2016 07:15:59] "POST /markov HTTP/1.1" 200 65 0.0008
+07:15:59 web.1  | 52.90.146.42 - - [06/Jun/2016 07:15:59] "POST /markov HTTP/1.1" 200 - 0.0003
+07:16:00 web.1  | 54.174.114.150 - - [06/Jun/2016 07:16:00] "POST /markov HTTP/1.1" 200 - 0.0006
+07:16:01 web.1  | [LOG] Storing: la il me saoule
+07:16:01 web.1  | 54.174.33.17 - - [06/Jun/2016 07:16:01] "POST /markov HTTP/1.1" 200 - 0.0007
+07:16:05 web.1  | [LOG] Storing: À répéter de la merde
+07:16:05 web.1  | 54.89.92.4 - - [06/Jun/2016 07:16:05] "POST /markov HTTP/1.1" 200 - 0.0007
+07:16:11 web.1  | 54.209.231.248 - - [06/Jun/2016 07:16:11] "POST /markov HTTP/1.1" 200 - 0.0006
+07:16:22 web.1  | [LOG] Storing: histoire de lui faire voir de nouveaux horizons
+07:16:22 web.1  | 54.174.33.17 - - [06/Jun/2016 07:16:22] "POST /markov HTTP/1.1" 200 - 0.0007
+07:16:27 web.1  | [LOG] Storing: et qu'il claque quelque culs
+07:16:27 web.1  | 54.209.231.248 - - [06/Jun/2016 07:16:27] "POST /markov HTTP/1.1" 200 - 0.0008
+07:16:33 web.1  | [LOG] Storing: des ptits culs partout
+07:16:33 web.1  | 54.165.241.61 - - [06/Jun/2016 07:16:33] "POST /markov HTTP/1.1" 200 - 0.0008
+07:16:45 web.1  | [LOG] Storing: exact, il en profiterai bien
+07:16:45 web.1  | 54.165.241.61 - - [06/Jun/2016 07:16:45] "POST /markov HTTP/1.1" 200 - 0.0007
+07:16:55 web.1  | 54.209.231.248 - - [06/Jun/2016 07:16:55] "POST /markov HTTP/1.1" 200 - 0.0006
+07:17:06 web.1  | [LOG] Storing: il se branle 4x par jour +il baise partout
+07:17:06 web.1  | 54.165.241.61 - - [06/Jun/2016 07:17:06] "POST /markov HTTP/1.1" 200 - 0.0008
+07:17:12 web.1  | [LOG] Storing: alors voir des ptits culs
+07:17:12 web.1  | 54.209.231.248 - - [06/Jun/2016 07:17:12] "POST /markov HTTP/1.1" 200 - 0.0008
+07:17:12 web.1  | [LOG] Storing: putain je serais à 9h30 à cds
+07:17:12 web.1  | 54.209.231.248 - - [06/Jun/2016 07:17:12] "POST /markov HTTP/1.1" 200 - 0.0006
+07:17:17 web.1  | [LOG] Storing: je suis un gros enculé
+07:17:17 web.1  | 52.90.33.223 - - [06/Jun/2016 07:17:17] "POST /markov HTTP/1.1" 200 - 0.0008
+07:17:23 web.1  | 54.174.114.150 - - [06/Jun/2016 07:17:23] "POST /markov HTTP/1.1" 200 - 0.0006
+07:20:43 web.1  | [LOG] Storing: ouais bon la base à bien était reset
+07:20:43 web.1  | 52.90.146.42 - - [06/Jun/2016 07:20:43] "POST /markov HTTP/1.1" 200 - 0.0008
+07:21:03 web.1  | 52.91.184.228 - - [06/Jun/2016 07:21:03] "POST /markov HTTP/1.1" 200 - 0.0006
+07:21:17 web.1  | [LOG] Storing: tain, si des que on doit reboot le srv la base doit être reset
+07:21:17 web.1  | 54.89.92.4 - - [06/Jun/2016 07:21:17] "POST /markov HTTP/1.1" 200 - 0.0008
+07:21:19 web.1  | [LOG] Storing: ça va pas lfaire
+07:21:19 web.1  | 54.89.92.4 - - [06/Jun/2016 07:21:19] "POST /markov HTTP/1.1" 200 - 0.0007
+07:21:26 web.1  | [LOG] Storing: faudrait backup avantr
+07:21:26 web.1  | 54.209.231.248 - - [06/Jun/2016 07:21:26] "POST /markov HTTP/1.1" 200 - 0.0007
+07:21:45 web.1  | [LOG] Storing: petite crontab qui save la base tous les jours
+07:21:45 web.1  | 54.174.114.150 - - [06/Jun/2016 07:21:45] "POST /markov HTTP/1.1" 200 - 0.0008
+07:21:53 web.1  | [LOG] Storing: et puis c nickel, au pire on perd que 1 jour
+07:21:53 web.1  | 54.89.92.4 - - [06/Jun/2016 07:21:53] "POST /markov HTTP/1.1" 200 - 0.0009
+07:21:59 web.1  | [LOG] Storing: même 2 fois par jours yolo
+07:21:59 web.1  | 54.174.33.17 - - [06/Jun/2016 07:21:59] "POST /markov HTTP/1.1" 200 - 0.0008
+07:22:07 web.1  | 52.90.146.42 - - [06/Jun/2016 07:22:07] "POST /markov HTTP/1.1" 200 - 0.0006
+07:22:11 web.1  | [LOG] Storing: doit y avoir un meilleur truv
+07:22:11 web.1  | 54.89.92.4 - - [06/Jun/2016 07:22:11] "POST /markov HTTP/1.1" 200 - 0.0008
+07:22:20 web.1  | 54.89.92.4 - - [06/Jun/2016 07:22:20] "POST /markov HTTP/1.1" 200 - 0.0006
+07:22:25 web.1  | [LOG] Storing: c'est chelou que ce soit pété
+07:22:25 web.1  | 52.91.184.228 - - [06/Jun/2016 07:22:25] "POST /markov HTTP/1.1" 200 - 0.0008
+07:22:47 web.1  | [LOG] Storing: deja faut que je répare cette histoire de réseau
+07:22:47 web.1  | 54.174.33.17 - - [06/Jun/2016 07:22:47] "POST /markov HTTP/1.1" 200 - 0.0007
+07:22:52 web.1  | [LOG] Storing: des que tu reboot y'a plus d'accès au net
+07:22:52 web.1  | 54.209.231.248 - - [06/Jun/2016 07:22:52] "POST /markov HTTP/1.1" 200 - 0.0009
+07:23:02 web.1  | [LOG] Storing: faut ajouter les routes a la main
+07:23:02 web.1  | 52.90.146.42 - - [06/Jun/2016 07:23:02] "POST /markov HTTP/1.1" 200 - 0.0008
+07:23:05 web.1  | [LOG] Storing: comme un manouche
+07:23:05 web.1  | 54.165.241.61 - - [06/Jun/2016 07:23:05] "POST /markov HTTP/1.1" 200 - 0.0007
+07:23:14 web.1  | [LOG] Storing: bonjour jules duvivier,
+07:23:14 web.1  | [LOG] Storing: le mot de passe de votre compte jules.duvivier de l'application bureautique - cdbdx arrive à expiration dans 28 jours.
+07:23:14 web.1  | 54.174.33.17 - - [06/Jun/2016 07:23:14] "POST /markov HTTP/1.1" 200 - 0.0010
+07:23:23 web.1  | [LOG] Storing: yolo je suis plus là dans 28 jourssss
+07:23:23 web.1  | 54.89.92.4 - - [06/Jun/2016 07:23:23] "POST /markov HTTP/1.1" 200 - 0.0008
+07:26:26 web.1  | 81.252.251.70 - - [06/Jun/2016 07:26:26] "GET /markov?token=TqxCpOdjgSuZqe8ChrmnSkuc HTTP/1.1" 200 20 0.0010
+07:26:26 web.1  | 81.252.251.70 - - [06/Jun/2016 07:26:26] "GET /markov?token=TqxCpOdjgSuZqe8ChrmnSkuc HTTP/1.1" 200 25 0.0006
+07:26:27 web.1  | 81.252.251.70 - - [06/Jun/2016 07:26:27] "GET /markov?token=TqxCpOdjgSuZqe8ChrmnSkuc HTTP/1.1" 200 18 0.0008
+07:26:27 web.1  | 81.252.251.70 - - [06/Jun/2016 07:26:27] "GET /markov?token=TqxCpOdjgSuZqe8ChrmnSkuc HTTP/1.1" 200 62 0.0014
+07:28:27 web.1  | 54.174.114.150 - - [06/Jun/2016 07:28:27] "POST /markov HTTP/1.1" 200 - 0.0006
+07:28:31 web.1  | [LOG] Storing: tu me manques
+07:28:31 web.1  | 54.89.92.4 - - [06/Jun/2016 07:28:31] "POST /markov HTTP/1.1" 200 - 0.0008
+07:28:36 web.1  | [LOG] Ok merci thug
+07:28:36 web.1  | [LOG] Replying: merci bg
+07:28:36 web.1  | 54.209.231.248 - - [06/Jun/2016 07:28:36] "POST /markov HTTP/1.1" 200 34 0.0007
+07:28:36 web.1  | 54.165.241.61 - - [06/Jun/2016 07:28:36] "POST /markov HTTP/1.1" 200 - 0.0003
+07:30:08 web.1  | started with pid 1835
+07:30:09 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:30:09 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:30:09 web.1  | Maximum connections set to 1024
+07:30:09 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:30:09 web.1  | Stopping ...
+07:30:09 web.1  | == Sinatra has ended his set (crowd applauds)
+07:30:09 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:30:09 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:30:09 web.1  | exited with code 1
+07:30:09 system | sending SIGTERM to all processes
+07:30:22 web.1  | 54.165.241.61 - - [06/Jun/2016 07:30:22] "POST /markov HTTP/1.1" 200 - 0.0006
+07:30:34 web.1  | started with pid 1842
+07:30:34 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:30:34 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:30:34 web.1  | Maximum connections set to 1024
+07:30:34 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:30:34 web.1  | Stopping ...
+07:30:34 web.1  | == Sinatra has ended his set (crowd applauds)
+07:30:34 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:30:34 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:30:34 web.1  | exited with code 1
+07:30:34 system | sending SIGTERM to all processes
+07:30:45 web.1  | [LOG] Replying: bof, faut savoir prendre du temps pour soi
+07:30:45 web.1  | 52.91.184.228 - - [06/Jun/2016 07:30:45] "POST /markov HTTP/1.1" 200 68 0.0014
+07:30:45 web.1  | 52.90.146.42 - - [06/Jun/2016 07:30:45] "POST /markov HTTP/1.1" 200 - 0.0003
+07:30:50 web.1  | [LOG] Storing: tu me manques
+07:30:50 web.1  | 54.165.241.61 - - [06/Jun/2016 07:30:50] "POST /markov HTTP/1.1" 200 - 0.0009
+07:31:01 web.1  | [LOG] Ok merci thug
+07:31:01 web.1  | [LOG] Replying: merci bg
+07:31:01 web.1  | [LOG] Replying: damien si tu te souviens de la petite melissandre, tu risques d'apprécier
+07:31:01 web.1  | 54.209.231.248 - - [06/Jun/2016 07:31:01] "POST /markov HTTP/1.1" 200 100 0.0015
+07:31:02 web.1  | 52.90.146.42 - - [06/Jun/2016 07:31:02] "POST /markov HTTP/1.1" 200 - 0.0003
+07:31:06 web.1  | [LOG] Replying: À cause de toi je peux pas faire de cisco je l'envoi chié
+07:31:06 web.1  | 54.165.241.61 - - [06/Jun/2016 07:31:06] "POST /markov HTTP/1.1" 200 85 0.0112
+07:31:07 web.1  | 54.174.33.17 - - [06/Jun/2016 07:31:07] "POST /markov HTTP/1.1" 200 - 0.0004
+07:31:41 web.1  | [LOG] Storing: combien de %?
+07:31:41 web.1  | [LOG] Replying: bonjour jules duvivier,
+07:31:41 web.1  | 52.91.184.228 - - [06/Jun/2016 07:31:41] "POST /markov HTTP/1.1" 200 49 0.0011
+07:31:41 web.1  | 52.91.184.228 - - [06/Jun/2016 07:31:41] "POST /markov HTTP/1.1" 200 - 0.0003
+07:31:51 web.1  | [LOG] Storing: combien de %?
+07:31:51 web.1  | 54.165.241.61 - - [06/Jun/2016 07:31:51] "POST /markov HTTP/1.1" 200 - 0.0007
+07:32:04 web.1  | [LOG] Replying: combien de %?
+07:32:04 web.1  | 54.165.241.61 - - [06/Jun/2016 07:32:04] "POST /markov HTTP/1.1" 200 39 0.0009
+07:32:05 web.1  | 54.209.231.248 - - [06/Jun/2016 07:32:05] "POST /markov HTTP/1.1" 200 - 0.0004
+07:32:12 web.1  | [LOG] Storing: ça marche aps
+07:32:12 web.1  | 54.165.241.61 - - [06/Jun/2016 07:32:12] "POST /markov HTTP/1.1" 200 - 0.0007
+07:32:16 web.1  | [LOG] Storing: le nohup.out il est ou?
+07:32:16 web.1  | 52.90.33.223 - - [06/Jun/2016 07:32:16] "POST /markov HTTP/1.1" 200 - 0.0008
+07:32:27 web.1  | [LOG] Storing: ok j'ai trouvé
+07:32:27 web.1  | 54.174.114.150 - - [06/Jun/2016 07:32:27] "POST /markov HTTP/1.1" 200 - 0.0008
+07:32:29 web.1  | 54.209.231.248 - - [06/Jun/2016 07:32:29] "POST /markov HTTP/1.1" 200 - 0.0006
+07:33:50 web.1  | [LOG] Storing: a chaque modif du app.rb jdois rebbot admin ?.
+07:33:50 web.1  | 54.174.114.150 - - [06/Jun/2016 07:33:50] "POST /markov HTTP/1.1" 200 - 0.6843
+07:33:53 web.1  | [LOG] Storing: jpense que oui?
+07:33:53 web.1  | 54.89.92.4 - - [06/Jun/2016 07:33:53] "POST /markov HTTP/1.1" 200 - 0.0008
+07:34:00 web.1  | [LOG] Storing: enfin relance foremost
+07:34:00 web.1  | [LOG] Replying: la il me saoule
+07:34:00 web.1  | 54.89.92.4 - - [06/Jun/2016 07:34:00] "POST /markov HTTP/1.1" 200 41 0.0013
+07:34:01 web.1  | 52.90.146.42 - - [06/Jun/2016 07:34:01] "POST /markov HTTP/1.1" 200 - 0.0004
+07:34:17 web.1  | 52.90.33.223 - - [06/Jun/2016 07:34:17] "POST /markov HTTP/1.1" 200 - 0.0006
+07:34:17 web.1  | 54.165.241.61 - - [06/Jun/2016 07:34:17] "POST /markov HTTP/1.1" 200 - 0.0004
+07:34:22 web.1  | 54.209.231.248 - - [06/Jun/2016 07:34:22] "POST /markov HTTP/1.1" 200 - 0.0006
+07:34:41 web.1  | [LOG] Storing: si tu fais
+07:34:41 web.1  | 52.90.33.223 - - [06/Jun/2016 07:34:41] "POST /markov HTTP/1.1" 200 - 0.0008
+07:34:43 web.1  | 54.89.92.4 - - [06/Jun/2016 07:34:43] "POST /markov HTTP/1.1" 200 - 0.0006
+07:34:46 web.1  | [LOG] Storing: t'as qqch ?
+07:34:46 web.1  | 54.165.241.61 - - [06/Jun/2016 07:34:46] "POST /markov HTTP/1.1" 200 - 0.0007
+07:35:06 web.1  | [LOG] Storing: ruby 2.2.3p173 2015-08-18 revision 51636 [x86_64-linux]
+07:35:06 web.1  | 52.91.184.228 - - [06/Jun/2016 07:35:06] "POST /markov HTTP/1.1" 200 - 0.0008
+07:35:13 web.1  | 54.174.114.150 - - [06/Jun/2016 07:35:13] "POST /markov HTTP/1.1" 200 - 0.0006
+07:35:24 web.1  | [LOG] Storing: et jpeux ouvrir nohup en mode dynamique?
+07:35:24 web.1  | 52.90.146.42 - - [06/Jun/2016 07:35:24] "POST /markov HTTP/1.1" 200 - 0.0008
+07:35:34 web.1  | [LOG] Storing: genre si ya des modifs elles apparaisent en direct?
+07:35:34 web.1  | [LOG] Replying: doit y avoir un meilleur truv
+07:35:34 web.1  | 54.174.114.150 - - [06/Jun/2016 07:35:34] "POST /markov HTTP/1.1" 200 55 0.0013
+07:35:35 web.1  | 52.90.33.223 - - [06/Jun/2016 07:35:35] "POST /markov HTTP/1.1" 200 - 0.0003
+07:35:55 web.1  | [LOG] Storing: combien de %,
+07:35:55 web.1  | 54.174.114.150 - - [06/Jun/2016 07:35:55] "POST /markov HTTP/1.1" 200 - 0.0008
+07:35:58 web.1  | [LOG] Storing: combien de %?
+07:35:58 web.1  | 54.89.92.4 - - [06/Jun/2016 07:35:58] "POST /markov HTTP/1.1" 200 - 0.0016
+07:36:07 web.1  | 54.174.114.150 - - [06/Jun/2016 07:36:07] "POST /markov HTTP/1.1" 200 - 0.0007
+07:36:13 web.1  | [LOG] Storing: tail -f nohup.out
+07:36:13 web.1  | 52.91.184.228 - - [06/Jun/2016 07:36:13] "POST /markov HTTP/1.1" 200 - 0.0007
+07:36:31 web.1  | [LOG] Replying: donc autant vraiment faire dla merde
+07:36:31 web.1  | 54.174.114.150 - - [06/Jun/2016 07:36:31] "POST /markov HTTP/1.1" 200 62 0.0010
+07:36:33 web.1  | 52.91.184.228 - - [06/Jun/2016 07:36:33] "POST /markov HTTP/1.1" 200 - 0.0003
+07:36:35 web.1  | [LOG] Storing: ok ça marche
+07:36:35 web.1  | 54.165.241.61 - - [06/Jun/2016 07:36:35] "POST /markov HTTP/1.1" 200 - 0.0007
+07:36:36 web.1  | 52.91.184.228 - - [06/Jun/2016 07:36:36] "POST /markov HTTP/1.1" 200 - 0.0006
+07:36:43 web.1  | [LOG] Storing: combien de %?
+07:36:43 web.1  | 54.165.241.61 - - [06/Jun/2016 07:36:43] "POST /markov HTTP/1.1" 200 - 0.0008
+07:37:14 web.1  | [LOG] Ok merci thug
+07:37:14 web.1  | [LOG] Replying: merci bg
+07:37:14 web.1  | 52.90.146.42 - - [06/Jun/2016 07:37:14] "POST /markov HTTP/1.1" 200 34 0.0008
+07:37:14 web.1  | 54.89.92.4 - - [06/Jun/2016 07:37:14] "POST /markov HTTP/1.1" 200 - 0.0003
+07:37:23 web.1  | started with pid 2113
+07:37:24 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:37:24 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:37:24 web.1  | Maximum connections set to 1024
+07:37:24 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:37:24 web.1  | Stopping ...
+07:37:24 web.1  | == Sinatra has ended his set (crowd applauds)
+07:37:24 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:37:24 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:37:24 web.1  | exited with code 1
+07:37:24 system | sending SIGTERM to all processes
+07:37:29 web.1  | [LOG] Ok merci thug
+07:37:29 web.1  | [LOG] Replying: merci bg
+07:37:29 web.1  | 54.89.92.4 - - [06/Jun/2016 07:37:29] "POST /markov HTTP/1.1" 200 34 0.0008
+07:37:29 web.1  | 54.89.92.4 - - [06/Jun/2016 07:37:29] "POST /markov HTTP/1.1" 200 - 0.0003
+07:38:05 web.1  | started with pid 2121
+07:38:05 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:38:05 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:38:05 web.1  | Maximum connections set to 1024
+07:38:05 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:38:05 web.1  | Stopping ...
+07:38:05 web.1  | == Sinatra has ended his set (crowd applauds)
+07:38:05 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:38:05 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:38:05 web.1  | exited with code 1
+07:38:05 system | sending SIGTERM to all processes
+07:38:16 web.1  | 54.165.241.61 - - [06/Jun/2016 07:38:16] "POST /markov HTTP/1.1" 200 - 0.0006
+07:38:19 web.1  | [LOG] Replying: des erreur ruby
+07:38:19 web.1  | 54.174.33.17 - - [06/Jun/2016 07:38:19] "POST /markov HTTP/1.1" 200 41 0.0010
+07:38:19 web.1  | 54.174.33.17 - - [06/Jun/2016 07:38:19] "POST /markov HTTP/1.1" 200 - 0.0003
+07:38:35 web.1  | [LOG] Replying: je vais proposer à cdiscount dallez bosser au jardin public
+07:38:35 web.1  | 54.165.241.61 - - [06/Jun/2016 07:38:35] "POST /markov HTTP/1.1" 200 86 0.0016
+07:38:36 web.1  | 54.89.92.4 - - [06/Jun/2016 07:38:36] "POST /markov HTTP/1.1" 200 - 0.0004
+07:38:51 web.1  | [LOG] Replying: ducoup je vais améliorer le bot
+07:38:51 web.1  | 54.165.241.61 - - [06/Jun/2016 07:38:51] "POST /markov HTTP/1.1" 200 58 0.0013
+07:38:52 web.1  | 52.90.146.42 - - [06/Jun/2016 07:38:52] "POST /markov HTTP/1.1" 200 - 0.0004
+07:39:03 web.1  | [LOG] Replying: deja faut que je m'en branle complet maintenant
+07:39:03 web.1  | 54.174.114.150 - - [06/Jun/2016 07:39:03] "POST /markov HTTP/1.1" 200 73 0.0012
+07:39:03 web.1  | 54.209.231.248 - - [06/Jun/2016 07:39:03] "POST /markov HTTP/1.1" 200 - 0.0004
+07:39:24 web.1  | [LOG] Replying: il a pas l'air
+07:39:24 web.1  | 54.174.114.150 - - [06/Jun/2016 07:39:24] "POST /markov HTTP/1.1" 200 40 0.0012
+07:39:25 web.1  | 52.90.33.223 - - [06/Jun/2016 07:39:25] "POST /markov HTTP/1.1" 200 - 0.0004
+07:40:26 web.1  | started with pid 2137
+07:40:27 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:40:27 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:40:27 web.1  | Maximum connections set to 1024
+07:40:27 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:40:27 web.1  | Stopping ...
+07:40:27 web.1  | == Sinatra has ended his set (crowd applauds)
+07:40:27 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:40:27 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:40:27 web.1  | exited with code 1
+07:40:27 system | sending SIGTERM to all processes
+07:40:39 web.1  | [LOG] Replying: la base ?
+07:40:39 web.1  | 52.90.146.42 - - [06/Jun/2016 07:40:39] "POST /markov HTTP/1.1" 200 35 0.0010
+07:40:41 web.1  | 52.91.184.228 - - [06/Jun/2016 07:40:41] "POST /markov HTTP/1.1" 200 - 0.0004
+07:40:45 web.1  | [LOG] Replying: le mot de passe de votre compte jules.duvivier de l'application bureautique - cdbdx arrive à expiration dans 28 jourssss
+07:40:45 web.1  | 52.90.146.42 - - [06/Jun/2016 07:40:45] "POST /markov HTTP/1.1" 200 147 0.0020
+07:40:45 web.1  | 52.90.33.223 - - [06/Jun/2016 07:40:45] "POST /markov HTTP/1.1" 200 - 0.0003
+07:41:02 web.1  | [LOG] Replying: j'ai corrigé l'erreur putain
+07:41:02 web.1  | 52.91.184.228 - - [06/Jun/2016 07:41:02] "POST /markov HTTP/1.1" 200 55 0.0012
+07:41:02 web.1  | 54.89.92.4 - - [06/Jun/2016 07:41:02] "POST /markov HTTP/1.1" 200 - 0.0003
+07:42:22 web.1  | started with pid 2145
+07:42:22 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:42:22 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:42:22 web.1  | Maximum connections set to 1024
+07:42:22 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:42:22 web.1  | Stopping ...
+07:42:22 web.1  | == Sinatra has ended his set (crowd applauds)
+07:42:22 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:42:22 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:42:22 web.1  | exited with code 1
+07:42:22 system | sending SIGTERM to all processes
+07:42:26 web.1  | [LOG] Replying: cpas totodu40 le pass?
+07:42:26 web.1  | 54.174.33.17 - - [06/Jun/2016 07:42:26] "POST /markov HTTP/1.1" 200 48 0.0011
+07:42:26 web.1  | 54.209.231.248 - - [06/Jun/2016 07:42:26] "POST /markov HTTP/1.1" 200 - 0.0004
+07:42:34 web.1  | [LOG] Replying: tu la reboot?
+07:42:34 web.1  | 52.90.33.223 - - [06/Jun/2016 07:42:34] "POST /markov HTTP/1.1" 200 39 0.0011
+07:42:34 web.1  | 54.174.114.150 - - [06/Jun/2016 07:42:34] "POST /markov HTTP/1.1" 200 - 0.0004
+07:43:48 web.1  | started with pid 2158
+07:43:49 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:43:49 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:43:49 web.1  | Maximum connections set to 1024
+07:43:49 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:43:49 web.1  | Stopping ...
+07:43:49 web.1  | == Sinatra has ended his set (crowd applauds)
+07:43:49 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:43:49 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:43:49 web.1  | exited with code 1
+07:43:49 system | sending SIGTERM to all processes
+07:43:55 web.1  | [LOG] Replying: tu vois des erreurs?
+07:43:55 web.1  | 54.209.231.248 - - [06/Jun/2016 07:43:55] "POST /markov HTTP/1.1" 200 46 0.0011
+07:43:55 web.1  | 54.174.114.150 - - [06/Jun/2016 07:43:55] "POST /markov HTTP/1.1" 200 - 0.0005
+07:43:59 web.1  | [LOG] Replying: a chaque modif du app.rb jdois rebbot admin ?.
+07:43:59 web.1  | 54.209.231.248 - - [06/Jun/2016 07:43:59] "POST /markov HTTP/1.1" 200 72 0.0017
+07:44:01 web.1  | 54.165.241.61 - - [06/Jun/2016 07:44:01] "POST /markov HTTP/1.1" 200 - 0.0004
+SIGTERM received
+07:45:54 system | sending SIGTERM to all processes
+07:45:55 web.1  | exited with code 0
+19:33:29 web.1  | started with pid 8384
+19:33:30 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+19:33:30 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+19:33:30 web.1  | Maximum connections set to 1024
+19:33:30 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+19:33:34 web.1  | [LOG] Replying: sa réponse par en log fdp
+19:33:34 web.1  | 54.174.33.17 - - [06/Jun/2016 19:33:34] "POST /markov HTTP/1.1" 200 52 0.0684
+19:33:34 web.1  | 54.174.114.150 - - [06/Jun/2016 19:33:34] "POST /markov HTTP/1.1" 200 - 0.0005
+19:33:39 web.1  | [LOG] Replying: ouais cest rien
+19:33:39 web.1  | 52.90.33.223 - - [06/Jun/2016 19:33:39] "POST /markov HTTP/1.1" 200 41 0.0010
+19:33:39 web.1  | 52.91.184.228 - - [06/Jun/2016 19:33:39] "POST /markov HTTP/1.1" 200 - 0.0004
+19:33:46 web.1  | [LOG] ma forme blabla
+19:33:46 web.1  | [LOG] Replying: 10.0 :cry:
+19:33:46 web.1  | 54.165.241.61 - - [06/Jun/2016 19:33:46] "POST /markov HTTP/1.1" 200 36 0.0007
+19:33:46 web.1  | 54.209.231.248 - - [06/Jun/2016 19:33:46] "POST /markov HTTP/1.1" 200 - 0.0003
+19:33:52 web.1  | [LOG] Storing: cest deja trop
+19:33:52 web.1  | 52.90.33.223 - - [06/Jun/2016 19:33:52] "POST /markov HTTP/1.1" 200 - 0.0009
+19:33:52 web.1  | [LOG] Replying: jsuis pas pourri a ce point
+19:33:52 web.1  | 54.89.92.4 - - [06/Jun/2016 19:33:52] "POST /markov HTTP/1.1" 200 53 0.0008
+19:33:53 web.1  | 54.174.33.17 - - [06/Jun/2016 19:33:53] "POST /markov HTTP/1.1" 200 - 0.0003
+19:33:59 web.1  | rand : 12
+19:33:59 web.1  | question : Quel est le symbole du Sodium 
+19:33:59 web.1  | reponse :  Na
+19:33:59 web.1  | [LOG] Replying: Quel est le symbole du Sodium 
+19:33:59 web.1  | la reponse attendu est na
+19:33:59 web.1  | Et tu as dis : robposeunequestion
+19:33:59 web.1  | false
+19:33:59 web.1  | 54.89.92.4 - - [06/Jun/2016 19:33:59] "POST /markov HTTP/1.1" 200 56 0.0028
+19:33:59 web.1  | la reponse attendu est na
+19:33:59 web.1  | Et tu as dis : pause
+19:33:59 web.1  | false
+19:33:59 web.1  | 52.91.184.228 - - [06/Jun/2016 19:33:59] "POST /markov HTTP/1.1" 200 - 0.0008
+19:33:59 web.1  | la reponse attendu est na
+19:33:59 web.1  | Et tu as dis : quelestlesymboledusodium
+19:33:59 web.1  | false
+19:33:59 web.1  | 52.90.33.223 - - [06/Jun/2016 19:33:59] "POST /markov HTTP/1.1" 200 - 0.0003
+19:34:00 web.1  | la reponse attendu est na
+19:34:00 web.1  | Et tu as dis : pause
+19:34:00 web.1  | false
+19:34:00 web.1  | 54.165.241.61 - - [06/Jun/2016 19:34:00] "POST /markov HTTP/1.1" 200 - 0.0009
+19:34:01 web.1  | la reponse attendu est na
+19:34:01 web.1  | Et tu as dis : omfg
+19:34:01 web.1  | false
+19:34:01 web.1  | [LOG] Replying: tu me demande un travail énorme, rends toi en bien compte
+19:34:01 web.1  | 54.165.241.61 - - [06/Jun/2016 19:34:01] "POST /markov HTTP/1.1" 200 84 0.0022
+19:34:01 web.1  | la reponse attendu est na
+19:34:01 web.1  | Et tu as dis : tumedemandeuntravailenormerendstoienbiencompte
+19:34:01 web.1  | false
+19:34:01 web.1  | 54.89.92.4 - - [06/Jun/2016 19:34:01] "POST /markov HTTP/1.1" 200 - 0.0008
+19:34:04 web.1  | la reponse attendu est na
+19:34:04 web.1  | Et tu as dis : hahaha
+19:34:04 web.1  | false
+19:34:04 web.1  | 54.89.92.4 - - [06/Jun/2016 19:34:04] "POST /markov HTTP/1.1" 200 - 0.0011
+19:34:07 web.1  | la reponse attendu est na
+19:34:07 web.1  | Et tu as dis : cetaitbeaucavince
+19:34:07 web.1  | false
+19:34:07 web.1  | [LOG] Storing: cetait beau ca vince
+19:34:07 web.1  | [LOG] Replying: 'u0bqc7pmj' = 'loulou',
+19:34:07 web.1  | 52.90.33.223 - - [06/Jun/2016 19:34:07] "POST /markov HTTP/1.1" 200 49 0.0012
+19:34:08 web.1  | la reponse attendu est na
+19:34:08 web.1  | Et tu as dis : u0bqc7pmjloulou
+19:34:08 web.1  | false
+19:34:08 web.1  | 52.90.146.42 - - [06/Jun/2016 19:34:08] "POST /markov HTTP/1.1" 200 - 0.0006
+19:34:11 web.1  | la reponse attendu est na
+19:34:11 web.1  | Et tu as dis : jesaispastropjevaisbosserunpeupourgagnerdessousetapresjesaispasettoi
+19:34:11 web.1  | false
+19:34:11 web.1  | [LOG] Storing: je sais pas trop je vais bosser un peu pour gagner des sous et après je sais pas et toi
+19:34:11 web.1  | 54.89.92.4 - - [06/Jun/2016 19:34:11] "POST /markov HTTP/1.1" 200 - 0.0013
+19:34:14 web.1  | la reponse attendu est na
+19:34:14 web.1  | Et tu as dis : narob
+19:34:14 web.1  | false
+19:34:14 web.1  | JE SUIS ICI
+19:34:14 web.1  | [LOG] Replying: Bien ouej Jules
+19:34:14 web.1  | 54.174.114.150 - - [06/Jun/2016 19:34:14] "POST /markov HTTP/1.1" 200 41 0.0010
+19:34:14 web.1  | 52.91.184.228 - - [06/Jun/2016 19:34:14] "POST /markov HTTP/1.1" 200 - 0.0005
+19:34:20 web.1  | 52.90.146.42 - - [06/Jun/2016 19:34:20] "POST /markov HTTP/1.1" 200 - 0.0008
+19:34:27 web.1  | rand : 16
+19:34:27 web.1  | question : Quel instrument de musique fut inventé à Florence par Bartolomeo Cristofori en 1709 ? 
+19:34:27 web.1  | reponse :  Piano
+19:34:27 web.1  | [LOG] Replying: Quel instrument de musique fut inventé à Florence par Bartolomeo Cristofori en 1709 ? 
+19:34:27 web.1  | la reponse attendu est piano
+19:34:27 web.1  | Et tu as dis : robposeunequestion
+19:34:27 web.1  | false
+19:34:27 web.1  | 52.90.146.42 - - [06/Jun/2016 19:34:27] "POST /markov HTTP/1.1" 200 114 0.0031
+19:34:27 web.1  | la reponse attendu est piano
+19:34:27 web.1  | Et tu as dis : quelinstrumentdemusiquefutinventeflorenceparbartolomeocristoforien1709
+19:34:27 web.1  | false
+19:34:27 web.1  | 54.89.92.4 - - [06/Jun/2016 19:34:27] "POST /markov HTTP/1.1" 200 - 0.0004
+19:34:33 web.1  | la reponse attendu est piano
+19:34:33 web.1  | Et tu as dis : laflutte
+19:34:33 web.1  | false
+19:34:33 web.1  | 54.165.241.61 - - [06/Jun/2016 19:34:33] "POST /markov HTTP/1.1" 200 - 0.0009
+19:34:34 web.1  | la reponse attendu est piano
+19:34:34 web.1  | Et tu as dis : laguitareohwait
+19:34:34 web.1  | false
+19:34:34 web.1  | [LOG] Storing: la guitare , oh wait
+19:34:34 web.1  | 52.90.146.42 - - [06/Jun/2016 19:34:34] "POST /markov HTTP/1.1" 200 - 0.0009
+19:34:41 web.1  | la reponse attendu est piano
+19:34:41 web.1  | Et tu as dis : letriangle
+19:34:41 web.1  | false
+19:34:41 web.1  | 54.89.92.4 - - [06/Jun/2016 19:34:41] "POST /markov HTTP/1.1" 200 - 0.0008
+19:34:48 web.1  | la reponse attendu est piano
+19:34:48 web.1  | Et tu as dis : lesaxophone
+19:34:48 web.1  | false
+19:34:48 web.1  | 54.165.241.61 - - [06/Jun/2016 19:34:48] "POST /markov HTTP/1.1" 200 - 0.0009
+19:34:48 web.1  | la reponse attendu est piano
+19:34:48 web.1  | Et tu as dis : bienouejvince
+19:34:48 web.1  | false
+19:34:48 web.1  | [LOG] Storing: bien ouej vince
+19:34:48 web.1  | 54.174.114.150 - - [06/Jun/2016 19:34:48] "POST /markov HTTP/1.1" 200 - 0.0008
+19:34:57 web.1  | la reponse attendu est piano
+19:34:57 web.1  | Et tu as dis : laccordeonabec
+19:34:57 web.1  | false
+19:34:57 web.1  | [LOG] Storing: l'accordéon a bec
+19:34:57 web.1  | 54.174.33.17 - - [06/Jun/2016 19:34:57] "POST /markov HTTP/1.1" 200 - 0.0010
+19:34:59 web.1  | la reponse attendu est piano
+19:34:59 web.1  | Et tu as dis : riekfkdjspianofkdkskzk
+19:34:59 web.1  | false
+19:34:59 web.1  | JE SUIS ICI
+19:34:59 web.1  | [LOG] Replying: Bien ouej Jules
+19:34:59 web.1  | 52.90.146.42 - - [06/Jun/2016 19:34:59] "POST /markov HTTP/1.1" 200 41 0.0008
+19:34:59 web.1  | 52.90.33.223 - - [06/Jun/2016 19:34:59] "POST /markov HTTP/1.1" 200 - 0.0003
+19:35:02 web.1  | 52.90.33.223 - - [06/Jun/2016 19:35:02] "POST /markov HTTP/1.1" 200 - 0.0008
+19:35:03 web.1  | 54.89.92.4 - - [06/Jun/2016 19:35:03] "POST /markov HTTP/1.1" 200 - 0.0007
+19:35:06 web.1  | [LOG] Replying: foreman start -f procfile
+19:35:06 web.1  | 54.209.231.248 - - [06/Jun/2016 19:35:06] "POST /markov HTTP/1.1" 200 51 0.0013
+19:35:06 web.1  | 54.174.33.17 - - [06/Jun/2016 19:35:06] "POST /markov HTTP/1.1" 200 - 0.0003
+19:35:11 web.1  | [LOG] Replying: cordillére des andes
+19:35:11 web.1  | 54.209.231.248 - - [06/Jun/2016 19:35:11] "POST /markov HTTP/1.1" 200 47 0.0010
+19:35:12 web.1  | 52.90.146.42 - - [06/Jun/2016 19:35:12] "POST /markov HTTP/1.1" 200 - 0.0006
+19:35:31 web.1  | [LOG] Replying: 'u0c8f961w' = 'ami noir',
+19:35:31 web.1  | 54.209.231.248 - - [06/Jun/2016 19:35:31] "POST /markov HTTP/1.1" 200 51 0.0014
+19:35:31 web.1  | 52.90.146.42 - - [06/Jun/2016 19:35:31] "POST /markov HTTP/1.1" 200 - 0.0004
+19:35:44 web.1  | [LOG] Storing: la base à enxore etait reset vince ??
+19:35:44 web.1  | 54.209.231.248 - - [06/Jun/2016 19:35:44] "POST /markov HTTP/1.1" 200 - 0.0011
+19:35:46 web.1  | [LOG] Replying: salut tout le monde
+19:35:46 web.1  | 54.89.92.4 - - [06/Jun/2016 19:35:46] "POST /markov HTTP/1.1" 200 45 0.0038
+19:35:46 web.1  | 52.90.33.223 - - [06/Jun/2016 19:35:46] "POST /markov HTTP/1.1" 200 - 0.0004
+19:35:48 web.1  | [LOG] Replying: même 2 fois par jours yolo
+19:35:48 web.1  | 54.174.114.150 - - [06/Jun/2016 19:35:48] "POST /markov HTTP/1.1" 200 53 0.0012
+19:35:48 web.1  | 52.91.184.228 - - [06/Jun/2016 19:35:48] "POST /markov HTTP/1.1" 200 - 0.0004
+19:35:50 web.1  | [LOG] Replying: un loulou en plein effort
+19:35:50 web.1  | 54.174.33.17 - - [06/Jun/2016 19:35:50] "POST /markov HTTP/1.1" 200 51 0.0012
+19:35:51 web.1  | 54.174.33.17 - - [06/Jun/2016 19:35:51] "POST /markov HTTP/1.1" 200 - 0.0004
+19:35:53 web.1  | [LOG] Replying: ya 10 questions qui tournent
+19:35:53 web.1  | 54.89.92.4 - - [06/Jun/2016 19:35:53] "POST /markov HTTP/1.1" 200 54 0.0010
+19:35:53 web.1  | 54.174.114.150 - - [06/Jun/2016 19:35:53] "POST /markov HTTP/1.1" 200 - 0.0003
+19:35:54 web.1  | [LOG] Replying: ah il a bug là
+19:35:54 web.1  | 52.91.184.228 - - [06/Jun/2016 19:35:54] "POST /markov HTTP/1.1" 200 41 0.0009
+19:35:54 web.1  | 54.174.33.17 - - [06/Jun/2016 19:35:54] "POST /markov HTTP/1.1" 200 - 0.0003
+19:35:56 web.1  | [LOG] Replying: j'espere connaitre la réponse
+19:35:56 web.1  | 52.91.184.228 - - [06/Jun/2016 19:35:56] "POST /markov HTTP/1.1" 200 56 0.0013
+19:35:57 web.1  | 54.174.33.17 - - [06/Jun/2016 19:35:57] "POST /markov HTTP/1.1" 200 - 0.0005
+19:36:02 web.1  | [LOG] Storing: putain elle a etait reset
+19:36:02 web.1  | 54.174.114.150 - - [06/Jun/2016 19:36:02] "POST /markov HTTP/1.1" 200 - 0.0009
+19:36:06 web.1  | [LOG] Replying: il est ou?
+19:36:06 web.1  | 54.174.114.150 - - [06/Jun/2016 19:36:06] "POST /markov HTTP/1.1" 200 36 0.0010
+19:36:07 web.1  | 54.174.114.150 - - [06/Jun/2016 19:36:07] "POST /markov HTTP/1.1" 200 - 0.0004
+19:36:09 web.1  | 54.165.241.61 - - [06/Jun/2016 19:36:09] "POST /markov HTTP/1.1" 200 - 0.0007
+19:36:12 web.1  | 54.89.92.4 - - [06/Jun/2016 19:36:12] "POST /markov HTTP/1.1" 200 - 0.0008
+19:36:14 web.1  | 54.89.92.4 - - [06/Jun/2016 19:36:14] "POST /markov HTTP/1.1" 200 - 0.0008
+19:36:18 web.1  | 52.90.146.42 - - [06/Jun/2016 19:36:18] "POST /markov HTTP/1.1" 200 - 0.0007
+19:36:37 web.1  | [LOG] Replying: bah la sicile ?
+19:36:37 web.1  | 54.165.241.61 - - [06/Jun/2016 19:36:37] "POST /markov HTTP/1.1" 200 41 0.0013
+19:36:37 web.1  | 54.174.33.17 - - [06/Jun/2016 19:36:37] "POST /markov HTTP/1.1" 200 - 0.0004
+19:37:42 web.1  | [LOG] Replying: bah tu peux le faire
+19:37:42 web.1  | 54.165.241.61 - - [06/Jun/2016 19:37:42] "POST /markov HTTP/1.1" 200 46 0.0009
+19:37:42 web.1  | 52.91.184.228 - - [06/Jun/2016 19:37:42] "POST /markov HTTP/1.1" 200 - 0.0004
+19:37:48 web.1  | rand : 19
+19:37:48 web.1  | question : Quelle est la racine carrée de 144 ? 
+19:37:48 web.1  | reponse :  12
+19:37:48 web.1  | [LOG] Replying: Quelle est la racine carrée de 144 ? 
+19:37:48 web.1  | la reponse attendu est 12
+19:37:48 web.1  | Et tu as dis : robposeunequestion
+19:37:48 web.1  | false
+19:37:48 web.1  | 52.90.33.223 - - [06/Jun/2016 19:37:48] "POST /markov HTTP/1.1" 200 64 0.0030
+19:37:48 web.1  | la reponse attendu est 12
+19:37:48 web.1  | Et tu as dis : quelleestlaracinecarreede144
+19:37:48 web.1  | false
+19:37:48 web.1  | 54.174.114.150 - - [06/Jun/2016 19:37:48] "POST /markov HTTP/1.1" 200 - 0.0005
+19:37:51 web.1  | la reponse attendu est 12
+19:37:51 web.1  | Et tu as dis : 12
+19:37:51 web.1  | true
+19:37:51 web.1  | JE SUIS ICI
+19:37:51 web.1  | [LOG] Replying: Bien ouej Vince
+19:37:51 web.1  | 54.89.92.4 - - [06/Jun/2016 19:37:51] "POST /markov HTTP/1.1" 200 41 0.0012
+19:37:51 web.1  | 54.174.114.150 - - [06/Jun/2016 19:37:51] "POST /markov HTTP/1.1" 200 - 0.0004
+19:37:55 web.1  | [LOG] Replying: redis 127.0.0.1:6379 keys ça marche pas chez moi
+19:37:55 web.1  | 54.209.231.248 - - [06/Jun/2016 19:37:55] "POST /markov HTTP/1.1" 200 75 0.0016
+19:37:55 web.1  | 52.91.184.228 - - [06/Jun/2016 19:37:55] "POST /markov HTTP/1.1" 200 - 0.0006
+19:37:56 web.1  | 52.91.184.228 - - [06/Jun/2016 19:37:56] "POST /markov HTTP/1.1" 200 - 0.0009
+19:37:58 web.1  | 54.89.92.4 - - [06/Jun/2016 19:37:58] "POST /markov HTTP/1.1" 200 - 0.0009
+19:38:08 web.1  | rand : 9
+19:38:08 web.1  | question : Quel est le nom de la prise Ethernet ? 
+19:38:08 web.1  | reponse :  RJ45
+19:38:08 web.1  | [LOG] Replying: Quel est le nom de la prise Ethernet ? 
+19:38:08 web.1  | la reponse attendu est rj45
+19:38:08 web.1  | Et tu as dis : robposeunequestion
+19:38:08 web.1  | false
+19:38:08 web.1  | 54.165.241.61 - - [06/Jun/2016 19:38:08] "POST /markov HTTP/1.1" 200 65 0.0029
+19:38:09 web.1  | la reponse attendu est rj45
+19:38:09 web.1  | Et tu as dis : quelestlenomdelapriseethernet
+19:38:09 web.1  | false
+19:38:09 web.1  | 52.91.184.228 - - [06/Jun/2016 19:38:09] "POST /markov HTTP/1.1" 200 - 0.0007
+19:38:13 web.1  | la reponse attendu est rj45
+19:38:13 web.1  | Et tu as dis : rj45
+19:38:13 web.1  | true
+19:38:13 web.1  | JE SUIS ICI
+19:38:13 web.1  | [LOG] Replying: Bien ouej Vince
+19:38:13 web.1  | 54.89.92.4 - - [06/Jun/2016 19:38:13] "POST /markov HTTP/1.1" 200 41 0.0009
+19:38:13 web.1  | 52.90.33.223 - - [06/Jun/2016 19:38:13] "POST /markov HTTP/1.1" 200 - 0.0005
+19:38:13 web.1  | rand : 4
+19:38:13 web.1  | question : Quel os du squelette humain est le plus long et le plus solide ? 
+19:38:13 web.1  | reponse :  Fémur
+19:38:13 web.1  | [LOG] Replying: Quel os du squelette humain est le plus long et le plus solide ? 
+19:38:13 web.1  | la reponse attendu est femur
+19:38:13 web.1  | Et tu as dis : robposeunequestion
+19:38:13 web.1  | false
+19:38:13 web.1  | 54.165.241.61 - - [06/Jun/2016 19:38:13] "POST /markov HTTP/1.1" 200 91 0.0030
+19:38:14 web.1  | la reponse attendu est femur
+19:38:14 web.1  | Et tu as dis : quelosdusquelettehumainestlepluslongetleplussolide
+19:38:14 web.1  | false
+19:38:14 web.1  | 54.174.114.150 - - [06/Jun/2016 19:38:14] "POST /markov HTTP/1.1" 200 - 0.0006
+19:38:18 web.1  | la reponse attendu est femur
+19:38:18 web.1  | Et tu as dis : lecubitus
+19:38:18 web.1  | false
+19:38:18 web.1  | 54.89.92.4 - - [06/Jun/2016 19:38:18] "POST /markov HTTP/1.1" 200 - 0.0008
+19:38:27 web.1  | la reponse attendu est femur
+19:38:27 web.1  | Et tu as dis : robcetaitquoilareponse
+19:38:27 web.1  | false
+19:38:27 web.1  | [LOG] Replying: La réponse attendue était Fémur
+19:38:27 web.1  | 52.90.33.223 - - [06/Jun/2016 19:38:27] "POST /markov HTTP/1.1" 200 62 0.0008
+19:38:28 web.1  | 54.89.92.4 - - [06/Jun/2016 19:38:28] "POST /markov HTTP/1.1" 200 - 0.0005
+19:38:31 web.1  | 52.90.146.42 - - [06/Jun/2016 19:38:31] "POST /markov HTTP/1.1" 200 - 0.0007
+19:38:32 web.1  | rand : 18
+19:38:32 web.1  | question : Un litre est forcément égal à un kilogramme? (Vrai ou Faux)
+19:38:32 web.1  | reponse :  Faux
+19:38:32 web.1  | [LOG] Replying: Un litre est forcément égal à un kilogramme? (Vrai ou Faux)
+19:38:32 web.1  | la reponse attendu est faux
+19:38:32 web.1  | Et tu as dis : robposeunequestion
+19:38:32 web.1  | false
+19:38:32 web.1  | 52.91.184.228 - - [06/Jun/2016 19:38:32] "POST /markov HTTP/1.1" 200 88 0.0029
+19:38:32 web.1  | la reponse attendu est faux
+19:38:32 web.1  | Et tu as dis : unlitreestforcementegalunkilogrammevraioufaux
+19:38:32 web.1  | false
+19:38:32 web.1  | 54.209.231.248 - - [06/Jun/2016 19:38:32] "POST /markov HTTP/1.1" 200 - 0.0004
+19:38:34 web.1  | la reponse attendu est faux
+19:38:34 web.1  | Et tu as dis : faux
+19:38:34 web.1  | true
+19:38:34 web.1  | JE SUIS ICI
+19:38:34 web.1  | [LOG] Replying: Bien ouej Vince
+19:38:34 web.1  | 52.90.33.223 - - [06/Jun/2016 19:38:34] "POST /markov HTTP/1.1" 200 41 0.0009
+19:38:35 web.1  | 54.174.114.150 - - [06/Jun/2016 19:38:35] "POST /markov HTTP/1.1" 200 - 0.0004
+19:38:35 web.1  | rand : 22
+19:38:35 web.1  | question : En quelle année s'est déroulée la prise de Constantinople ? 
+19:38:35 web.1  | reponse :  1453
+19:38:35 web.1  | [LOG] Replying: En quelle année s'est déroulée la prise de Constantinople ? 
+19:38:35 web.1  | la reponse attendu est 1453
+19:38:35 web.1  | Et tu as dis : robposeunequestion
+19:38:35 web.1  | false
+19:38:35 web.1  | 52.90.33.223 - - [06/Jun/2016 19:38:35] "POST /markov HTTP/1.1" 200 89 0.0029
+19:38:36 web.1  | la reponse attendu est 1453
+19:38:36 web.1  | Et tu as dis : enquelleanneesestderouleelaprisedeconstantinople
+19:38:36 web.1  | false
+19:38:36 web.1  | 54.165.241.61 - - [06/Jun/2016 19:38:36] "POST /markov HTTP/1.1" 200 - 0.0005
+19:38:43 web.1  | la reponse attendu est 1453
+19:38:43 web.1  | Et tu as dis : 1515
+19:38:43 web.1  | false
+19:38:43 web.1  | 52.91.184.228 - - [06/Jun/2016 19:38:43] "POST /markov HTTP/1.1" 200 - 0.0010
+19:38:45 web.1  | la reponse attendu est 1453
+19:38:45 web.1  | Et tu as dis : 489
+19:38:45 web.1  | false
+19:38:45 web.1  | 52.90.146.42 - - [06/Jun/2016 19:38:45] "POST /markov HTTP/1.1" 200 - 0.0007
+19:38:48 web.1  | la reponse attendu est 1453
+19:38:48 web.1  | Et tu as dis : 13xx
+19:38:48 web.1  | false
+19:38:48 web.1  | 54.209.231.248 - - [06/Jun/2016 19:38:48] "POST /markov HTTP/1.1" 200 - 0.0009
+19:38:52 web.1  | la reponse attendu est 1453
+19:38:52 web.1  | Et tu as dis : 1380
+19:38:52 web.1  | false
+19:38:52 web.1  | 54.209.231.248 - - [06/Jun/2016 19:38:52] "POST /markov HTTP/1.1" 200 - 0.0009
+19:38:54 web.1  | la reponse attendu est 1453
+19:38:54 web.1  | Et tu as dis : 1356
+19:38:54 web.1  | false
+19:38:54 web.1  | 54.174.114.150 - - [06/Jun/2016 19:38:54] "POST /markov HTTP/1.1" 200 - 0.0009
+19:38:55 web.1  | la reponse attendu est 1453
+19:38:55 web.1  | Et tu as dis : 1351
+19:38:55 web.1  | false
+19:38:55 web.1  | 54.165.241.61 - - [06/Jun/2016 19:38:55] "POST /markov HTTP/1.1" 200 - 0.0007
+19:38:57 web.1  | la reponse attendu est 1453
+19:38:57 web.1  | Et tu as dis : 13
+19:38:57 web.1  | false
+19:38:57 web.1  | 52.91.184.228 - - [06/Jun/2016 19:38:57] "POST /markov HTTP/1.1" 200 - 0.0009
+19:38:59 web.1  | la reponse attendu est 1453
+19:38:59 web.1  | Et tu as dis : 1352
+19:38:59 web.1  | false
+19:38:59 web.1  | 52.90.146.42 - - [06/Jun/2016 19:38:59] "POST /markov HTTP/1.1" 200 - 0.0026
+19:39:00 web.1  | la reponse attendu est 1453
+19:39:00 web.1  | Et tu as dis : robcetaitquoilareponse
+19:39:00 web.1  | false
+19:39:00 web.1  | [LOG] Replying: La réponse attendue était 1453
+19:39:00 web.1  | 54.165.241.61 - - [06/Jun/2016 19:39:00] "POST /markov HTTP/1.1" 200 60 0.0006
+19:39:00 web.1  | 54.209.231.248 - - [06/Jun/2016 19:39:00] "POST /markov HTTP/1.1" 200 - 0.0005
+19:39:01 web.1  | 52.91.184.228 - - [06/Jun/2016 19:39:01] "POST /markov HTTP/1.1" 200 - 0.0007
+19:39:03 web.1  | rand : 20
+19:39:03 web.1  | question : Quel groupe sanguin est donneur universel ? 
+19:39:03 web.1  | reponse :  O
+19:39:03 web.1  | [LOG] Replying: Quel groupe sanguin est donneur universel ? 
+19:39:03 web.1  | la reponse attendu est o
+19:39:03 web.1  | Et tu as dis : robposeunequestion
+19:39:03 web.1  | false
+19:39:03 web.1  | JE SUIS ICI
+19:39:03 web.1  | [LOG] Replying: Bien ouej Vince
+19:39:03 web.1  | 52.90.33.223 - - [06/Jun/2016 19:39:03] "POST /markov HTTP/1.1" 200 41 0.0029
+19:39:03 web.1  | 52.90.33.223 - - [06/Jun/2016 19:39:03] "POST /markov HTTP/1.1" 200 - 0.0007
+19:39:04 web.1  | 52.90.33.223 - - [06/Jun/2016 19:39:04] "POST /markov HTTP/1.1" 200 - 0.0003
+19:39:08 web.1  | rand : 48
+19:39:08 web.1  | question : Combien louka a t-il d'adbos ? 
+19:39:08 web.1  | reponse :  1
+19:39:08 web.1  | [LOG] Replying: Combien louka a t-il d'adbos ? 
+19:39:08 web.1  | la reponse attendu est 1
+19:39:08 web.1  | Et tu as dis : robposeunequestion
+19:39:08 web.1  | false
+19:39:08 web.1  | 52.90.146.42 - - [06/Jun/2016 19:39:08] "POST /markov HTTP/1.1" 200 57 0.0030
+19:39:09 web.1  | la reponse attendu est 1
+19:39:09 web.1  | Et tu as dis : combienloukaatildadbos
+19:39:09 web.1  | false
+19:39:09 web.1  | 54.174.114.150 - - [06/Jun/2016 19:39:09] "POST /markov HTTP/1.1" 200 - 0.0004
+19:39:11 web.1  | la reponse attendu est 1
+19:39:11 web.1  | Et tu as dis : 0
+19:39:11 web.1  | false
+19:39:11 web.1  | [LOG] Replying: on récapitule tes réponses passent
+19:39:11 web.1  | 52.90.146.42 - - [06/Jun/2016 19:39:11] "POST /markov HTTP/1.1" 200 62 0.0013
+19:39:12 web.1  | la reponse attendu est 1
+19:39:12 web.1  | Et tu as dis : onrecapituletesreponsespassent
+19:39:12 web.1  | false
+19:39:12 web.1  | 52.90.146.42 - - [06/Jun/2016 19:39:12] "POST /markov HTTP/1.1" 200 - 0.0004
+19:39:14 web.1  | la reponse attendu est 1
+19:39:14 web.1  | Et tu as dis : jetaispaspretdyarriver
+19:39:14 web.1  | false
+19:39:14 web.1  | [LOG] Storing: j'étais pas pret d'y arriver
+19:39:14 web.1  | 54.174.114.150 - - [06/Jun/2016 19:39:14] "POST /markov HTTP/1.1" 200 - 0.0009
+19:39:16 web.1  | la reponse attendu est 1
+19:39:16 web.1  | Et tu as dis : 1
+19:39:16 web.1  | true
+19:39:16 web.1  | JE SUIS ICI
+19:39:16 web.1  | [LOG] Replying: Bien ouej Vince
+19:39:16 web.1  | 54.174.33.17 - - [06/Jun/2016 19:39:16] "POST /markov HTTP/1.1" 200 41 0.0008
+19:39:17 web.1  | 52.90.33.223 - - [06/Jun/2016 19:39:17] "POST /markov HTTP/1.1" 200 - 0.0003
+19:39:17 web.1  | rand : 15
+19:39:17 web.1  | question : La vitesse de quoi mesure un anénomètre ? 
+19:39:17 web.1  | reponse :  Vent
+19:39:17 web.1  | [LOG] Replying: La vitesse de quoi mesure un anénomètre ? 
+19:39:17 web.1  | la reponse attendu est vent
+19:39:17 web.1  | Et tu as dis : robposeunequestion
+19:39:17 web.1  | false
+19:39:17 web.1  | 54.174.33.17 - - [06/Jun/2016 19:39:17] "POST /markov HTTP/1.1" 200 70 0.0031
+19:39:18 web.1  | la reponse attendu est vent
+19:39:18 web.1  | Et tu as dis : lavitessedequoimesureunanenometre
+19:39:18 web.1  | false
+19:39:18 web.1  | 54.165.241.61 - - [06/Jun/2016 19:39:18] "POST /markov HTTP/1.1" 200 - 0.0005
+19:39:19 web.1  | la reponse attendu est vent
+19:39:19 web.1  | Et tu as dis : 1roblemonoabdal
+19:39:19 web.1  | false
+19:39:19 web.1  | [LOG] Replying: il est sur google là
+19:39:19 web.1  | 54.165.241.61 - - [06/Jun/2016 19:39:19] "POST /markov HTTP/1.1" 200 47 0.0010
+19:39:19 web.1  | la reponse attendu est vent
+19:39:19 web.1  | Et tu as dis : ilestsurgooglel
+19:39:19 web.1  | false
+19:39:19 web.1  | 54.165.241.61 - - [06/Jun/2016 19:39:19] "POST /markov HTTP/1.1" 200 - 0.0004
+19:39:20 web.1  | la reponse attendu est vent
+19:39:20 web.1  | Et tu as dis : vent
+19:39:20 web.1  | true
+19:39:20 web.1  | JE SUIS ICI
+19:39:20 web.1  | [LOG] Replying: Bien ouej Vince
+19:39:20 web.1  | 52.90.146.42 - - [06/Jun/2016 19:39:20] "POST /markov HTTP/1.1" 200 41 0.0008
+19:39:21 web.1  | 54.89.92.4 - - [06/Jun/2016 19:39:21] "POST /markov HTTP/1.1" 200 - 0.0004
+19:39:22 web.1  | rand : 13
+19:39:22 web.1  | question : Comment les Russes appellent les hommes qu'ils envoient dans l'espace ? 
+19:39:22 web.1  | reponse :  cosmonautes
+19:39:22 web.1  | [LOG] Replying: Comment les Russes appellent les hommes qu'ils envoient dans l'espace ? 
+19:39:22 web.1  | la reponse attendu est cosmonautes
+19:39:22 web.1  | Et tu as dis : robposeunequestion
+19:39:22 web.1  | false
+19:39:22 web.1  | 54.174.33.17 - - [06/Jun/2016 19:39:22] "POST /markov HTTP/1.1" 200 98 0.0028
+19:39:23 web.1  | la reponse attendu est cosmonautes
+19:39:23 web.1  | Et tu as dis : commentlesrussesappellentleshommesquilsenvoientdanslespace
+19:39:23 web.1  | false
+19:39:23 web.1  | 54.165.241.61 - - [06/Jun/2016 19:39:23] "POST /markov HTTP/1.1" 200 - 0.0005
+19:39:28 web.1  | la reponse attendu est cosmonautes
+19:39:28 web.1  | Et tu as dis : lesastronaumes
+19:39:28 web.1  | false
+19:39:28 web.1  | 54.174.33.17 - - [06/Jun/2016 19:39:28] "POST /markov HTTP/1.1" 200 - 0.0008
+19:39:32 web.1  | la reponse attendu est cosmonautes
+19:39:32 web.1  | Et tu as dis : astronomes
+19:39:32 web.1  | false
+19:39:32 web.1  | 52.91.184.228 - - [06/Jun/2016 19:39:32] "POST /markov HTTP/1.1" 200 - 0.0007
+19:39:33 web.1  | la reponse attendu est cosmonautes
+19:39:33 web.1  | Et tu as dis : omg
+19:39:33 web.1  | false
+19:39:33 web.1  | 52.91.184.228 - - [06/Jun/2016 19:39:33] "POST /markov HTTP/1.1" 200 - 0.0006
+19:39:35 web.1  | la reponse attendu est cosmonautes
+19:39:35 web.1  | Et tu as dis : tibolike
+19:39:35 web.1  | false
+19:39:35 web.1  | 54.174.114.150 - - [06/Jun/2016 19:39:35] "POST /markov HTTP/1.1" 200 - 0.0007
+19:39:39 web.1  | la reponse attendu est cosmonautes
+19:39:39 web.1  | Et tu as dis : nanmais
+19:39:39 web.1  | false
+19:39:39 web.1  | 52.90.146.42 - - [06/Jun/2016 19:39:39] "POST /markov HTTP/1.1" 200 - 0.0007
+19:39:54 web.1  | la reponse attendu est cosmonautes
+19:39:54 web.1  | Et tu as dis : quoijules
+19:39:54 web.1  | false
+19:39:54 web.1  | [LOG] Storing: quoi jules ?
+19:39:54 web.1  | 54.89.92.4 - - [06/Jun/2016 19:39:54] "POST /markov HTTP/1.1" 200 - 0.0009
+19:39:58 web.1  | la reponse attendu est cosmonautes
+19:39:58 web.1  | Et tu as dis : yaastronautresastraunomesetjsaisplusquoi
+19:39:58 web.1  | false
+19:39:58 web.1  | [LOG] Storing: y'a astronautres/astraunomes et jsais plus quoi
+19:39:58 web.1  | 52.90.33.223 - - [06/Jun/2016 19:39:58] "POST /markov HTTP/1.1" 200 - 0.0009
+19:40:08 web.1  | la reponse attendu est cosmonautes
+19:40:08 web.1  | Et tu as dis : astronomescaexistepassi
+19:40:08 web.1  | false
+19:40:08 web.1  | [LOG] Storing: astronomes ca existe pas si?
+19:40:08 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:08] "POST /markov HTTP/1.1" 200 - 0.0009
+19:40:09 web.1  | la reponse attendu est cosmonautes
+19:40:09 web.1  | Et tu as dis : selonleuropeetatsunisetrussie
+19:40:09 web.1  | false
+19:40:09 web.1  | [LOG] Storing: selon  l'europe/etats unis et russie
+19:40:09 web.1  | 54.174.33.17 - - [06/Jun/2016 19:40:09] "POST /markov HTTP/1.1" 200 - 0.0009
+19:40:11 web.1  | la reponse attendu est cosmonautes
+19:40:11 web.1  | Et tu as dis : sisisi
+19:40:11 web.1  | false
+19:40:11 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:11] "POST /markov HTTP/1.1" 200 - 0.0007
+19:40:14 web.1  | la reponse attendu est cosmonautes
+19:40:14 web.1  | Et tu as dis : astronautescosmonautesspationautes
+19:40:14 web.1  | false
+19:40:14 web.1  | JE SUIS ICI
+19:40:14 web.1  | [LOG] Replying: Bien ouej Jules
+19:40:14 web.1  | [LOG] Storing: astronautes, cosmonautes, spationautes
+19:40:14 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:14] "POST /markov HTTP/1.1" 200 41 0.0009
+19:40:14 web.1  | 52.90.146.42 - - [06/Jun/2016 19:40:14] "POST /markov HTTP/1.1" 200 - 0.0004
+19:40:16 web.1  | [LOG] Storing: c'est ça les 3
+19:40:16 web.1  | 54.209.231.248 - - [06/Jun/2016 19:40:16] "POST /markov HTTP/1.1" 200 - 0.0010
+19:40:18 web.1  | 52.90.146.42 - - [06/Jun/2016 19:40:18] "POST /markov HTTP/1.1" 200 - 0.0007
+19:40:20 web.1  | 52.91.184.228 - - [06/Jun/2016 19:40:20] "POST /markov HTTP/1.1" 200 - 0.0008
+19:40:21 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:21] "POST /markov HTTP/1.1" 200 - 0.0007
+19:40:24 web.1  | [LOG] Replying: faudrait backup avantr
+19:40:24 web.1  | 54.209.231.248 - - [06/Jun/2016 19:40:24] "POST /markov HTTP/1.1" 200 48 0.0010
+19:40:25 web.1  | 54.89.92.4 - - [06/Jun/2016 19:40:25] "POST /markov HTTP/1.1" 200 - 0.0007
+19:40:25 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:25] "POST /markov HTTP/1.1" 200 - 0.0003
+19:40:28 web.1  | 54.89.92.4 - - [06/Jun/2016 19:40:28] "POST /markov HTTP/1.1" 200 - 0.0006
+19:40:29 web.1  | [LOG] Storing: qui étudie les astres
+19:40:29 web.1  | 54.174.33.17 - - [06/Jun/2016 19:40:29] "POST /markov HTTP/1.1" 200 - 0.0008
+19:40:41 web.1  | rand : 23
+19:40:41 web.1  | question : Quelle est la capitale du Pérou ? 
+19:40:41 web.1  | reponse :  Lima
+19:40:41 web.1  | [LOG] Replying: Quelle est la capitale du Pérou ? 
+19:40:41 web.1  | la reponse attendu est lima
+19:40:41 web.1  | Et tu as dis : robposeunequestion
+19:40:41 web.1  | false
+19:40:41 web.1  | 54.165.241.61 - - [06/Jun/2016 19:40:41] "POST /markov HTTP/1.1" 200 61 0.0029
+19:40:42 web.1  | la reponse attendu est lima
+19:40:42 web.1  | Et tu as dis : quelleestlacapitaleduperou
+19:40:42 web.1  | false
+19:40:42 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:42] "POST /markov HTTP/1.1" 200 - 0.0004
+19:40:45 web.1  | la reponse attendu est lima
+19:40:45 web.1  | Et tu as dis : lima
+19:40:45 web.1  | true
+19:40:45 web.1  | JE SUIS ICI
+19:40:45 web.1  | [LOG] Replying: Bien ouej Jules
+19:40:45 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:45] "POST /markov HTTP/1.1" 200 41 0.0007
+19:40:46 web.1  | 52.90.33.223 - - [06/Jun/2016 19:40:46] "POST /markov HTTP/1.1" 200 - 0.0004
+19:40:49 web.1  | 54.174.114.150 - - [06/Jun/2016 19:40:49] "POST /markov HTTP/1.1" 200 - 0.0008
+19:40:51 web.1  | rand : 41
+19:40:51 web.1  | question : Quel est le numéro de Département de Tarbes ? 
+19:40:51 web.1  | reponse :  65
+19:40:51 web.1  | [LOG] Replying: Quel est le numéro de Département de Tarbes ? 
+19:40:51 web.1  | la reponse attendu est 65
+19:40:51 web.1  | Et tu as dis : robposeunequestion
+19:40:51 web.1  | false
+19:40:51 web.1  | 52.90.146.42 - - [06/Jun/2016 19:40:51] "POST /markov HTTP/1.1" 200 74 0.0029
+19:40:51 web.1  | la reponse attendu est 65
+19:40:51 web.1  | Et tu as dis : quelestlenumerodedepartementdetarbes
+19:40:51 web.1  | false
+19:40:51 web.1  | 52.91.184.228 - - [06/Jun/2016 19:40:51] "POST /markov HTTP/1.1" 200 - 0.0005
+19:40:55 web.1  | la reponse attendu est 65
+19:40:55 web.1  | Et tu as dis : 65
+19:40:55 web.1  | true
+19:40:55 web.1  | JE SUIS ICI
+19:40:55 web.1  | [LOG] Replying: Bien ouej Vince
+19:40:55 web.1  | 52.90.33.223 - - [06/Jun/2016 19:40:55] "POST /markov HTTP/1.1" 200 41 0.0008
+19:40:55 web.1  | rand : 30
+19:40:55 web.1  | question : Quel dessinateur a créé Gaston Lagaffe ? 
+19:40:55 web.1  | reponse :  Franquin
+19:40:55 web.1  | [LOG] Replying: Quel dessinateur a créé Gaston Lagaffe ? 
+19:40:55 web.1  | la reponse attendu est franquin
+19:40:55 web.1  | Et tu as dis : robposeunequestion
+19:40:55 web.1  | false
+19:40:55 web.1  | 52.90.33.223 - - [06/Jun/2016 19:40:55] "POST /markov HTTP/1.1" 200 69 0.0029
+19:40:55 web.1  | la reponse attendu est franquin
+19:40:55 web.1  | Et tu as dis : bienouejvince
+19:40:55 web.1  | false
+19:40:55 web.1  | 54.89.92.4 - - [06/Jun/2016 19:40:55] "POST /markov HTTP/1.1" 200 - 0.0004
+19:40:56 web.1  | la reponse attendu est franquin
+19:40:56 web.1  | Et tu as dis : queldessinateuracreegastonlagaffe
+19:40:56 web.1  | false
+19:40:56 web.1  | 54.89.92.4 - - [06/Jun/2016 19:40:56] "POST /markov HTTP/1.1" 200 - 0.0017
+19:40:59 web.1  | la reponse attendu est franquin
+19:40:59 web.1  | Et tu as dis : franquin
+19:40:59 web.1  | true
+19:40:59 web.1  | JE SUIS ICI
+19:40:59 web.1  | [LOG] Replying: Bien ouej Vince
+19:40:59 web.1  | 54.89.92.4 - - [06/Jun/2016 19:40:59] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:00 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:00] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:00 web.1  | rand : 43
+19:41:00 web.1  | question : Quel est le nom de l'acteur porno chauve de brazzers 
+19:41:00 web.1  | reponse :  Johnny Sins
+19:41:00 web.1  | [LOG] Replying: Quel est le nom de l'acteur porno chauve de brazzers 
+19:41:00 web.1  | la reponse attendu est johnnysins
+19:41:00 web.1  | Et tu as dis : robposeunequestion
+19:41:00 web.1  | false
+19:41:00 web.1  | 52.91.184.228 - - [06/Jun/2016 19:41:00] "POST /markov HTTP/1.1" 200 79 0.0028
+19:41:00 web.1  | la reponse attendu est johnnysins
+19:41:00 web.1  | Et tu as dis : quelestlenomdelacteurpornochauvedebrazzers
+19:41:00 web.1  | false
+19:41:00 web.1  | 52.90.33.223 - - [06/Jun/2016 19:41:00] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:04 web.1  | la reponse attendu est johnnysins
+19:41:04 web.1  | Et tu as dis : johnnysins
+19:41:04 web.1  | true
+19:41:04 web.1  | JE SUIS ICI
+19:41:04 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:04 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:04] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:04 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:04] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:04 web.1  | rand : 41
+19:41:04 web.1  | question : Quel est le numéro de Département de Tarbes ? 
+19:41:04 web.1  | reponse :  65
+19:41:04 web.1  | [LOG] Replying: Quel est le numéro de Département de Tarbes ? 
+19:41:04 web.1  | la reponse attendu est 65
+19:41:04 web.1  | Et tu as dis : robposeunequestion
+19:41:04 web.1  | false
+19:41:04 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:04] "POST /markov HTTP/1.1" 200 74 0.0027
+19:41:05 web.1  | la reponse attendu est 65
+19:41:05 web.1  | Et tu as dis : quelestlenumerodedepartementdetarbes
+19:41:05 web.1  | false
+19:41:05 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:05] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:09 web.1  | la reponse attendu est 65
+19:41:09 web.1  | Et tu as dis : 65
+19:41:09 web.1  | true
+19:41:09 web.1  | JE SUIS ICI
+19:41:09 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:09 web.1  | 54.209.231.248 - - [06/Jun/2016 19:41:09] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:09 web.1  | rand : 49
+19:41:09 web.1  | question : Quel est le nom de la bombe largué sur Hiroshima ? 
+19:41:09 web.1  | reponse :  Little Boy
+19:41:09 web.1  | [LOG] Replying: Quel est le nom de la bombe largué sur Hiroshima ? 
+19:41:09 web.1  | la reponse attendu est littleboy
+19:41:09 web.1  | Et tu as dis : robposeunequestion
+19:41:09 web.1  | false
+19:41:09 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:09] "POST /markov HTTP/1.1" 200 78 0.0028
+19:41:10 web.1  | la reponse attendu est littleboy
+19:41:10 web.1  | Et tu as dis : bienouejvince
+19:41:10 web.1  | false
+19:41:10 web.1  | 54.209.231.248 - - [06/Jun/2016 19:41:10] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:10 web.1  | la reponse attendu est littleboy
+19:41:10 web.1  | Et tu as dis : quelestlenomdelabombelarguesurhiroshima
+19:41:10 web.1  | false
+19:41:10 web.1  | 52.91.184.228 - - [06/Jun/2016 19:41:10] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:13 web.1  | la reponse attendu est littleboy
+19:41:13 web.1  | Et tu as dis : littleboy
+19:41:13 web.1  | true
+19:41:13 web.1  | JE SUIS ICI
+19:41:13 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:13 web.1  | 52.90.33.223 - - [06/Jun/2016 19:41:13] "POST /markov HTTP/1.1" 200 41 0.0007
+19:41:13 web.1  | 52.91.184.228 - - [06/Jun/2016 19:41:13] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:14 web.1  | rand : 38
+19:41:14 web.1  | question : Dans quel boite travail Damien ? 
+19:41:14 web.1  | reponse :  ExpertCom
+19:41:14 web.1  | [LOG] Replying: Dans quel boite travail Damien ? 
+19:41:14 web.1  | la reponse attendu est expertcom
+19:41:14 web.1  | Et tu as dis : robposeunequestion
+19:41:14 web.1  | false
+19:41:14 web.1  | 52.91.184.228 - - [06/Jun/2016 19:41:14] "POST /markov HTTP/1.1" 200 59 0.0028
+19:41:14 web.1  | la reponse attendu est expertcom
+19:41:14 web.1  | Et tu as dis : dansquelboitetravaildamien
+19:41:14 web.1  | false
+19:41:14 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:14] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:17 web.1  | la reponse attendu est expertcom
+19:41:17 web.1  | Et tu as dis : expertcome
+19:41:17 web.1  | false
+19:41:17 web.1  | JE SUIS ICI
+19:41:17 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:17 web.1  | 52.90.33.223 - - [06/Jun/2016 19:41:17] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:18 web.1  | 54.174.114.150 - - [06/Jun/2016 19:41:18] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:18 web.1  | rand : 17
+19:41:18 web.1  | question : Quel os est inséparable du radius ? 
+19:41:18 web.1  | reponse :  Cubitus
+19:41:18 web.1  | [LOG] Replying: Quel os est inséparable du radius ? 
+19:41:18 web.1  | la reponse attendu est cubitus
+19:41:18 web.1  | Et tu as dis : robposeunequestion
+19:41:18 web.1  | false
+19:41:18 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:18] "POST /markov HTTP/1.1" 200 63 0.0027
+19:41:18 web.1  | la reponse attendu est cubitus
+19:41:18 web.1  | Et tu as dis : quelosestinseparableduradius
+19:41:18 web.1  | false
+19:41:18 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:18] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:22 web.1  | la reponse attendu est cubitus
+19:41:22 web.1  | Et tu as dis : cubitus
+19:41:22 web.1  | true
+19:41:22 web.1  | JE SUIS ICI
+19:41:22 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:22 web.1  | 52.90.33.223 - - [06/Jun/2016 19:41:22] "POST /markov HTTP/1.1" 200 41 0.0009
+19:41:23 web.1  | rand : 25
+19:41:23 web.1  | question : Quelle est la plus grande île de la Méditerranée ? 
+19:41:23 web.1  | reponse :  Sicile
+19:41:23 web.1  | [LOG] Replying: Quelle est la plus grande île de la Méditerranée ? 
+19:41:23 web.1  | la reponse attendu est sicile
+19:41:23 web.1  | Et tu as dis : robposeunequestion
+19:41:23 web.1  | false
+19:41:23 web.1  | 52.91.184.228 - - [06/Jun/2016 19:41:23] "POST /markov HTTP/1.1" 200 80 0.0028
+19:41:23 web.1  | la reponse attendu est sicile
+19:41:23 web.1  | Et tu as dis : bienouejvince
+19:41:23 web.1  | false
+19:41:23 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:23] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:23 web.1  | la reponse attendu est sicile
+19:41:23 web.1  | Et tu as dis : quelleestlaplusgrandeledelamediterranee
+19:41:23 web.1  | false
+19:41:23 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:23] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:26 web.1  | la reponse attendu est sicile
+19:41:26 web.1  | Et tu as dis : sicile
+19:41:26 web.1  | true
+19:41:26 web.1  | JE SUIS ICI
+19:41:26 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:26 web.1  | 52.91.184.228 - - [06/Jun/2016 19:41:26] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:26 web.1  | 54.209.231.248 - - [06/Jun/2016 19:41:26] "POST /markov HTTP/1.1" 200 - 0.0003
+19:41:27 web.1  | rand : 16
+19:41:27 web.1  | question : Quel instrument de musique fut inventé à Florence par Bartolomeo Cristofori en 1709 ? 
+19:41:27 web.1  | reponse :  Piano
+19:41:27 web.1  | [LOG] Replying: Quel instrument de musique fut inventé à Florence par Bartolomeo Cristofori en 1709 ? 
+19:41:27 web.1  | la reponse attendu est piano
+19:41:27 web.1  | Et tu as dis : robposeunequestion
+19:41:27 web.1  | false
+19:41:27 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:27] "POST /markov HTTP/1.1" 200 114 0.0028
+19:41:27 web.1  | la reponse attendu est piano
+19:41:27 web.1  | Et tu as dis : quelinstrumentdemusiquefutinventeflorenceparbartolomeocristoforien1709
+19:41:27 web.1  | false
+19:41:27 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:27] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:31 web.1  | la reponse attendu est piano
+19:41:31 web.1  | Et tu as dis : piano
+19:41:31 web.1  | true
+19:41:31 web.1  | JE SUIS ICI
+19:41:31 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:31 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:31] "POST /markov HTTP/1.1" 200 41 0.0010
+19:41:31 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:31] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:32 web.1  | rand : 8
+19:41:32 web.1  | question : Quel est l'extension des fichiers PowerPoint? 
+19:41:32 web.1  | reponse :  ppt
+19:41:32 web.1  | [LOG] Replying: Quel est l'extension des fichiers PowerPoint? 
+19:41:32 web.1  | la reponse attendu est ppt
+19:41:32 web.1  | Et tu as dis : robposeunequestion
+19:41:32 web.1  | false
+19:41:32 web.1  | 54.209.231.248 - - [06/Jun/2016 19:41:32] "POST /markov HTTP/1.1" 200 72 0.0027
+19:41:32 web.1  | la reponse attendu est ppt
+19:41:32 web.1  | Et tu as dis : quelestlextensiondesfichierspowerpoint
+19:41:32 web.1  | false
+19:41:32 web.1  | 54.174.114.150 - - [06/Jun/2016 19:41:32] "POST /markov HTTP/1.1" 200 - 0.0006
+19:41:34 web.1  | la reponse attendu est ppt
+19:41:34 web.1  | Et tu as dis : pptx
+19:41:34 web.1  | false
+19:41:34 web.1  | JE SUIS ICI
+19:41:34 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:34 web.1  | 54.209.231.248 - - [06/Jun/2016 19:41:34] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:35 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:35] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:37 web.1  | [LOG] Storing: questions de merde
+19:41:37 web.1  | 52.90.33.223 - - [06/Jun/2016 19:41:37] "POST /markov HTTP/1.1" 200 - 0.0008
+19:41:38 web.1  | rand : 23
+19:41:38 web.1  | question : Quelle est la capitale du Pérou ? 
+19:41:38 web.1  | reponse :  Lima
+19:41:38 web.1  | [LOG] Replying: Quelle est la capitale du Pérou ? 
+19:41:38 web.1  | la reponse attendu est lima
+19:41:38 web.1  | Et tu as dis : robposeunequestion
+19:41:38 web.1  | false
+19:41:38 web.1  | 52.90.33.223 - - [06/Jun/2016 19:41:38] "POST /markov HTTP/1.1" 200 61 0.0028
+19:41:38 web.1  | la reponse attendu est lima
+19:41:38 web.1  | Et tu as dis : quelleestlacapitaleduperou
+19:41:38 web.1  | false
+19:41:38 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:38] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:41 web.1  | la reponse attendu est lima
+19:41:41 web.1  | Et tu as dis : lima
+19:41:41 web.1  | true
+19:41:41 web.1  | JE SUIS ICI
+19:41:41 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:41 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:41] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:41 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:41] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:42 web.1  | rand : 30
+19:41:42 web.1  | question : Quel dessinateur a créé Gaston Lagaffe ? 
+19:41:42 web.1  | reponse :  Franquin
+19:41:42 web.1  | [LOG] Replying: Quel dessinateur a créé Gaston Lagaffe ? 
+19:41:42 web.1  | la reponse attendu est franquin
+19:41:42 web.1  | Et tu as dis : robposeunequestion
+19:41:42 web.1  | false
+19:41:42 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:42] "POST /markov HTTP/1.1" 200 69 0.0028
+19:41:42 web.1  | la reponse attendu est franquin
+19:41:42 web.1  | Et tu as dis : queldessinateuracreegastonlagaffe
+19:41:42 web.1  | false
+19:41:42 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:42] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:47 web.1  | la reponse attendu est franquin
+19:41:47 web.1  | Et tu as dis : franquin
+19:41:47 web.1  | true
+19:41:47 web.1  | JE SUIS ICI
+19:41:47 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:47 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:47] "POST /markov HTTP/1.1" 200 41 0.0008
+19:41:48 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:48] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:48 web.1  | rand : 32
+19:41:48 web.1  | question : Quel était le slogan de campagne de François Mitterrand en 1981 ? 
+19:41:48 web.1  | reponse :  La force tranquille
+19:41:48 web.1  | [LOG] Replying: Quel était le slogan de campagne de François Mitterrand en 1981 ? 
+19:41:48 web.1  | la reponse attendu est laforcetranquille
+19:41:48 web.1  | Et tu as dis : robposeunequestion
+19:41:48 web.1  | false
+19:41:48 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:48] "POST /markov HTTP/1.1" 200 94 0.0028
+19:41:49 web.1  | la reponse attendu est laforcetranquille
+19:41:49 web.1  | Et tu as dis : queletaitleslogandecampagnedefranoismitterranden1981
+19:41:49 web.1  | false
+19:41:49 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:49] "POST /markov HTTP/1.1" 200 - 0.0005
+19:41:54 web.1  | la reponse attendu est laforcetranquille
+19:41:54 web.1  | Et tu as dis : laforcetranquille
+19:41:54 web.1  | true
+19:41:54 web.1  | JE SUIS ICI
+19:41:54 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:54 web.1  | [LOG] Storing: la force tranquille
+19:41:54 web.1  | 54.209.231.248 - - [06/Jun/2016 19:41:54] "POST /markov HTTP/1.1" 200 41 0.0009
+19:41:55 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:55] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:55 web.1  | rand : 37
+19:41:55 web.1  | question : A quel animal peut on comparer Vince ? 
+19:41:55 web.1  | reponse :  rat
+19:41:55 web.1  | [LOG] Replying: A quel animal peut on comparer Vince ? 
+19:41:55 web.1  | la reponse attendu est rat
+19:41:55 web.1  | Et tu as dis : robposeunequestion
+19:41:55 web.1  | false
+19:41:55 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:55] "POST /markov HTTP/1.1" 200 65 0.0028
+19:41:56 web.1  | la reponse attendu est rat
+19:41:56 web.1  | Et tu as dis : aquelanimalpeutoncomparervince
+19:41:56 web.1  | false
+19:41:56 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:56] "POST /markov HTTP/1.1" 200 - 0.0006
+19:41:57 web.1  | la reponse attendu est rat
+19:41:57 web.1  | Et tu as dis : rat
+19:41:57 web.1  | true
+19:41:57 web.1  | JE SUIS ICI
+19:41:57 web.1  | [LOG] Replying: Bien ouej Vince
+19:41:57 web.1  | 54.165.241.61 - - [06/Jun/2016 19:41:57] "POST /markov HTTP/1.1" 200 41 0.0007
+19:41:58 web.1  | 52.90.146.42 - - [06/Jun/2016 19:41:58] "POST /markov HTTP/1.1" 200 - 0.0004
+19:41:58 web.1  | rand : 14
+19:41:58 web.1  | question : Comment s'appellent les plus fins vaisseaux sanguins ? 
+19:41:58 web.1  | reponse :  capillaires
+19:41:58 web.1  | [LOG] Replying: Comment s'appellent les plus fins vaisseaux sanguins ? 
+19:41:58 web.1  | la reponse attendu est capillaires
+19:41:58 web.1  | Et tu as dis : robposeunequestion
+19:41:58 web.1  | false
+19:41:58 web.1  | 54.89.92.4 - - [06/Jun/2016 19:41:58] "POST /markov HTTP/1.1" 200 81 0.0027
+19:41:58 web.1  | la reponse attendu est capillaires
+19:41:58 web.1  | Et tu as dis : commentsappellentlesplusfinsvaisseauxsanguins
+19:41:58 web.1  | false
+19:41:58 web.1  | 54.174.33.17 - - [06/Jun/2016 19:41:58] "POST /markov HTTP/1.1" 200 - 0.0018
+19:42:02 web.1  | la reponse attendu est capillaires
+19:42:02 web.1  | Et tu as dis : capillaire
+19:42:02 web.1  | false
+19:42:02 web.1  | 52.91.184.228 - - [06/Jun/2016 19:42:02] "POST /markov HTTP/1.1" 200 - 0.0008
+19:42:02 web.1  | rand : 0
+19:42:02 web.1  | question : Quelle est la capitale de la France? 
+19:42:02 web.1  | reponse :  Paris
+19:42:02 web.1  | [LOG] Replying: Quelle est la capitale de la France? 
+19:42:02 web.1  | la reponse attendu est paris
+19:42:02 web.1  | Et tu as dis : robposeunequestion
+19:42:02 web.1  | false
+19:42:02 web.1  | 54.89.92.4 - - [06/Jun/2016 19:42:02] "POST /markov HTTP/1.1" 200 63 0.0028
+19:42:03 web.1  | la reponse attendu est paris
+19:42:03 web.1  | Et tu as dis : quelleestlacapitaledelafrance
+19:42:03 web.1  | false
+19:42:03 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:03] "POST /markov HTTP/1.1" 200 - 0.0005
+19:42:06 web.1  | la reponse attendu est paris
+19:42:06 web.1  | Et tu as dis : paris
+19:42:06 web.1  | true
+19:42:06 web.1  | JE SUIS ICI
+19:42:06 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:06 web.1  | 54.165.241.61 - - [06/Jun/2016 19:42:06] "POST /markov HTTP/1.1" 200 41 0.0008
+19:42:06 web.1  | rand : 37
+19:42:06 web.1  | question : A quel animal peut on comparer Vince ? 
+19:42:06 web.1  | reponse :  rat
+19:42:06 web.1  | [LOG] Replying: A quel animal peut on comparer Vince ? 
+19:42:06 web.1  | la reponse attendu est rat
+19:42:06 web.1  | Et tu as dis : robposeunequestion
+19:42:06 web.1  | false
+19:42:06 web.1  | 54.165.241.61 - - [06/Jun/2016 19:42:06] "POST /markov HTTP/1.1" 200 65 0.0027
+19:42:06 web.1  | la reponse attendu est rat
+19:42:06 web.1  | Et tu as dis : bienouejvince
+19:42:06 web.1  | false
+19:42:06 web.1  | 54.165.241.61 - - [06/Jun/2016 19:42:06] "POST /markov HTTP/1.1" 200 - 0.0005
+19:42:06 web.1  | la reponse attendu est rat
+19:42:06 web.1  | Et tu as dis : aquelanimalpeutoncomparervince
+19:42:06 web.1  | false
+19:42:06 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:06] "POST /markov HTTP/1.1" 200 - 0.0003
+19:42:09 web.1  | la reponse attendu est rat
+19:42:09 web.1  | Et tu as dis : rat
+19:42:09 web.1  | true
+19:42:09 web.1  | JE SUIS ICI
+19:42:09 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:09 web.1  | 52.90.33.223 - - [06/Jun/2016 19:42:09] "POST /markov HTTP/1.1" 200 41 0.0008
+19:42:09 web.1  | rand : 11
+19:42:09 web.1  | question : Comment s'appelle l'unité d'énergie? 
+19:42:09 web.1  | reponse :  joule
+19:42:09 web.1  | [LOG] Replying: Comment s'appelle l'unité d'énergie? 
+19:42:09 web.1  | la reponse attendu est joule
+19:42:09 web.1  | Et tu as dis : robposeunequestion
+19:42:09 web.1  | false
+19:42:09 web.1  | 52.90.33.223 - - [06/Jun/2016 19:42:09] "POST /markov HTTP/1.1" 200 65 0.0028
+19:42:10 web.1  | la reponse attendu est joule
+19:42:10 web.1  | Et tu as dis : bienouejvince
+19:42:10 web.1  | false
+19:42:10 web.1  | 54.89.92.4 - - [06/Jun/2016 19:42:10] "POST /markov HTTP/1.1" 200 - 0.0006
+19:42:10 web.1  | la reponse attendu est joule
+19:42:10 web.1  | Et tu as dis : commentsappellelunitedenergie
+19:42:10 web.1  | false
+19:42:10 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:10] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:14 web.1  | la reponse attendu est joule
+19:42:14 web.1  | Et tu as dis : joules
+19:42:14 web.1  | false
+19:42:14 web.1  | JE SUIS ICI
+19:42:14 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:14 web.1  | 54.89.92.4 - - [06/Jun/2016 19:42:14] "POST /markov HTTP/1.1" 200 41 0.0008
+19:42:14 web.1  | rand : 44
+19:42:14 web.1  | question : Qui est l'inventeur du langage C ? 
+19:42:14 web.1  | reponse :  Dennis Ritchie
+19:42:14 web.1  | [LOG] Replying: Qui est l'inventeur du langage C ? 
+19:42:14 web.1  | la reponse attendu est dennisritchie
+19:42:14 web.1  | Et tu as dis : robposeunequestion
+19:42:14 web.1  | false
+19:42:14 web.1  | 52.91.184.228 - - [06/Jun/2016 19:42:14] "POST /markov HTTP/1.1" 200 61 0.0028
+19:42:15 web.1  | la reponse attendu est dennisritchie
+19:42:15 web.1  | Et tu as dis : bienouejvince
+19:42:15 web.1  | false
+19:42:15 web.1  | 54.174.114.150 - - [06/Jun/2016 19:42:15] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:15 web.1  | la reponse attendu est dennisritchie
+19:42:15 web.1  | Et tu as dis : quiestlinventeurdulangagec
+19:42:15 web.1  | false
+19:42:15 web.1  | 54.165.241.61 - - [06/Jun/2016 19:42:15] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:19 web.1  | la reponse attendu est dennisritchie
+19:42:19 web.1  | Et tu as dis : dennisritchie
+19:42:19 web.1  | true
+19:42:19 web.1  | JE SUIS ICI
+19:42:19 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:19 web.1  | 54.89.92.4 - - [06/Jun/2016 19:42:19] "POST /markov HTTP/1.1" 200 41 0.0009
+19:42:19 web.1  | 52.91.184.228 - - [06/Jun/2016 19:42:19] "POST /markov HTTP/1.1" 200 - 0.0003
+19:42:20 web.1  | rand : 11
+19:42:20 web.1  | question : Comment s'appelle l'unité d'énergie? 
+19:42:20 web.1  | reponse :  joule
+19:42:20 web.1  | [LOG] Replying: Comment s'appelle l'unité d'énergie? 
+19:42:20 web.1  | la reponse attendu est joule
+19:42:20 web.1  | Et tu as dis : robposeunequestion
+19:42:20 web.1  | false
+19:42:20 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:20] "POST /markov HTTP/1.1" 200 65 0.0027
+19:42:20 web.1  | la reponse attendu est joule
+19:42:20 web.1  | Et tu as dis : commentsappellelunitedenergie
+19:42:20 web.1  | false
+19:42:20 web.1  | 52.90.33.223 - - [06/Jun/2016 19:42:20] "POST /markov HTTP/1.1" 200 - 0.0005
+19:42:25 web.1  | la reponse attendu est joule
+19:42:25 web.1  | Et tu as dis : joules
+19:42:25 web.1  | false
+19:42:25 web.1  | JE SUIS ICI
+19:42:25 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:25 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:25] "POST /markov HTTP/1.1" 200 41 0.0007
+19:42:25 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:25] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:25 web.1  | rand : 7
+19:42:25 web.1  | question : Protocole (langage) d'échange de fichiers entre un client et un serveur sur Internet? 
+19:42:25 web.1  | reponse :  FTP
+19:42:25 web.1  | [LOG] Replying: Protocole (langage) d'échange de fichiers entre un client et un serveur sur Internet? 
+19:42:25 web.1  | la reponse attendu est ftp
+19:42:25 web.1  | Et tu as dis : robposeunequestion
+19:42:25 web.1  | false
+19:42:25 web.1  | 52.90.146.42 - - [06/Jun/2016 19:42:25] "POST /markov HTTP/1.1" 200 113 0.0028
+19:42:26 web.1  | la reponse attendu est ftp
+19:42:26 web.1  | Et tu as dis : protocolelangagedechangedefichiersentreunclientetunserveursurinternet
+19:42:26 web.1  | false
+19:42:26 web.1  | 52.90.146.42 - - [06/Jun/2016 19:42:26] "POST /markov HTTP/1.1" 200 - 0.0007
+19:42:29 web.1  | la reponse attendu est ftp
+19:42:29 web.1  | Et tu as dis : ftp
+19:42:29 web.1  | true
+19:42:29 web.1  | JE SUIS ICI
+19:42:29 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:29 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:29] "POST /markov HTTP/1.1" 200 41 0.0008
+19:42:30 web.1  | 54.174.114.150 - - [06/Jun/2016 19:42:30] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:30 web.1  | rand : 16
+19:42:30 web.1  | question : Quel instrument de musique fut inventé à Florence par Bartolomeo Cristofori en 1709 ? 
+19:42:30 web.1  | reponse :  Piano
+19:42:30 web.1  | [LOG] Replying: Quel instrument de musique fut inventé à Florence par Bartolomeo Cristofori en 1709 ? 
+19:42:30 web.1  | la reponse attendu est piano
+19:42:30 web.1  | Et tu as dis : robposeunequestion
+19:42:30 web.1  | false
+19:42:30 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:30] "POST /markov HTTP/1.1" 200 114 0.0029
+19:42:31 web.1  | la reponse attendu est piano
+19:42:31 web.1  | Et tu as dis : quelinstrumentdemusiquefutinventeflorenceparbartolomeocristoforien1709
+19:42:31 web.1  | false
+19:42:31 web.1  | 52.90.146.42 - - [06/Jun/2016 19:42:31] "POST /markov HTTP/1.1" 200 - 0.0005
+19:42:34 web.1  | la reponse attendu est piano
+19:42:34 web.1  | Et tu as dis : piano
+19:42:34 web.1  | true
+19:42:34 web.1  | JE SUIS ICI
+19:42:34 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:34 web.1  | 52.91.184.228 - - [06/Jun/2016 19:42:34] "POST /markov HTTP/1.1" 200 41 0.0008
+19:42:35 web.1  | rand : 22
+19:42:35 web.1  | question : En quelle année s'est déroulée la prise de Constantinople ? 
+19:42:35 web.1  | reponse :  1453
+19:42:35 web.1  | [LOG] Replying: En quelle année s'est déroulée la prise de Constantinople ? 
+19:42:35 web.1  | la reponse attendu est 1453
+19:42:35 web.1  | Et tu as dis : robposeunequestion
+19:42:35 web.1  | false
+19:42:35 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:35] "POST /markov HTTP/1.1" 200 89 0.0028
+19:42:35 web.1  | la reponse attendu est 1453
+19:42:35 web.1  | Et tu as dis : bienouejvince
+19:42:35 web.1  | false
+19:42:35 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:35] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:35 web.1  | la reponse attendu est 1453
+19:42:35 web.1  | Et tu as dis : enquelleanneesestderouleelaprisedeconstantinople
+19:42:35 web.1  | false
+19:42:35 web.1  | 54.174.114.150 - - [06/Jun/2016 19:42:35] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:39 web.1  | la reponse attendu est 1453
+19:42:39 web.1  | Et tu as dis : 1435
+19:42:39 web.1  | false
+19:42:39 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:39] "POST /markov HTTP/1.1" 200 - 0.0008
+19:42:44 web.1  | la reponse attendu est 1453
+19:42:44 web.1  | Et tu as dis : 1437
+19:42:44 web.1  | false
+19:42:44 web.1  | 54.174.33.17 - - [06/Jun/2016 19:42:44] "POST /markov HTTP/1.1" 200 - 0.0009
+19:42:46 web.1  | la reponse attendu est 1453
+19:42:46 web.1  | Et tu as dis : fuck
+19:42:46 web.1  | false
+19:42:46 web.1  | 52.90.146.42 - - [06/Jun/2016 19:42:46] "POST /markov HTTP/1.1" 200 - 0.0008
+19:42:53 web.1  | la reponse attendu est 1453
+19:42:53 web.1  | Et tu as dis : robcetaitquoilareponse
+19:42:53 web.1  | false
+19:42:53 web.1  | [LOG] Replying: La réponse attendue était 1453
+19:42:53 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:53] "POST /markov HTTP/1.1" 200 60 0.0007
+19:42:54 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:54] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:54 web.1  | rand : 47
+19:42:54 web.1  | question : Sur quel port communique le protocole RDP par défaut ? 
+19:42:54 web.1  | reponse :  3389
+19:42:54 web.1  | [LOG] Replying: Sur quel port communique le protocole RDP par défaut ? 
+19:42:54 web.1  | la reponse attendu est 3389
+19:42:54 web.1  | Et tu as dis : robposeunequestion
+19:42:54 web.1  | false
+19:42:54 web.1  | 54.89.92.4 - - [06/Jun/2016 19:42:54] "POST /markov HTTP/1.1" 200 82 0.0028
+19:42:55 web.1  | la reponse attendu est 3389
+19:42:55 web.1  | Et tu as dis : surquelportcommuniqueleprotocolerdppardefaut
+19:42:55 web.1  | false
+19:42:55 web.1  | 52.91.184.228 - - [06/Jun/2016 19:42:55] "POST /markov HTTP/1.1" 200 - 0.0006
+19:42:58 web.1  | la reponse attendu est 3389
+19:42:58 web.1  | Et tu as dis : 3389
+19:42:58 web.1  | true
+19:42:58 web.1  | JE SUIS ICI
+19:42:58 web.1  | [LOG] Replying: Bien ouej Vince
+19:42:58 web.1  | 54.89.92.4 - - [06/Jun/2016 19:42:58] "POST /markov HTTP/1.1" 200 41 0.0010
+19:42:58 web.1  | 54.174.114.150 - - [06/Jun/2016 19:42:58] "POST /markov HTTP/1.1" 200 - 0.0004
+19:42:59 web.1  | rand : 8
+19:42:59 web.1  | question : Quel est l'extension des fichiers PowerPoint? 
+19:42:59 web.1  | reponse :  ppt
+19:42:59 web.1  | [LOG] Replying: Quel est l'extension des fichiers PowerPoint? 
+19:42:59 web.1  | la reponse attendu est ppt
+19:42:59 web.1  | Et tu as dis : robposeunequestion
+19:42:59 web.1  | false
+19:42:59 web.1  | 54.209.231.248 - - [06/Jun/2016 19:42:59] "POST /markov HTTP/1.1" 200 72 0.0029
+19:42:59 web.1  | la reponse attendu est ppt
+19:42:59 web.1  | Et tu as dis : quelestlextensiondesfichierspowerpoint
+19:42:59 web.1  | false
+19:42:59 web.1  | 54.165.241.61 - - [06/Jun/2016 19:42:59] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:01 web.1  | la reponse attendu est ppt
+19:43:01 web.1  | Et tu as dis : pptx
+19:43:01 web.1  | false
+19:43:01 web.1  | JE SUIS ICI
+19:43:01 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:01 web.1  | 52.91.184.228 - - [06/Jun/2016 19:43:01] "POST /markov HTTP/1.1" 200 41 0.0008
+19:43:02 web.1  | 54.165.241.61 - - [06/Jun/2016 19:43:02] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:02 web.1  | rand : 42
+19:43:02 web.1  | question : Comment dit-on firewall en français ? 
+19:43:02 web.1  | reponse :  Mur de feu
+19:43:02 web.1  | [LOG] Replying: Comment dit-on firewall en français ? 
+19:43:02 web.1  | la reponse attendu est murdefeu
+19:43:02 web.1  | Et tu as dis : robposeunequestion
+19:43:02 web.1  | false
+19:43:02 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:02] "POST /markov HTTP/1.1" 200 65 0.0027
+19:43:02 web.1  | la reponse attendu est murdefeu
+19:43:02 web.1  | Et tu as dis : commentditonfirewallenfranais
+19:43:02 web.1  | false
+19:43:02 web.1  | 54.165.241.61 - - [06/Jun/2016 19:43:02] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:05 web.1  | la reponse attendu est murdefeu
+19:43:05 web.1  | Et tu as dis : parefeu
+19:43:05 web.1  | false
+19:43:05 web.1  | 52.90.146.42 - - [06/Jun/2016 19:43:05] "POST /markov HTTP/1.1" 200 - 0.0009
+19:43:06 web.1  | rand : 27
+19:43:06 web.1  | question : Comment se nomme un vers de 12 syllabes ? 
+19:43:06 web.1  | reponse :  Alexandrin 
+19:43:06 web.1  | [LOG] Replying: Comment se nomme un vers de 12 syllabes ? 
+19:43:06 web.1  | la reponse attendu est alexandrin
+19:43:06 web.1  | Et tu as dis : robposeunequestion
+19:43:06 web.1  | false
+19:43:06 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:06] "POST /markov HTTP/1.1" 200 68 0.0029
+19:43:07 web.1  | la reponse attendu est alexandrin
+19:43:07 web.1  | Et tu as dis : commentsenommeunversde12syllabes
+19:43:07 web.1  | false
+19:43:07 web.1  | 52.90.146.42 - - [06/Jun/2016 19:43:07] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:10 web.1  | la reponse attendu est alexandrin
+19:43:10 web.1  | Et tu as dis : alexandrin
+19:43:10 web.1  | true
+19:43:10 web.1  | JE SUIS ICI
+19:43:10 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:10 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:10] "POST /markov HTTP/1.1" 200 41 0.0007
+19:43:10 web.1  | rand : 24
+19:43:10 web.1  | question : Quel est le symbole chimique de l'Arsenic ? 
+19:43:10 web.1  | reponse :  As
+19:43:10 web.1  | [LOG] Replying: Quel est le symbole chimique de l'Arsenic ? 
+19:43:10 web.1  | la reponse attendu est as
+19:43:10 web.1  | Et tu as dis : robposeunequestion
+19:43:10 web.1  | false
+19:43:10 web.1  | 54.165.241.61 - - [06/Jun/2016 19:43:10] "POST /markov HTTP/1.1" 200 70 0.0030
+19:43:10 web.1  | la reponse attendu est as
+19:43:10 web.1  | Et tu as dis : bienouejvince
+19:43:10 web.1  | false
+19:43:10 web.1  | 54.209.231.248 - - [06/Jun/2016 19:43:10] "POST /markov HTTP/1.1" 200 - 0.0019
+19:43:11 web.1  | la reponse attendu est as
+19:43:11 web.1  | Et tu as dis : quelestlesymbolechimiquedelarsenic
+19:43:11 web.1  | false
+19:43:11 web.1  | 52.90.146.42 - - [06/Jun/2016 19:43:11] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:13 web.1  | la reponse attendu est as
+19:43:13 web.1  | Et tu as dis : as
+19:43:13 web.1  | true
+19:43:13 web.1  | JE SUIS ICI
+19:43:13 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:13 web.1  | 52.90.33.223 - - [06/Jun/2016 19:43:13] "POST /markov HTTP/1.1" 200 41 0.0007
+19:43:14 web.1  | 52.91.184.228 - - [06/Jun/2016 19:43:14] "POST /markov HTTP/1.1" 200 - 0.0003
+19:43:15 web.1  | rand : 41
+19:43:15 web.1  | question : Quel est le numéro de Département de Tarbes ? 
+19:43:15 web.1  | reponse :  65
+19:43:15 web.1  | [LOG] Replying: Quel est le numéro de Département de Tarbes ? 
+19:43:15 web.1  | la reponse attendu est 65
+19:43:15 web.1  | Et tu as dis : robposeunequestion
+19:43:15 web.1  | false
+19:43:15 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:15] "POST /markov HTTP/1.1" 200 74 0.0029
+19:43:15 web.1  | la reponse attendu est 65
+19:43:15 web.1  | Et tu as dis : quelestlenumerodedepartementdetarbes
+19:43:15 web.1  | false
+19:43:15 web.1  | 54.89.92.4 - - [06/Jun/2016 19:43:15] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:17 web.1  | la reponse attendu est 65
+19:43:17 web.1  | Et tu as dis : 65
+19:43:17 web.1  | true
+19:43:17 web.1  | JE SUIS ICI
+19:43:17 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:17 web.1  | 52.91.184.228 - - [06/Jun/2016 19:43:17] "POST /markov HTTP/1.1" 200 41 0.0007
+19:43:18 web.1  | 54.174.33.17 - - [06/Jun/2016 19:43:18] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:18 web.1  | rand : 31
+19:43:18 web.1  | question : Un guéridon est une table qui n'a qu'un ... . ? 
+19:43:18 web.1  | reponse :  Pied
+19:43:18 web.1  | [LOG] Replying: Un guéridon est une table qui n'a qu'un ... . ? 
+19:43:18 web.1  | la reponse attendu est pied
+19:43:18 web.1  | Et tu as dis : robposeunequestion
+19:43:18 web.1  | false
+19:43:18 web.1  | 52.91.184.228 - - [06/Jun/2016 19:43:18] "POST /markov HTTP/1.1" 200 75 0.0028
+19:43:19 web.1  | la reponse attendu est pied
+19:43:19 web.1  | Et tu as dis : ungueridonestunetablequinaquun
+19:43:19 web.1  | false
+19:43:19 web.1  | 52.90.146.42 - - [06/Jun/2016 19:43:19] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:24 web.1  | la reponse attendu est pied
+19:43:24 web.1  | Et tu as dis : pied
+19:43:24 web.1  | true
+19:43:24 web.1  | JE SUIS ICI
+19:43:24 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:24 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:24] "POST /markov HTTP/1.1" 200 41 0.0009
+19:43:24 web.1  | 54.89.92.4 - - [06/Jun/2016 19:43:24] "POST /markov HTTP/1.1" 200 - 0.0003
+19:43:25 web.1  | rand : 13
+19:43:25 web.1  | question : Comment les Russes appellent les hommes qu'ils envoient dans l'espace ? 
+19:43:25 web.1  | reponse :  cosmonautes
+19:43:25 web.1  | [LOG] Replying: Comment les Russes appellent les hommes qu'ils envoient dans l'espace ? 
+19:43:25 web.1  | la reponse attendu est cosmonautes
+19:43:25 web.1  | Et tu as dis : robposeunequestion
+19:43:25 web.1  | false
+19:43:25 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:25] "POST /markov HTTP/1.1" 200 98 0.0027
+19:43:26 web.1  | la reponse attendu est cosmonautes
+19:43:26 web.1  | Et tu as dis : commentlesrussesappellentleshommesquilsenvoientdanslespace
+19:43:26 web.1  | false
+19:43:26 web.1  | 52.90.33.223 - - [06/Jun/2016 19:43:26] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:30 web.1  | la reponse attendu est cosmonautes
+19:43:30 web.1  | Et tu as dis : spationautes
+19:43:30 web.1  | false
+19:43:30 web.1  | 54.174.33.17 - - [06/Jun/2016 19:43:30] "POST /markov HTTP/1.1" 200 - 0.0007
+19:43:38 web.1  | la reponse attendu est cosmonautes
+19:43:38 web.1  | Et tu as dis : cosmonautes
+19:43:38 web.1  | true
+19:43:38 web.1  | JE SUIS ICI
+19:43:38 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:38 web.1  | 54.209.231.248 - - [06/Jun/2016 19:43:38] "POST /markov HTTP/1.1" 200 41 0.0008
+19:43:39 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:39] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:40 web.1  | rand : 39
+19:43:40 web.1  | question : Quel est le numéro de département de Dax ? 
+19:43:40 web.1  | reponse :  40
+19:43:40 web.1  | [LOG] Replying: Quel est le numéro de département de Dax ? 
+19:43:40 web.1  | la reponse attendu est 40
+19:43:40 web.1  | Et tu as dis : robposeunequestion
+19:43:40 web.1  | false
+19:43:40 web.1  | 52.91.184.228 - - [06/Jun/2016 19:43:40] "POST /markov HTTP/1.1" 200 71 0.0029
+19:43:41 web.1  | la reponse attendu est 40
+19:43:41 web.1  | Et tu as dis : quelestlenumerodedepartementdedax
+19:43:41 web.1  | false
+19:43:41 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:41] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:44 web.1  | la reponse attendu est 40
+19:43:44 web.1  | Et tu as dis : 40
+19:43:44 web.1  | true
+19:43:44 web.1  | JE SUIS ICI
+19:43:44 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:44 web.1  | 52.91.184.228 - - [06/Jun/2016 19:43:44] "POST /markov HTTP/1.1" 200 41 0.0009
+19:43:44 web.1  | rand : 46
+19:43:44 web.1  | question : Quelle est la plus grande chaîne de montagne du monde ? 
+19:43:44 web.1  | reponse :  Cordillère des Andes
+19:43:44 web.1  | [LOG] Replying: Quelle est la plus grande chaîne de montagne du monde ? 
+19:43:44 web.1  | la reponse attendu est cordilleredesandes
+19:43:44 web.1  | Et tu as dis : robposeunequestion
+19:43:44 web.1  | false
+19:43:44 web.1  | 54.174.33.17 - - [06/Jun/2016 19:43:44] "POST /markov HTTP/1.1" 200 83 0.0028
+19:43:44 web.1  | la reponse attendu est cordilleredesandes
+19:43:44 web.1  | Et tu as dis : bienouejvince
+19:43:44 web.1  | false
+19:43:44 web.1  | 52.90.33.223 - - [06/Jun/2016 19:43:44] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:45 web.1  | la reponse attendu est cordilleredesandes
+19:43:45 web.1  | Et tu as dis : quelleestlaplusgrandechanedemontagnedumonde
+19:43:45 web.1  | false
+19:43:45 web.1  | 52.90.146.42 - - [06/Jun/2016 19:43:45] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:51 web.1  | la reponse attendu est cordilleredesandes
+19:43:51 web.1  | Et tu as dis : cordilleredesandes
+19:43:51 web.1  | true
+19:43:51 web.1  | JE SUIS ICI
+19:43:51 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:51 web.1  | [LOG] Storing: cordillere des andes
+19:43:51 web.1  | 52.90.33.223 - - [06/Jun/2016 19:43:51] "POST /markov HTTP/1.1" 200 41 0.0010
+19:43:52 web.1  | 54.165.241.61 - - [06/Jun/2016 19:43:52] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:52 web.1  | rand : 39
+19:43:52 web.1  | question : Quel est le numéro de département de Dax ? 
+19:43:52 web.1  | reponse :  40
+19:43:52 web.1  | [LOG] Replying: Quel est le numéro de département de Dax ? 
+19:43:52 web.1  | la reponse attendu est 40
+19:43:52 web.1  | Et tu as dis : robposeunequestion
+19:43:52 web.1  | false
+19:43:52 web.1  | 54.174.33.17 - - [06/Jun/2016 19:43:52] "POST /markov HTTP/1.1" 200 71 0.0028
+19:43:53 web.1  | la reponse attendu est 40
+19:43:53 web.1  | Et tu as dis : quelestlenumerodedepartementdedax
+19:43:53 web.1  | false
+19:43:53 web.1  | 54.174.114.150 - - [06/Jun/2016 19:43:53] "POST /markov HTTP/1.1" 200 - 0.0005
+19:43:54 web.1  | la reponse attendu est 40
+19:43:54 web.1  | Et tu as dis : 40
+19:43:54 web.1  | true
+19:43:54 web.1  | JE SUIS ICI
+19:43:54 web.1  | [LOG] Replying: Bien ouej Vince
+19:43:54 web.1  | 52.90.146.42 - - [06/Jun/2016 19:43:54] "POST /markov HTTP/1.1" 200 41 0.0008
+19:43:55 web.1  | 54.89.92.4 - - [06/Jun/2016 19:43:55] "POST /markov HTTP/1.1" 200 - 0.0004
+19:43:55 web.1  | rand : 47
+19:43:55 web.1  | question : Sur quel port communique le protocole RDP par défaut ? 
+19:43:55 web.1  | reponse :  3389
+19:43:55 web.1  | [LOG] Replying: Sur quel port communique le protocole RDP par défaut ? 
+19:43:55 web.1  | la reponse attendu est 3389
+19:43:55 web.1  | Et tu as dis : robposeunequestion
+19:43:55 web.1  | false
+19:43:55 web.1  | 54.165.241.61 - - [06/Jun/2016 19:43:55] "POST /markov HTTP/1.1" 200 82 0.0029
+19:43:56 web.1  | la reponse attendu est 3389
+19:43:56 web.1  | Et tu as dis : surquelportcommuniqueleprotocolerdppardefaut
+19:43:56 web.1  | false
+19:43:56 web.1  | 54.165.241.61 - - [06/Jun/2016 19:43:56] "POST /markov HTTP/1.1" 200 - 0.0005
+19:44:01 web.1  | la reponse attendu est 3389
+19:44:01 web.1  | Et tu as dis : 3389
+19:44:01 web.1  | true
+19:44:01 web.1  | JE SUIS ICI
+19:44:01 web.1  | [LOG] Replying: Bien ouej Vince
+19:44:01 web.1  | 54.89.92.4 - - [06/Jun/2016 19:44:01] "POST /markov HTTP/1.1" 200 41 0.0008
+19:44:01 web.1  | 52.90.146.42 - - [06/Jun/2016 19:44:01] "POST /markov HTTP/1.1" 200 - 0.0005
+19:44:02 web.1  | rand : 38
+19:44:02 web.1  | question : Dans quel boite travail Damien ? 
+19:44:02 web.1  | reponse :  ExpertCom
+19:44:02 web.1  | [LOG] Replying: Dans quel boite travail Damien ? 
+19:44:02 web.1  | la reponse attendu est expertcom
+19:44:02 web.1  | Et tu as dis : robposeunequestion
+19:44:02 web.1  | false
+19:44:02 web.1  | 54.89.92.4 - - [06/Jun/2016 19:44:02] "POST /markov HTTP/1.1" 200 59 0.0027
+19:44:02 web.1  | la reponse attendu est expertcom
+19:44:02 web.1  | Et tu as dis : dansquelboitetravaildamien
+19:44:02 web.1  | false
+19:44:02 web.1  | 52.90.33.223 - - [06/Jun/2016 19:44:02] "POST /markov HTTP/1.1" 200 - 0.0005
+19:44:08 web.1  | la reponse attendu est expertcom
+19:44:08 web.1  | Et tu as dis : expertcom
+19:44:08 web.1  | true
+19:44:08 web.1  | JE SUIS ICI
+19:44:08 web.1  | [LOG] Replying: Bien ouej Vince
+19:44:08 web.1  | 52.91.184.228 - - [06/Jun/2016 19:44:08] "POST /markov HTTP/1.1" 200 41 0.0009
+19:44:09 web.1  | 54.174.33.17 - - [06/Jun/2016 19:44:09] "POST /markov HTTP/1.1" 200 - 0.0006
+19:44:14 web.1  | [LOG] Storing: bon après un essai assez concluant
+19:44:14 web.1  | 54.89.92.4 - - [06/Jun/2016 19:44:14] "POST /markov HTTP/1.1" 200 - 0.0010
+19:44:20 web.1  | [LOG] Storing: le random est vraiment au fond
+19:44:20 web.1  | 54.89.92.4 - - [06/Jun/2016 19:44:20] "POST /markov HTTP/1.1" 200 - 0.0009
+19:44:26 web.1  | 54.165.241.61 - - [06/Jun/2016 19:44:26] "POST /markov HTTP/1.1" 200 - 0.0008
+19:44:32 web.1  | [LOG] Storing: et encore yavait du mieux là
+19:44:32 web.1  | 54.89.92.4 - - [06/Jun/2016 19:44:32] "POST /markov HTTP/1.1" 200 - 0.0009
+19:44:39 web.1  | 54.174.114.150 - - [06/Jun/2016 19:44:39] "POST /markov HTTP/1.1" 200 - 0.0007
+19:44:48 web.1  | [LOG] Storing: constantinople et cosmonautes
+19:44:48 web.1  | 52.90.33.223 - - [06/Jun/2016 19:44:48] "POST /markov HTTP/1.1" 200 - 0.0008
+19:44:53 web.1  | 52.90.33.223 - - [06/Jun/2016 19:44:53] "POST /markov HTTP/1.1" 200 - 0.0007
+19:44:56 web.1  | 54.174.114.150 - - [06/Jun/2016 19:44:56] "POST /markov HTTP/1.1" 200 - 0.0007
+19:45:54 web.1  | [LOG] Storing: so much wow
+19:45:54 web.1  | 54.89.92.4 - - [06/Jun/2016 19:45:54] "POST /markov HTTP/1.1" 200 - 0.0010
+19:46:14 web.1  | rand : 47
+19:46:14 web.1  | question : Sur quel port communique le protocole RDP par défaut ? 
+19:46:14 web.1  | reponse :  3389
+19:46:14 web.1  | [LOG] Replying: Sur quel port communique le protocole RDP par défaut ? 
+19:46:14 web.1  | la reponse attendu est 3389
+19:46:14 web.1  | Et tu as dis : robposeunequestion
+19:46:14 web.1  | false
+19:46:14 web.1  | 54.89.92.4 - - [06/Jun/2016 19:46:14] "POST /markov HTTP/1.1" 200 82 0.0029
+19:46:15 web.1  | la reponse attendu est 3389
+19:46:15 web.1  | Et tu as dis : surquelportcommuniqueleprotocolerdppardefaut
+19:46:15 web.1  | false
+19:46:15 web.1  | 52.90.146.42 - - [06/Jun/2016 19:46:15] "POST /markov HTTP/1.1" 200 - 0.0005
+19:46:17 web.1  | rand : 39
+19:46:17 web.1  | question : Quel est le numéro de département de Dax ? 
+19:46:17 web.1  | reponse :  40
+19:46:17 web.1  | [LOG] Replying: Quel est le numéro de département de Dax ? 
+19:46:17 web.1  | la reponse attendu est 40
+19:46:17 web.1  | Et tu as dis : robposeunequestion
+19:46:17 web.1  | false
+19:46:17 web.1  | 54.165.241.61 - - [06/Jun/2016 19:46:17] "POST /markov HTTP/1.1" 200 71 0.0029
+19:46:17 web.1  | la reponse attendu est 40
+19:46:17 web.1  | Et tu as dis : quelestlenumerodedepartementdedax
+19:46:17 web.1  | false
+19:46:17 web.1  | 52.90.146.42 - - [06/Jun/2016 19:46:17] "POST /markov HTTP/1.1" 200 - 0.0005
+19:46:19 web.1  | rand : 35
+19:46:19 web.1  | question : Quel est le nom de la rue ou habite Damien à Bordeaux ? 
+19:46:19 web.1  | reponse :  Camille Godard
+19:46:19 web.1  | [LOG] Replying: Quel est le nom de la rue ou habite Damien à Bordeaux ? 
+19:46:19 web.1  | la reponse attendu est camillegodard
+19:46:19 web.1  | Et tu as dis : robposeunequestion
+19:46:19 web.1  | false
+19:46:19 web.1  | 52.90.146.42 - - [06/Jun/2016 19:46:19] "POST /markov HTTP/1.1" 200 83 0.0031
+19:46:19 web.1  | la reponse attendu est camillegodard
+19:46:19 web.1  | Et tu as dis : quelestlenomdelarueouhabitedamienbordeaux
+19:46:19 web.1  | false
+19:46:19 web.1  | 54.165.241.61 - - [06/Jun/2016 19:46:19] "POST /markov HTTP/1.1" 200 - 0.0005
+19:46:21 web.1  | rand : 27
+19:46:21 web.1  | question : Comment se nomme un vers de 12 syllabes ? 
+19:46:21 web.1  | reponse :  Alexandrin 
+19:46:21 web.1  | [LOG] Replying: Comment se nomme un vers de 12 syllabes ? 
+19:46:21 web.1  | la reponse attendu est alexandrin
+19:46:21 web.1  | Et tu as dis : robposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestionrobposeunequestion
+19:46:21 web.1  | false
+19:46:21 web.1  | 54.165.241.61 - - [06/Jun/2016 19:46:21] "POST /markov HTTP/1.1" 200 68 0.0029
+19:46:22 web.1  | la reponse attendu est alexandrin
+19:46:22 web.1  | Et tu as dis : commentsenommeunversde12syllabes
+19:46:22 web.1  | false
+19:46:22 web.1  | 54.89.92.4 - - [06/Jun/2016 19:46:22] "POST /markov HTTP/1.1" 200 - 0.0005
+19:46:23 web.1  | rand : 8
+19:46:23 web.1  | question : Quel est l'extension des fichiers PowerPoint? 
+19:46:23 web.1  | reponse :  ppt
+19:46:23 web.1  | [LOG] Replying: Quel est l'extension des fichiers PowerPoint? 
+19:46:23 web.1  | la reponse attendu est ppt
+19:46:23 web.1  | Et tu as dis : robposeunequestion
+19:46:23 web.1  | false
+19:46:23 web.1  | 54.174.33.17 - - [06/Jun/2016 19:46:23] "POST /markov HTTP/1.1" 200 72 0.0029
+19:46:24 web.1  | la reponse attendu est ppt
+19:46:24 web.1  | Et tu as dis : quelestlextensiondesfichierspowerpoint
+19:46:24 web.1  | false
+19:46:24 web.1  | 52.90.146.42 - - [06/Jun/2016 19:46:24] "POST /markov HTTP/1.1" 200 - 0.0004
+19:46:25 web.1  | rand : 29
+19:46:25 web.1  | question : Comment s'appellent les journées très chaudes lors desquelles Sirius et le soleil se lèvent et se couchent en même temps ? 
+19:46:25 web.1  | reponse :  Canicule
+19:46:25 web.1  | [LOG] Replying: Comment s'appellent les journées très chaudes lors desquelles Sirius et le soleil se lèvent et se couchent en même temps ? 
+19:46:25 web.1  | la reponse attendu est canicule
+19:46:25 web.1  | Et tu as dis : robposeunequestion
+19:46:25 web.1  | false
+19:46:25 web.1  | 54.174.114.150 - - [06/Jun/2016 19:46:25] "POST /markov HTTP/1.1" 200 153 0.0031
+19:46:25 web.1  | la reponse attendu est canicule
+19:46:25 web.1  | Et tu as dis : commentsappellentlesjourneestreschaudeslorsdesquellessiriusetlesoleilseleventetsecouchentenmemetemps
+19:46:25 web.1  | false
+19:46:25 web.1  | 54.165.241.61 - - [06/Jun/2016 19:46:25] "POST /markov HTTP/1.1" 200 - 0.0005
+19:46:27 web.1  | rand : 45
+19:46:27 web.1  | question : En quel langage écrit-on "putStr 'Hello world!'" ? 
+19:46:27 web.1  | reponse :  Haskell
+19:46:27 web.1  | [LOG] Replying: En quel langage écrit-on "putStr 'Hello world!'" ? 
+19:46:27 web.1  | la reponse attendu est haskell
+19:46:27 web.1  | Et tu as dis : robposeunequestion
+19:46:27 web.1  | false
+19:46:27 web.1  | 52.91.184.228 - - [06/Jun/2016 19:46:27] "POST /markov HTTP/1.1" 200 80 0.0028
+19:46:28 web.1  | la reponse attendu est haskell
+19:46:28 web.1  | Et tu as dis : enquellangageecritonputstrhelloworld
+19:46:28 web.1  | false
+19:46:28 web.1  | 52.90.33.223 - - [06/Jun/2016 19:46:28] "POST /markov HTTP/1.1" 200 - 0.0005
+19:46:29 web.1  | rand : 19
+19:46:29 web.1  | question : Quelle est la racine carrée de 144 ? 
+19:46:29 web.1  | reponse :  12
+19:46:29 web.1  | [LOG] Replying: Quelle est la racine carrée de 144 ? 
+19:46:29 web.1  | la reponse attendu est 12
+19:46:29 web.1  | Et tu as dis : robposeunequestion
+19:46:29 web.1  | false
+19:46:29 web.1  | 54.89.92.4 - - [06/Jun/2016 19:46:29] "POST /markov HTTP/1.1" 200 64 0.0029
+19:46:30 web.1  | la reponse attendu est 12
+19:46:30 web.1  | Et tu as dis : quelleestlaracinecarreede144
+19:46:30 web.1  | false
+19:46:30 web.1  | 54.174.33.17 - - [06/Jun/2016 19:46:30] "POST /markov HTTP/1.1" 200 - 0.0006
+19:46:31 web.1  | rand : 42
+19:46:31 web.1  | question : Comment dit-on firewall en français ? 
+19:46:31 web.1  | reponse :  Mur de feu
+19:46:31 web.1  | [LOG] Replying: Comment dit-on firewall en français ? 
+19:46:31 web.1  | la reponse attendu est murdefeu
+19:46:31 web.1  | Et tu as dis : robposeunequestion
+19:46:31 web.1  | false
+19:46:31 web.1  | 54.89.92.4 - - [06/Jun/2016 19:46:31] "POST /markov HTTP/1.1" 200 65 0.0029
+19:46:32 web.1  | la reponse attendu est murdefeu
+19:46:32 web.1  | Et tu as dis : commentditonfirewallenfranais
+19:46:32 web.1  | false
+19:46:32 web.1  | 54.165.241.61 - - [06/Jun/2016 19:46:32] "POST /markov HTTP/1.1" 200 - 0.0004
+19:46:33 web.1  | rand : 36
+19:46:33 web.1  | question : Quel est le meilleur site au monde ? 
+19:46:33 web.1  | reponse :  HappyBordeaux
+19:46:33 web.1  | [LOG] Replying: Quel est le meilleur site au monde ? 
+19:46:33 web.1  | la reponse attendu est happybordeaux
+19:46:33 web.1  | Et tu as dis : robposeunequestion
+19:46:33 web.1  | false
+19:46:33 web.1  | 54.89.92.4 - - [06/Jun/2016 19:46:33] "POST /markov HTTP/1.1" 200 63 0.0029
+19:46:34 web.1  | la reponse attendu est happybordeaux
+19:46:34 web.1  | Et tu as dis : quelestlemeilleursiteaumonde
+19:46:34 web.1  | false
+19:46:34 web.1  | 52.91.184.228 - - [06/Jun/2016 19:46:34] "POST /markov HTTP/1.1" 200 - 0.0006
+19:48:35 web.1  | la reponse attendu est happybordeaux
+19:48:35 web.1  | Et tu as dis : commentditonfirewallenfranaisgtmurdefeu
+19:48:35 web.1  | false
+19:48:35 web.1  | [LOG] Storing: comment dit-on firewall en français ? - mur de feu
+19:48:35 web.1  | [LOG] Replying: 08:44:30 web.1 | [log] replying: 1.0
+19:48:35 web.1  | 54.89.92.4 - - [06/Jun/2016 19:48:35] "POST /markov HTTP/1.1" 200 62 0.0018
+19:48:35 web.1  | la reponse attendu est happybordeaux
+19:48:35 web.1  | Et tu as dis : 084430web1logreplying10
+19:48:35 web.1  | false
+19:48:35 web.1  | 54.174.114.150 - - [06/Jun/2016 19:48:35] "POST /markov HTTP/1.1" 200 - 0.0004
+19:48:39 web.1  | la reponse attendu est happybordeaux
+19:48:39 web.1  | Et tu as dis : cestserieuxa
+19:48:39 web.1  | false
+19:48:39 web.1  | [LOG] Storing: c'est sérieux ça?
+19:48:39 web.1  | 54.174.114.150 - - [06/Jun/2016 19:48:39] "POST /markov HTTP/1.1" 200 - 0.0009
+19:48:43 web.1  | la reponse attendu est happybordeaux
+19:48:43 web.1  | Et tu as dis : we
+19:48:43 web.1  | false
+19:48:43 web.1  | 54.174.33.17 - - [06/Jun/2016 19:48:43] "POST /markov HTTP/1.1" 200 - 0.0007
+19:48:46 web.1  | la reponse attendu est happybordeaux
+19:48:46 web.1  | Et tu as dis : ctlacadeau
+19:48:46 web.1  | false
+19:48:46 web.1  | [LOG] Storing: ct la  cadeau
+19:48:46 web.1  | 54.165.241.61 - - [06/Jun/2016 19:48:46] "POST /markov HTTP/1.1" 200 - 0.0009
+19:48:52 web.1  | la reponse attendu est happybordeaux
+19:48:52 web.1  | Et tu as dis : putain
+19:48:52 web.1  | false
+19:48:52 web.1  | 52.91.184.228 - - [06/Jun/2016 19:48:52] "POST /markov HTTP/1.1" 200 - 0.0008
+19:48:54 web.1  | la reponse attendu est happybordeaux
+19:48:54 web.1  | Et tu as dis : scandale
+19:48:54 web.1  | false
+19:48:54 web.1  | 52.91.184.228 - - [06/Jun/2016 19:48:54] "POST /markov HTTP/1.1" 200 - 0.0007
+19:48:59 web.1  | la reponse attendu est happybordeaux
+19:48:59 web.1  | Et tu as dis : tupeuxchangerwllh
+19:48:59 web.1  | false
+19:48:59 web.1  | [LOG] Storing: tu peux changer wllh
+19:48:59 web.1  | 54.165.241.61 - - [06/Jun/2016 19:48:59] "POST /markov HTTP/1.1" 200 - 0.0008
+19:49:04 web.1  | la reponse attendu est happybordeaux
+19:49:04 web.1  | Et tu as dis : nan
+19:49:04 web.1  | false
+19:49:04 web.1  | 54.165.241.61 - - [06/Jun/2016 19:49:04] "POST /markov HTTP/1.1" 200 - 0.0007
+19:49:06 web.1  | la reponse attendu est happybordeaux
+19:49:06 web.1  | Et tu as dis : ballec
+19:49:06 web.1  | false
+19:49:06 web.1  | 52.91.184.228 - - [06/Jun/2016 19:49:06] "POST /markov HTTP/1.1" 200 - 0.0007
+SIGHUP received
+19:57:43 system | sending SIGTERM to all processes
+19:57:43 web.1  | exited with code 0
+06:53:53 web.1  | started with pid 9144
+06:53:54 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+06:53:54 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+06:53:54 web.1  | Maximum connections set to 1024
+06:53:54 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+06:53:56 web.1  | 52.90.146.42 - - [07/Jun/2016 06:53:56] "POST /markov HTTP/1.1" 200 - 0.0037
+06:53:58 web.1  | [LOG] Replying: qu'il faut tout refaire
+06:53:58 web.1  | 54.174.33.17 - - [07/Jun/2016 06:53:58] "POST /markov HTTP/1.1" 200 49 0.0009
+06:53:59 web.1  | 54.89.92.4 - - [07/Jun/2016 06:53:59] "POST /markov HTTP/1.1" 200 - 0.0003
+06:53:59 web.1  | [LOG] Storing: je suis sur le phone
+06:53:59 web.1  | 54.174.114.150 - - [07/Jun/2016 06:53:59] "POST /markov HTTP/1.1" 200 - 0.0006
+06:54:12 web.1  | [LOG] Storing: t'as fais quoi vince ?
+06:54:12 web.1  | 52.90.33.223 - - [07/Jun/2016 06:54:12] "POST /markov HTTP/1.1" 200 - 0.0009
+06:54:13 web.1  | rand : 14
+06:54:13 web.1  | question : Comment s'appellent les plus fins vaisseaux sanguins ? 
+06:54:13 web.1  | reponse :  capillaires
+06:54:13 web.1  | [LOG] Replying: Comment s'appellent les plus fins vaisseaux sanguins ? 
+06:54:13 web.1  | la reponse attendu est capillaires
+06:54:13 web.1  | Et tu as dis : robposeunequestion
+06:54:13 web.1  | false
+06:54:13 web.1  | 54.174.33.17 - - [07/Jun/2016 06:54:13] "POST /markov HTTP/1.1" 200 81 0.0026
+06:54:14 web.1  | la reponse attendu est capillaires
+06:54:14 web.1  | Et tu as dis : commentsappellentlesplusfinsvaisseauxsanguins
+06:54:14 web.1  | false
+06:54:14 web.1  | 52.90.146.42 - - [07/Jun/2016 06:54:14] "POST /markov HTTP/1.1" 200 - 0.0005
+06:54:18 web.1  | la reponse attendu est capillaires
+06:54:18 web.1  | Et tu as dis : bharubyetaitstop
+06:54:18 web.1  | false
+06:54:18 web.1  | [LOG] Storing: bha ruby était stop
+06:54:18 web.1  | 52.90.33.223 - - [07/Jun/2016 06:54:18] "POST /markov HTTP/1.1" 200 - 0.0009
+06:54:25 web.1  | la reponse attendu est capillaires
+06:54:25 web.1  | Et tu as dis : whyjsaispas
+06:54:25 web.1  | false
+06:54:25 web.1  | [LOG] Storing: why jsais pas
+06:54:25 web.1  | 54.165.241.61 - - [07/Jun/2016 06:54:25] "POST /markov HTTP/1.1" 200 - 0.0009
+06:54:27 web.1  | la reponse attendu est capillaires
+06:54:27 web.1  | Et tu as dis : fuck
+06:54:27 web.1  | false
+06:54:27 web.1  | 52.90.33.223 - - [07/Jun/2016 06:54:27] "POST /markov HTTP/1.1" 200 - 0.0007
+06:54:31 web.1  | la reponse attendu est capillaires
+06:54:31 web.1  | Et tu as dis : doityavoiruntrucquileshutdown
+06:54:31 web.1  | false
+06:54:31 web.1  | [LOG] Storing: doit y avoir un truc qui le shutdown
+06:54:31 web.1  | 54.165.241.61 - - [07/Jun/2016 06:54:31] "POST /markov HTTP/1.1" 200 - 0.0010
+06:54:40 web.1  | la reponse attendu est capillaires
+06:54:40 web.1  | Et tu as dis : genreuneerreuravecunexit
+06:54:40 web.1  | false
+06:54:40 web.1  | [LOG] Storing: genre une erreur avec un exit(
+06:54:40 web.1  | 52.90.146.42 - - [07/Jun/2016 06:54:40] "POST /markov HTTP/1.1" 200 - 0.0014
+06:54:42 web.1  | la reponse attendu est capillaires
+06:54:42 web.1  | Et tu as dis : jpensecestuneerreurdanslecode
+06:54:42 web.1  | false
+06:54:42 web.1  | [LOG] Storing: jpense cest une erreur dans le code
+06:54:42 web.1  | 52.90.33.223 - - [07/Jun/2016 06:54:42] "POST /markov HTTP/1.1" 200 - 0.0013
+06:54:46 web.1  | la reponse attendu est capillaires
+06:54:46 web.1  | Et tu as dis : unmomentilcrash
+06:54:46 web.1  | false
+06:54:46 web.1  | [LOG] Storing: un moment il crash
+06:54:46 web.1  | 52.90.146.42 - - [07/Jun/2016 06:54:46] "POST /markov HTTP/1.1" 200 - 0.0010
+06:54:49 web.1  | la reponse attendu est capillaires
+06:54:49 web.1  | Et tu as dis : jeverrais
+06:54:49 web.1  | false
+06:54:49 web.1  | 54.174.33.17 - - [07/Jun/2016 06:54:49] "POST /markov HTTP/1.1" 200 - 0.0009
+06:54:56 web.1  | rand : 41
+06:54:56 web.1  | question : Quel est le numéro de département de Dax ? 
+06:54:56 web.1  | reponse :  40
+06:54:56 web.1  | [LOG] Replying: Quel est le numéro de département de Dax ? 
+06:54:56 web.1  | la reponse attendu est 40
+06:54:56 web.1  | Et tu as dis : robposeunequestion
+06:54:56 web.1  | false
+06:54:56 web.1  | 52.90.146.42 - - [07/Jun/2016 06:54:56] "POST /markov HTTP/1.1" 200 71 0.0030
+06:54:56 web.1  | la reponse attendu est 40
+06:54:56 web.1  | Et tu as dis : quelestlenumerodedepartementdedax
+06:54:56 web.1  | false
+06:54:56 web.1  | 54.174.33.17 - - [07/Jun/2016 06:54:56] "POST /markov HTTP/1.1" 200 - 0.0007
+06:55:03 web.1  | la reponse attendu est 40
+06:55:03 web.1  | Et tu as dis : eeeeeeeeeeeeeeeeeeeeeeeee
+06:55:03 web.1  | false
+06:55:03 web.1  | 52.91.184.228 - - [07/Jun/2016 06:55:03] "POST /markov HTTP/1.1" 200 - 0.0009
+06:55:06 web.1  | la reponse attendu est 40
+06:55:06 web.1  | Et tu as dis : rob
+06:55:06 web.1  | false
+06:55:06 web.1  | [LOG] Replying: dans la question du litre
+06:55:06 web.1  | 54.209.231.248 - - [07/Jun/2016 06:55:06] "POST /markov HTTP/1.1" 200 51 0.0011
+06:55:06 web.1  | la reponse attendu est 40
+06:55:06 web.1  | Et tu as dis : bonetjameliorelerandom
+06:55:06 web.1  | false
+06:55:06 web.1  | [LOG] Storing: bon et j'améliore le random
+06:55:06 web.1  | 52.90.33.223 - - [07/Jun/2016 06:55:06] "POST /markov HTTP/1.1" 200 - 0.0008
+06:55:08 web.1  | la reponse attendu est 40
+06:55:08 web.1  | Et tu as dis : danslaquestiondulitre
+06:55:08 web.1  | false
+06:55:08 web.1  | 54.165.241.61 - - [07/Jun/2016 06:55:08] "POST /markov HTTP/1.1" 200 - 0.0007
+06:55:27 web.1  | la reponse attendu est 40
+06:55:27 web.1  | Et tu as dis : jtauraisbienfileunexempledeseed
+06:55:27 web.1  | false
+06:55:27 web.1  | [LOG] Storing: jt'aurais bien filé un exemple de seed
+06:55:27 web.1  | 54.209.231.248 - - [07/Jun/2016 06:55:27] "POST /markov HTTP/1.1" 200 - 0.0011
+06:55:30 web.1  | la reponse attendu est 40
+06:55:30 web.1  | Et tu as dis : maiscestenc
+06:55:30 web.1  | false
+06:55:30 web.1  | [LOG] Storing: mais c'est en c
+06:55:30 web.1  | 52.91.184.228 - - [07/Jun/2016 06:55:30] "POST /markov HTTP/1.1" 200 - 0.0010
+06:55:30 web.1  | la reponse attendu est 40
+06:55:30 web.1  | Et tu as dis : disappointed
+06:55:30 web.1  | false
+06:55:30 web.1  | 52.90.146.42 - - [07/Jun/2016 06:55:30] "POST /markov HTTP/1.1" 200 - 0.0008
+06:55:38 web.1  | la reponse attendu est 40
+06:55:38 web.1  | Et tu as dis : nonmaisjesaisfairewallah
+06:55:38 web.1  | false
+06:55:38 web.1  | [LOG] Storing: non mais je sais faire wallah
+06:55:38 web.1  | 52.91.184.228 - - [07/Jun/2016 06:55:38] "POST /markov HTTP/1.1" 200 - 0.0008
+06:55:41 web.1  | la reponse attendu est 40
+06:55:41 web.1  | Et tu as dis : tumeprendspourqui
+06:55:41 web.1  | false
+06:55:41 web.1  | [LOG] Storing: tu me prends pour qui
+06:55:41 web.1  | 52.90.146.42 - - [07/Jun/2016 06:55:41] "POST /markov HTTP/1.1" 200 - 0.0010
+06:55:52 web.1  | la reponse attendu est 40
+06:55:52 web.1  | Et tu as dis : javaisoubliequetetaislemeilleur
+06:55:52 web.1  | false
+06:55:52 web.1  | [LOG] Storing: j'avais oublié que t'étais le meilleur
+06:55:52 web.1  | 52.91.184.228 - - [07/Jun/2016 06:55:52] "POST /markov HTTP/1.1" 200 - 0.0011
+06:55:54 web.1  | la reponse attendu est 40
+06:55:54 web.1  | Et tu as dis : sorry
+06:55:54 web.1  | false
+06:55:54 web.1  | 54.89.92.4 - - [07/Jun/2016 06:55:54] "POST /markov HTTP/1.1" 200 - 0.0007
+06:55:57 web.1  | la reponse attendu est 40
+06:55:57 web.1  | Et tu as dis : tumepardonne
+06:55:57 web.1  | false
+06:55:57 web.1  | [LOG] Storing: tu me pardonne ?
+06:55:57 web.1  | 54.209.231.248 - - [07/Jun/2016 06:55:57] "POST /markov HTTP/1.1" 200 - 0.0012
+06:56:02 web.1  | la reponse attendu est 40
+06:56:02 web.1  | Et tu as dis : bof
+06:56:02 web.1  | false
+06:56:02 web.1  | [LOG] Replying: bon d'ou j'ai pété le truc moi
+06:56:02 web.1  | 54.209.231.248 - - [07/Jun/2016 06:56:02] "POST /markov HTTP/1.1" 200 58 0.0017
+06:56:03 web.1  | la reponse attendu est 40
+06:56:03 web.1  | Et tu as dis : bondoujaipeteletrucmoi
+06:56:03 web.1  | false
+06:56:03 web.1  | 52.90.146.42 - - [07/Jun/2016 06:56:03] "POST /markov HTTP/1.1" 200 - 0.0005
+06:56:05 web.1  | la reponse attendu est 40
+06:56:05 web.1  | Et tu as dis : jetepriedebienvouloirmepardonner
+06:56:05 web.1  | false
+06:56:05 web.1  | [LOG] Storing: je te prie de bien vouloir me pardonner
+06:56:05 web.1  | 54.174.114.150 - - [07/Jun/2016 06:56:05] "POST /markov HTTP/1.1" 200 - 0.0010
+06:56:07 web.1  | la reponse attendu est 40
+06:56:07 web.1  | Et tu as dis : jevaispasmefairechier
+06:56:07 web.1  | false
+06:56:07 web.1  | [LOG] Storing: je vais pas me faire chier
+06:56:07 web.1  | 54.174.33.17 - - [07/Jun/2016 06:56:07] "POST /markov HTTP/1.1" 200 - 0.0008
+06:56:16 web.1  | la reponse attendu est 40
+06:56:16 web.1  | Et tu as dis : genreunetimestampmodulo60
+06:56:16 web.1  | false
+06:56:16 web.1  | [LOG] Storing: genre une timestamp modulo 60
+06:56:16 web.1  | 54.209.231.248 - - [07/Jun/2016 06:56:16] "POST /markov HTTP/1.1" 200 - 0.0011
+06:56:19 web.1  | la reponse attendu est 40
+06:56:19 web.1  | Et tu as dis : engros
+06:56:19 web.1  | false
+06:56:19 web.1  | 54.165.241.61 - - [07/Jun/2016 06:56:19] "POST /markov HTTP/1.1" 200 - 0.0008
+06:56:33 web.1  | la reponse attendu est 40
+06:56:33 web.1  | Et tu as dis : bon
+06:56:33 web.1  | false
+06:56:33 web.1  | 54.209.231.248 - - [07/Jun/2016 06:56:33] "POST /markov HTTP/1.1" 200 - 0.0008
+06:56:37 web.1  | la reponse attendu est 40
+06:56:37 web.1  | Et tu as dis : jailourdereudans4mins
+06:56:37 web.1  | false
+06:56:37 web.1  | [LOG] Storing: j'ai lourde réu dans 4 mins
+06:56:37 web.1  | 52.90.146.42 - - [07/Jun/2016 06:56:37] "POST /markov HTTP/1.1" 200 - 0.0011
+06:56:42 web.1  | la reponse attendu est 40
+06:56:42 web.1  | Et tu as dis : bg
+06:56:42 web.1  | false
+06:56:42 web.1  | [LOG] Replying: bas les couilles
+06:56:42 web.1  | 52.91.184.228 - - [07/Jun/2016 06:56:42] "POST /markov HTTP/1.1" 200 42 0.0014
+06:56:42 web.1  | la reponse attendu est 40
+06:56:42 web.1  | Et tu as dis : baslescouilles
+06:56:42 web.1  | false
+06:56:42 web.1  | 52.90.33.223 - - [07/Jun/2016 06:56:42] "POST /markov HTTP/1.1" 200 - 0.0004
+06:56:46 web.1  | la reponse attendu est 40
+06:56:46 web.1  | Et tu as dis : moijeparsdechezmoi
+06:56:46 web.1  | false
+06:56:46 web.1  | [LOG] Storing: moi je pars de chez moi
+06:56:46 web.1  | 54.165.241.61 - - [07/Jun/2016 06:56:46] "POST /markov HTTP/1.1" 200 - 0.0036
+06:56:48 web.1  | la reponse attendu est 40
+06:56:48 web.1  | Et tu as dis : jdoismontrermontravaildes2dernieressemaines
+06:56:48 web.1  | false
+06:56:48 web.1  | [LOG] Storing: jdois montrer mon travail des 2 dernieres semaines
+06:56:48 web.1  | 52.90.146.42 - - [07/Jun/2016 06:56:48] "POST /markov HTTP/1.1" 200 - 0.0009
+06:56:49 web.1  | la reponse attendu est 40
+06:56:49 web.1  | Et tu as dis : smile
+06:56:49 web.1  | false
+06:56:49 web.1  | 52.90.33.223 - - [07/Jun/2016 06:56:49] "POST /markov HTTP/1.1" 200 - 0.0007
+06:56:53 web.1  | la reponse attendu est 40
+06:56:53 web.1  | Et tu as dis : hahahaha
+06:56:53 web.1  | false
+06:56:53 web.1  | 52.90.146.42 - - [07/Jun/2016 06:56:53] "POST /markov HTTP/1.1" 200 - 0.0008
+06:56:57 web.1  | la reponse attendu est 40
+06:56:57 web.1  | Et tu as dis : alorsavousvoyezcestrob
+06:56:57 web.1  | false
+06:56:57 web.1  | [LOG] Replying: je te prie de bien vouloir me pardonner
+06:56:57 web.1  | 52.90.146.42 - - [07/Jun/2016 06:56:57] "POST /markov HTTP/1.1" 200 65 0.0017
+06:56:57 web.1  | la reponse attendu est 40
+06:56:57 web.1  | Et tu as dis : enjoy
+06:56:57 web.1  | false
+06:56:57 web.1  | 52.91.184.228 - - [07/Jun/2016 06:56:57] "POST /markov HTTP/1.1" 200 - 0.0006
+06:56:57 web.1  | la reponse attendu est 40
+06:56:57 web.1  | Et tu as dis : jetepriedebienvouloirmepardonner
+06:56:57 web.1  | false
+06:56:57 web.1  | 54.174.114.150 - - [07/Jun/2016 06:56:57] "POST /markov HTTP/1.1" 200 - 0.0003
+06:57:03 web.1  | la reponse attendu est 40
+06:57:03 web.1  | Et tu as dis : onteordonne
+06:57:03 web.1  | false
+06:57:03 web.1  | [LOG] Storing: on te ordonne
+06:57:03 web.1  | 54.174.33.17 - - [07/Jun/2016 06:57:03] "POST /markov HTTP/1.1" 200 - 0.0008
+06:57:06 web.1  | la reponse attendu est 40
+06:57:06 web.1  | Et tu as dis : pardonne
+06:57:06 web.1  | false
+06:57:06 web.1  | 52.90.146.42 - - [07/Jun/2016 06:57:06] "POST /markov HTTP/1.1" 200 - 0.0007
+06:57:15 web.1  | la reponse attendu est 40
+06:57:15 web.1  | Et tu as dis : robilestgontilvousvoulezluiparler
+06:57:15 web.1  | false
+06:57:15 web.1  | [LOG] Replying: comme un manouche
+06:57:15 web.1  | 54.89.92.4 - - [07/Jun/2016 06:57:15] "POST /markov HTTP/1.1" 200 43 0.0011
+06:57:17 web.1  | la reponse attendu est 40
+06:57:17 web.1  | Et tu as dis : commeunmanouche
+06:57:17 web.1  | false
+06:57:17 web.1  | 54.165.241.61 - - [07/Jun/2016 06:57:17] "POST /markov HTTP/1.1" 200 - 0.0004
+06:57:24 web.1  | la reponse attendu est 40
+06:57:24 web.1  | Et tu as dis : ditbonjourrob
+06:57:24 web.1  | false
+06:57:24 web.1  | [LOG] Replying: astronomes ca existe pas si?
+06:57:24 web.1  | 52.90.33.223 - - [07/Jun/2016 06:57:24] "POST /markov HTTP/1.1" 200 54 0.0015
+06:57:25 web.1  | la reponse attendu est 40
+06:57:25 web.1  | Et tu as dis : astronomescaexistepassi
+06:57:25 web.1  | false
+06:57:25 web.1  | 54.174.114.150 - - [07/Jun/2016 06:57:25] "POST /markov HTTP/1.1" 200 - 0.0004
+06:57:37 web.1  | la reponse attendu est 40
+06:57:37 web.1  | Et tu as dis : simaisrienavoiraveclesastronautes
+06:57:37 web.1  | false
+06:57:37 web.1  | [LOG] Storing: si, mais rien a voir avec les astronautes
+06:57:37 web.1  | 52.91.184.228 - - [07/Jun/2016 06:57:37] "POST /markov HTTP/1.1" 200 - 0.0011
+06:57:41 web.1  | la reponse attendu est 40
+06:57:41 web.1  | Et tu as dis : ahouietaujourdhuijefeedrobavecnosanciennesdiscussion
+06:57:41 web.1  | false
+06:57:41 web.1  | [LOG] Replying: bon j'y arrive pas
+06:57:41 web.1  | 54.174.33.17 - - [07/Jun/2016 06:57:41] "POST /markov HTTP/1.1" 200 44 0.0013
+06:57:41 web.1  | la reponse attendu est 40
+06:57:41 web.1  | Et tu as dis : bonjyarrivepas
+06:57:41 web.1  | false
+06:57:41 web.1  | 54.174.114.150 - - [07/Jun/2016 06:57:41] "POST /markov HTTP/1.1" 200 - 0.0004
+06:57:45 web.1  | la reponse attendu est 40
+06:57:45 web.1  | Et tu as dis : jetaisconhierrob
+06:57:45 web.1  | false
+06:57:45 web.1  | [LOG] Replying: un loulou en plein effort
+06:57:45 web.1  | 54.174.114.150 - - [07/Jun/2016 06:57:45] "POST /markov HTTP/1.1" 200 51 0.0014
+06:57:45 web.1  | la reponse attendu est 40
+06:57:45 web.1  | Et tu as dis : unloulouenpleineffort
+06:57:45 web.1  | false
+06:57:45 web.1  | 52.90.33.223 - - [07/Jun/2016 06:57:45] "POST /markov HTTP/1.1" 200 - 0.0005
+06:57:54 web.1  | la reponse attendu est 40
+06:57:54 web.1  | Et tu as dis : pcquedepuislerebootilestminable
+06:57:54 web.1  | false
+06:57:54 web.1  | [LOG] Storing: pcque depuis le reboot il est minable
+06:57:54 web.1  | 52.90.33.223 - - [07/Jun/2016 06:57:54] "POST /markov HTTP/1.1" 200 - 0.0010
+06:59:20 web.1  | la reponse attendu est 40
+06:59:20 web.1  | Et tu as dis : we
+06:59:20 web.1  | false
+06:59:20 web.1  | 54.89.92.4 - - [07/Jun/2016 06:59:20] "POST /markov HTTP/1.1" 200 - 0.0009
+06:59:25 web.1  | la reponse attendu est 40
+06:59:25 web.1  | Et tu as dis : robpelleachiasse
+06:59:25 web.1  | false
+06:59:25 web.1  | [LOG] Replying: on croirait pas comme ça et tout
+06:59:25 web.1  | 54.174.33.17 - - [07/Jun/2016 06:59:25] "POST /markov HTTP/1.1" 200 59 0.0016
+06:59:25 web.1  | la reponse attendu est 40
+06:59:25 web.1  | Et tu as dis : oncroiraitpascommeaettout
+06:59:25 web.1  | false
+06:59:25 web.1  | 54.165.241.61 - - [07/Jun/2016 06:59:25] "POST /markov HTTP/1.1" 200 - 0.0005
+06:59:31 web.1  | la reponse attendu est 40
+06:59:31 web.1  | Et tu as dis : sisijtejure
+06:59:31 web.1  | false
+06:59:31 web.1  | [LOG] Storing: sisi, jte jure
+06:59:31 web.1  | 54.89.92.4 - - [07/Jun/2016 06:59:31] "POST /markov HTTP/1.1" 200 - 0.0009
+07:00:02 web.1  | rand : 43
+07:00:02 web.1  | question : Quel est le numéro de Département de Tarbes ? 
+07:00:02 web.1  | reponse :  65
+07:00:02 web.1  | [LOG] Replying: Quel est le numéro de Département de Tarbes ? 
+07:00:02 web.1  | la reponse attendu est 65
+07:00:02 web.1  | Et tu as dis : robposeunequestionquetasjamaispose
+07:00:02 web.1  | false
+07:00:02 web.1  | 54.89.92.4 - - [07/Jun/2016 07:00:02] "POST /markov HTTP/1.1" 200 74 0.0028
+07:00:03 web.1  | la reponse attendu est 65
+07:00:03 web.1  | Et tu as dis : quelestlenumerodedepartementdetarbes
+07:00:03 web.1  | false
+07:00:03 web.1  | 52.90.33.223 - - [07/Jun/2016 07:00:03] "POST /markov HTTP/1.1" 200 - 0.0005
+07:00:07 web.1  | la reponse attendu est 65
+07:00:07 web.1  | Et tu as dis : oktamer
+07:00:07 web.1  | false
+07:00:07 web.1  | 54.89.92.4 - - [07/Jun/2016 07:00:07] "POST /markov HTTP/1.1" 200 - 0.0009
+07:02:49 web.1  | la reponse attendu est 65
+07:02:49 web.1  | Et tu as dis : etu0e4h1zk8ilvabien
+07:02:49 web.1  | false
+07:02:49 web.1  | [LOG] Storing: et benjamin il va bien?
+07:02:49 web.1  | [LOG] Replying: le joule ?
+07:02:49 web.1  | 54.209.231.248 - - [07/Jun/2016 07:02:49] "POST /markov HTTP/1.1" 200 36 0.8515
+07:02:51 web.1  | la reponse attendu est 65
+07:02:51 web.1  | Et tu as dis : lejoule
+07:02:51 web.1  | false
+07:02:51 web.1  | 54.209.231.248 - - [07/Jun/2016 07:02:51] "POST /markov HTTP/1.1" 200 - 0.0005
+07:05:42 web.1  | la reponse attendu est 65
+07:05:42 web.1  | Et tu as dis : fautaussiquejeluidisedepasmettreenbasequandcestdesreponsesauxquizz
+07:05:42 web.1  | false
+07:05:42 web.1  | [LOG] Storing: faut aussi que je lui dise de pas mettre en base quand cest des réponses aux quizz
+07:05:42 web.1  | 54.165.241.61 - - [07/Jun/2016 07:05:42] "POST /markov HTTP/1.1" 200 - 0.0013
+07:05:56 web.1  | la reponse attendu est 65
+07:05:56 web.1  | Et tu as dis : taintudemandestropdeboulotrob
+07:05:56 web.1  | false
+07:05:56 web.1  | [LOG] Replying: déjà il parle plus l'enculé
+07:05:56 web.1  | 54.174.114.150 - - [07/Jun/2016 07:05:56] "POST /markov HTTP/1.1" 200 56 0.0017
+07:05:56 web.1  | la reponse attendu est 65
+07:05:56 web.1  | Et tu as dis : dejilparlepluslencule
+07:05:56 web.1  | false
+07:05:56 web.1  | 54.165.241.61 - - [07/Jun/2016 07:05:56] "POST /markov HTTP/1.1" 200 - 0.0005
+07:12:37 web.1  | la reponse attendu est 65
+07:12:37 web.1  | Et tu as dis : allezrobonvafairedestests
+07:12:37 web.1  | false
+07:12:37 web.1  | [LOG] Replying: ouais wallah prend des trucs d'aujourd'hui
+07:12:37 web.1  | 54.174.33.17 - - [07/Jun/2016 07:12:37] "POST /markov HTTP/1.1" 200 68 0.0020
+07:12:37 web.1  | la reponse attendu est 65
+07:12:37 web.1  | Et tu as dis : ouaiswallahprenddestrucsdaujourdhui
+07:12:37 web.1  | false
+07:12:37 web.1  | 52.90.146.42 - - [07/Jun/2016 07:12:37] "POST /markov HTTP/1.1" 200 - 0.0006
+07:12:38 web.1  | la reponse attendu est 65
+07:12:38 web.1  | Et tu as dis : adieu
+07:12:38 web.1  | false
+07:12:38 web.1  | 52.90.146.42 - - [07/Jun/2016 07:12:38] "POST /markov HTTP/1.1" 200 - 0.0008
+07:12:48 web.1  | la reponse attendu est 65
+07:12:48 web.1  | Et tu as dis : salutrob
+07:12:48 web.1  | false
+07:12:48 web.1  | [LOG] Replying: ouais bon la base à enxore etait reset vince ??
+07:12:48 web.1  | 54.174.114.150 - - [07/Jun/2016 07:12:48] "POST /markov HTTP/1.1" 200 74 0.0114
+07:12:49 web.1  | la reponse attendu est 65
+07:12:49 web.1  | Et tu as dis : ouaisbonlabaseenxoreetaitresetvince
+07:12:49 web.1  | false
+07:12:49 web.1  | 52.91.184.228 - - [07/Jun/2016 07:12:49] "POST /markov HTTP/1.1" 200 - 0.0005
+07:12:54 web.1  | rand : 1
+07:12:54 web.1  | question : Combien fois 325*2? 
+07:12:54 web.1  | reponse :  650
+07:12:54 web.1  | [LOG] Replying: Combien fois 325*2? 
+07:12:54 web.1  | la reponse attendu est 650
+07:12:54 web.1  | Et tu as dis : poseunequestion
+07:12:54 web.1  | false
+07:12:54 web.1  | [LOG] Storing: pose une question
+07:12:54 web.1  | 54.174.114.150 - - [07/Jun/2016 07:12:54] "POST /markov HTTP/1.1" 200 46 0.0032
+07:12:54 web.1  | la reponse attendu est 650
+07:12:54 web.1  | Et tu as dis : combienfois3252
+07:12:54 web.1  | false
+07:12:55 web.1  | 54.174.33.17 - - [07/Jun/2016 07:12:55] "POST /markov HTTP/1.1" 200 - 0.0006
+07:12:58 web.1  | la reponse attendu est 650
+07:12:58 web.1  | Et tu as dis : jsaispas
+07:12:58 web.1  | false
+07:12:58 web.1  | 52.91.184.228 - - [07/Jun/2016 07:12:58] "POST /markov HTTP/1.1" 200 - 0.0008
+07:13:02 web.1  | la reponse attendu est 650
+07:13:02 web.1  | Et tu as dis : tusaistoi
+07:13:02 web.1  | false
+07:13:02 web.1  | [LOG] Storing: tu sais toi ?
+07:13:02 web.1  | 52.90.146.42 - - [07/Jun/2016 07:13:02] "POST /markov HTTP/1.1" 200 - 0.0011
+07:13:03 web.1  | la reponse attendu est 650
+07:13:03 web.1  | Et tu as dis : robbb
+07:13:03 web.1  | false
+07:13:03 web.1  | [LOG] Replying: en vrai, y'a pas des îles de ouf vers la grece ?
+07:13:03 web.1  | 52.91.184.228 - - [07/Jun/2016 07:13:03] "POST /markov HTTP/1.1" 200 75 0.0016
+07:13:04 web.1  | la reponse attendu est 650
+07:13:04 web.1  | Et tu as dis : envraiyapasdeslesdeoufverslagrece
+07:13:04 web.1  | false
+07:13:04 web.1  | 54.89.92.4 - - [07/Jun/2016 07:13:04] "POST /markov HTTP/1.1" 200 - 0.0006
+07:13:14 web.1  | la reponse attendu est 650
+07:13:14 web.1  | Et tu as dis : euh650
+07:13:14 web.1  | false
+07:13:14 web.1  | JE SUIS ICI
+07:13:14 web.1  | [LOG] Replying: Bien ouej Jules
+07:13:14 web.1  | 54.209.231.248 - - [07/Jun/2016 07:13:14] "POST /markov HTTP/1.1" 200 41 0.0009
+07:13:14 web.1  | 52.90.146.42 - - [07/Jun/2016 07:13:14] "POST /markov HTTP/1.1" 200 - 0.0004
+07:15:40 web.1  | started with pid 9405
+07:15:41 web.1  | == Sinatra/1.4.5 has taken the stage on 5000 for production with backup from Thin
+07:15:41 web.1  | Thin web server (v1.6.2 codename Doc Brown)
+07:15:41 web.1  | Maximum connections set to 1024
+07:15:41 web.1  | Listening on 0.0.0.0:5000, CTRL+C to stop
+07:15:41 web.1  | Stopping ...
+07:15:41 web.1  | == Sinatra has ended his set (crowd applauds)
+07:15:41 web.1  | /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_tcp_server': no acceptor (port is in use or requires root privileges) (RuntimeError)
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:526:in `start_server'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/tcp_server.rb:16:in `connect'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:63:in `block in start'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `call'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run_machine'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/eventmachine-1.0.4/lib/eventmachine.rb:187:in `run'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1497:in `start_server'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/base.rb:1435:in `run!'
+07:15:41 web.1  | 	from /usr/local/rvm/gems/ruby-2.2.3/gems/sinatra-1.4.5/lib/sinatra/main.rb:25:in `block in <module:Sinatra>'
+07:15:41 web.1  | exited with code 1
+07:15:41 system | sending SIGTERM to all processes
+SIGTERM received
+07:16:07 system | sending SIGTERM to all processes
+07:16:07 web.1  | exited with code 0

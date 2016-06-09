@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+ruby "2.2.3"
+
+gem "sinatra"
+gem "thin"
+gem "redis"
+gem "httparty"
+gem "dotenv"
+gem "oauth"
+gem "foreman"
+gem "weather-api"

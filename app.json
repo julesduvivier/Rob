@@ -1,0 +1,53 @@
+{
+  "name": "Snarkov",
+  "description": "A Sinatra-based Markov bot for Slack.",
+  "keywords": [
+    "slack",
+    "bot",
+    "markov"
+  ],
+  "repository": "https://github.com/gesteves/snarkov",
+  "addons": [
+    "rediscloud"
+  ],
+  "success_url": "https://github.com/gesteves/snarkov#usage",
+  "env": {
+    "OUTGOING_WEBHOOK_TOKEN": {
+      "description": "The token of the Slack outgoing webhook you'll use for this. Set it up at https://slack.com/services/new/outgoing-webhook. Make sure you don't set up a keyword. You'll have to point it to this app's URL once it's deployed.",
+      "required": true
+    },
+    "API_TOKEN": {
+      "description": "The Slack API key. Get it at https://api.slack.com/web",
+      "required": true
+    },
+    "RESPONSE_CHANCE": {
+      "description": "The probability that the bot will reply whenever someone speaks in the Slack channel.",
+      "required": true,
+      "value": "0.01"
+    },
+    "MAX_WORDS": {
+      "description": "The maximum length of the bot's replies.",
+      "required": true,
+      "value": "100"
+    },
+    "REPLY_REGEX": {
+      "description": "The bot will reply to messages matching this regex",
+      "required": true,
+      "value": "(sn|m)arkov"
+    },
+    "IGNORE_REGEX": {
+      "description": "The bot will not store messages matching this regex",
+      "required": true,
+      "value": "(sn|m)arkov"
+    },
+    "MUTE_REGEX": {
+      "description": "The bot will mute if this message is received",
+      "required": true,
+      "value": "^(sn|m)arkov mute"
+    },
+    "SLACK_USER": {
+      "description": "If you want to only store messages from a certain user, put their Slack username here. If blank, it stores everyone's messages.",
+      "required": false
+    }
+  }
+}
