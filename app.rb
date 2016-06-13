@@ -43,10 +43,11 @@ $question = ''
 $reponse = ''
 $nombre = 0
 $try = 0
+$deck_id = nil
 $isGame = false
 #$ap = "WIN"
 #$a = "eval"
-profil = {
+$profil = {
   'U0BJBFH5X' => 'Adrien',
   'U0E4H1ZK8' => 'Benji',
   'U0B1QHR7G' => 'Damien',
@@ -56,6 +57,18 @@ profil = {
   'U0B1MTGLU' => 'Vince',
   'U0E760J3G' => 'Tibo',
   'U0G7H58NL' => 'Yoo'
+}
+
+$lastFap = {
+ 'U0BJBFH5X' => Time.new(2002),
+  'U0E4H1ZK8' => Time.new(2002),
+  'U0B1QHR7G' => Time.new(2002),
+  'U0B1S7SGG' => Time.new(2002),
+  'U0C8F961W' => Time.new(2002),
+  'U0BQC7PMJ' => Time.new(2002),
+  'U0B1MTGLU' => Time.new(2002),
+  'U0E760J3G' => Time.new(2002),
+  'U0G7H58NL' => Time.new(2002)
 }
 
 $scores = {
@@ -140,6 +153,28 @@ post "/markov" do
     end
 
 
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob bataille init")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = bataille_init()
+      response = json_response_for_slack(reply)
+    end
+
+
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob bataille joue")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = bataille_play(params[:user_id])
+      response = json_response_for_slack(reply)
+    end
+
+
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
        !params[:text].nil? &&
@@ -150,6 +185,23 @@ post "/markov" do
     end
 
 
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob fapfap")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = fap(params[:user_id])
+      response = json_response_for_slack(reply)
+    end
+
+ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob spoil")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = spoil(params[:text])
+      response = json_response_for_slack(reply)
+    end
 
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
@@ -249,7 +301,7 @@ post "/markov" do
      usert = params[:user_id]
     # puts "user = " + usert
       # winner = profil[':'+usert]
-       winner =  profil[usert]
+       winner =  $profil[usert]
        $scores[winner]+=1
        reply = "Bien ouej " + winner + " (" + $scores[winner].to_s + " pts)\nLa réponse était " + $reponse + "\n"
        ifWinText = ifWin(winner)
@@ -446,10 +498,132 @@ end
 end
 
 
-def _1(t)
-eval(t)
+def spoil(text)
+x = text.partition('spoil').last
+name = open('http://spoilme.io/api/works?lang=fr&terms=' + x.to_s).read
+name = JSON.parse(name)
+id = name[0]['spoiler_ids']
+len = id.length
+rand =  SecureRandom.random_number(len)
+spoiler = open('http://spoilme.io/api/spoilers/' + id[rand].to_s).read
+spoiler = JSON.parse(spoiler)
+"Dans " + spoiler["work_name"] + ', ' + spoiler["value"] 
 end
 
+def time_diff(start, finish)
+   (finish - start) 
+end
+
+def bataille_init()
+deck = open('http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1').read
+deck = JSON.parse(deck)
+$deck_id = deck["deck_id"]
+draw = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/draw/?count=52').read
+draw = JSON.parse(draw)
+(0..50).step(2) do |n|
+puts n
+pile1 = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Rob/add/?cards=' + draw["cards"][n]["code"])
+pile2 = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Player/add/?cards=' + draw["cards"][n+1]["code"])
+end
+puts $deck_id
+"c'est bon on peut jouer"
+end
+
+def bataille_play(user)
+if $deck_id != nil
+cardRob = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Rob/draw/').read
+cardPlayer =  open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Player/draw/').read
+cardRob = JSON.parse(cardRob)
+cardPlayer = JSON.parse(cardPlayer)
+valR = cardRob["cards"][0]["value"]
+valP =  cardPlayer["cards"][0]["value"]
+codeR = cardRob["cards"][0]["code"]
+codeP = cardPlayer["cards"][0]["code"]
+cardToInt(valR)
+cardToInt(valP)
+string = "Rob : " + cardRob["cards"][0]["value"] + " / " + $profil[user] + " : " + cardPlayer["cards"][0]["value"] 
+
+if valR > valP
+string = string + "\n Rob l'emporte!"
+
+add = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Rob/add/?cards=' + codeR + ',' + codeP ).read
+add = JSON.parse(add)
+puts  add
+string = string + " (" + add["piles"]["Rob"]["remaining"].to_s + "/" + add["piles"]["Player"]["remaining"].to_s + ")"
+ if  add["piles"]["Rob"]["remaining"] == 0 
+     string = $profil[user] + " win !!! :trophy: "
+     $deck_id = nil
+  end
+  if  add["piles"]["Player"]["remaining"] == 0
+     string = "Rob win !!! :trophy: "
+     $deck_id = nil
+  end
+elsif valR < valP
+string = string + "\n " + $profil[user] + " l'emporte!"
+
+add = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Player/add/?cards=' + codeR + ',' + codeP).read
+add = JSON.parse(add)
+puts  add
+string = string + " (" + add["piles"]["Rob"]["remaining"].to_s + "/" + add["piles"]["Player"]["remaining"].to_s + ")"
+ if  add["piles"]["Rob"]["remaining"] == 0
+     string = $profil[user] + " win !!! :trophy: "
+     $deck_id = nil
+     end
+  if  add["piles"]["Player"]["remaining"] == 0
+     string = "Rob win !!! :trophy: "
+     $deck_id = nil
+     end
+else
+string = string + "\n Math nul"
+end
+else
+string = "Init une partie fdp"
+end
+return string
+
+end
+
+def cardToInt(card)
+if card == "0"
+val = 10
+elsif card == "JACK"
+val = 11
+elsif card == "QUEEN"
+val = 12
+elsif card == "KING"
+val = 13
+elsif card == "ACE"
+val = 14
+else
+val = card.to_i
+end
+return val
+end
+
+def fap(user)
+now = Time.now
+diff = time_diff($lastFap[user],now)
+puts diff
+if diff>600	
+ $lastFap[user]=Time.now
+  if user == 'U0E760J3G'
+  x = SecureRandom.random_number(1000)
+  name = open('http://api.porn.com/actors/find.json?order=rating&limit=1&sex=trans&page=' + x.to_s).read
+  name = JSON.parse(name)
+  elsif user == 'U0BQC7PMJ'
+  x = SecureRandom.random_number(1000)
+  name = open('http://api.porn.com/actors/find.json?limit=1&order=rating&sex=male&page=' + x.to_s).read
+  name = JSON.parse(name)
+  else
+  x = SecureRandom.random_number(2000)
+  name = open('http://api.porn.com/actors/find.json?order=rating&limit=1&page=' + x.to_s).read
+  name = JSON.parse(name)
+  end
+"Ok mofos, tu dois te fapper sur : " + "*" + name["result"][0]["name"] + "*\n\n" + name["result"][0]["thumb"]
+else
+"T'as déjà fini de te fapper sur la dernière sale précosse?"
+end
+end
 def game(text)
 nbP = (text.partition(':').last).to_i
 $try +=1
@@ -654,8 +828,15 @@ def man()
 " *GIF* \n"\
 ":point_right: Pour demander à Rob un gif de ouf :\n"\
 "_Gif! [whatyouwant]_\n"\
-"* Si Rob ne trouve pas de gif correspondant à votre recherche, vous aurez un gif de boobs parceque c'est toujours sympa*"
-
+"* Si Rob ne trouve pas de gif correspondant à votre recherche, vous aurez un gif de boobs parceque c'est toujours sympa*\n\n"\
+" *FAP TIME :sweat_drops:* \n"\
+":point_right: En manque d'inspiration pour le fap time ? :\n"\
+"_Rob fapfap_\n\n"\
+" *BATAILLE * \n"\
+":point_right: Pour intialiser une partie :\n"\
+"_Rob bataille init_\n"\
+":point_right: Pour tirer une carte :\n"\
+"_Rob bataille joue_\n"
 end
 
 
