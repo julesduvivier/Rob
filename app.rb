@@ -1,3 +1,4 @@
+
 # encoding: utf-8
 require "sinatra"
 require "json"
@@ -25,7 +26,7 @@ configure do
   set :mute_regex, Regexp.new(ENV["MUTE_REGEX"], "i")
   # Unmute if this message is received
   set :unmute_regex, Regexp.new(ENV["UNMUTE_REGEX"], "i")
-  
+
 #  set :forme, Regexp.new(ENV["FORME"],"i")
   # Set up redis
   case settings.environment
@@ -45,8 +46,7 @@ $nombre = 0
 $try = 0
 $deck_id = nil
 $isGame = false
-#$ap = "WIN"
-#$a = "eval"
+
 $profil = {
   'U0BJBFH5X' => 'Adrien',
   'U0E4H1ZK8' => 'Benji',
@@ -133,7 +133,7 @@ post "/markov" do
       reply = unshut()
       response = json_response_for_slack(reply)
    end
- 
+
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
        !params[:text].nil? &&
@@ -143,36 +143,7 @@ post "/markov" do
       response = json_response_for_slack(reply)
     end
 
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(R|r)ob blague de merde")
-      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
-      reply = joke()
-      response = json_response_for_slack(reply)
-    end
 
-
-
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(R|r)ob bataille init")
-      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
-      reply = bataille_init()
-      response = json_response_for_slack(reply)
-    end
-
-
-
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(R|r)ob bataille joue")
-      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
-      reply = bataille_play(params[:user_id])
-      response = json_response_for_slack(reply)
-    end
 
 
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
@@ -194,14 +165,6 @@ post "/markov" do
       response = json_response_for_slack(reply)
     end
 
- if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(R|r)ob spoil")
-      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
-      reply = spoil(params[:text])
-      response = json_response_for_slack(reply)
-    end
 
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
@@ -232,7 +195,7 @@ post "/markov" do
       #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+/).first.to$
       shut_up(5)
       reply = "Ok je reviens dans 5 minutes :coffee: "
-      
+
       response = json_response_for_slack(reply)
     end
 
@@ -276,10 +239,10 @@ post "/markov" do
        reply = calc(params[:text])
        response = json_response_for_slack(reply)
     end
-  
+
   if $isQuizz == true
   s = $reponse.delete(' ').downcase()
-  s.delete!("\n") 
+  s.delete!("\n")
   s.gsub!(/[éèêë]/,'e')
   s.gsub!(/[^0-9A-Za-z]/, '')
   puts "la reponse attendu est " + s
@@ -305,7 +268,7 @@ post "/markov" do
        $scores[winner]+=1
        reply = "Bien ouej " + winner + " (" + $scores[winner].to_s + " pts)\nLa réponse était " + $reponse + "\n"
        ifWinText = ifWin(winner)
-       reply = reply + ifWinText.to_s 
+       reply = reply + ifWinText.to_s
        response = json_response_for_slack(reply)
        $reponse = ""
        $isQuizz = false
@@ -366,14 +329,6 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
     end
 
 
-   # puts  params[:text].nil?
-   # puts  params[:text].match(settings.ignore_regex)
-   # puts params[:user_name].match(settings.ignore_regex) 
-   # puts params[:user_id] == "USLACKBOT"
-   # puts params[:user_id] == ""
-   # puts  params[:token] != ENV["OUTGOING_WEBHOOK_TOKEN"]
-
-
     # Ignore if text is a cfbot command, or a bot response, or the outgoing integration token doesn't match
     unless params[:text].nil? ||
            params[:text].match(settings.ignore_regex) ||
@@ -381,7 +336,7 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
            params[:user_id] == "USLACKBOT" ||
            params[:user_id] == "" ||
            params[:token] != ENV["OUTGOING_WEBHOOK_TOKEN"] ||
-	   $isQuizz == true
+           $isQuizz == true
 
 
       # Store the text if someone is not manually invoking a reply
@@ -399,19 +354,19 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
           end
         end
       end
-      
 
 
-     
+
+
 
 
       # Reply if the bot isn't shushed AND either the random number is under the threshold OR the bot was invoked
       if (!$redis.exists("snarkov:shush") &&
          params[:user_id] != "WEBFORM" &&
          response == "" &&
-	(rand <= $forme || params[:text].match(settings.reply_regex)))         
-		reply = build_markov
-        	response = json_response_for_slack(reply)
+        (rand <= $forme || params[:text].match(settings.reply_regex)))
+                reply = build_markov
+                response = json_response_for_slack(reply)
       end
     end
   rescue => error
@@ -498,113 +453,14 @@ end
 end
 
 
-def spoil(text)
-x = text.partition('spoil').last
-name = open('http://spoilme.io/api/works?lang=fr&terms=' + x.to_s).read
-name = JSON.parse(name)
-id = name[0]['spoiler_ids']
-len = id.length
-rand =  SecureRandom.random_number(len)
-spoiler = open('http://spoilme.io/api/spoilers/' + id[rand].to_s).read
-spoiler = JSON.parse(spoiler)
-"Dans " + spoiler["work_name"] + ', ' + spoiler["value"] 
-end
-
-def time_diff(start, finish)
-   (finish - start) 
-end
-
-def bataille_init()
-deck = open('http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1').read
-deck = JSON.parse(deck)
-$deck_id = deck["deck_id"]
-draw = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/draw/?count=52').read
-draw = JSON.parse(draw)
-(0..50).step(2) do |n|
-puts n
-pile1 = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Rob/add/?cards=' + draw["cards"][n]["code"])
-pile2 = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Player/add/?cards=' + draw["cards"][n+1]["code"])
-end
-puts $deck_id
-"c'est bon on peut jouer"
-end
-
-def bataille_play(user)
-if $deck_id != nil
-cardRob = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Rob/draw/').read
-cardPlayer =  open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Player/draw/').read
-cardRob = JSON.parse(cardRob)
-cardPlayer = JSON.parse(cardPlayer)
-valR = cardRob["cards"][0]["value"]
-valP =  cardPlayer["cards"][0]["value"]
-codeR = cardRob["cards"][0]["code"]
-codeP = cardPlayer["cards"][0]["code"]
-cardToInt(valR)
-cardToInt(valP)
-string = "Rob : " + cardRob["cards"][0]["value"] + " / " + $profil[user] + " : " + cardPlayer["cards"][0]["value"] 
-
-if valR > valP
-string = string + "\n Rob l'emporte!"
-
-add = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Rob/add/?cards=' + codeR + ',' + codeP ).read
-add = JSON.parse(add)
-puts  add
-string = string + " (" + add["piles"]["Rob"]["remaining"].to_s + "/" + add["piles"]["Player"]["remaining"].to_s + ")"
- if  add["piles"]["Rob"]["remaining"] == 0 
-     string = $profil[user] + " win !!! :trophy: "
-     $deck_id = nil
-  end
-  if  add["piles"]["Player"]["remaining"] == 0
-     string = "Rob win !!! :trophy: "
-     $deck_id = nil
-  end
-elsif valR < valP
-string = string + "\n " + $profil[user] + " l'emporte!"
-
-add = open('http://deckofcardsapi.com/api/deck/' + $deck_id + '/pile/Player/add/?cards=' + codeR + ',' + codeP).read
-add = JSON.parse(add)
-puts  add
-string = string + " (" + add["piles"]["Rob"]["remaining"].to_s + "/" + add["piles"]["Player"]["remaining"].to_s + ")"
- if  add["piles"]["Rob"]["remaining"] == 0
-     string = $profil[user] + " win !!! :trophy: "
-     $deck_id = nil
-     end
-  if  add["piles"]["Player"]["remaining"] == 0
-     string = "Rob win !!! :trophy: "
-     $deck_id = nil
-     end
-else
-string = string + "\n Math nul"
-end
-else
-string = "Init une partie fdp"
-end
-return string
-
-end
-
-def cardToInt(card)
-if card == "0"
-val = 10
-elsif card == "JACK"
-val = 11
-elsif card == "QUEEN"
-val = 12
-elsif card == "KING"
-val = 13
-elsif card == "ACE"
-val = 14
-else
-val = card.to_i
-end
-return val
-end
-
-def fap(user)
+def fap(user) 
 now = Time.now
+if (now.hour > 9 && now.hour < 18)
+"Pas de fap en pleine journée"
+else
 diff = time_diff($lastFap[user],now)
 puts diff
-if diff>600	
+if diff>600
  $lastFap[user]=Time.now
   if user == 'U0E760J3G'
   x = SecureRandom.random_number(1000)
@@ -624,6 +480,8 @@ else
 "T'as déjà fini de te fapper sur la dernière sale précosse?"
 end
 end
+end
+
 def game(text)
 nbP = (text.partition(':').last).to_i
 $try +=1
@@ -685,7 +543,7 @@ t = text.partition('gif!').last
 puts "tu cherche un gif de " + t
 response = open('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg-13&tag=' + t).read
 response = JSON.parse(response)
-if response["data"].empty? != true 
+if response["data"].empty? != true
 puts "il existe"
 response["data"]["fixed_height_small_url"]
 else
@@ -696,13 +554,6 @@ boob["data"]["fixed_height_small_url"]
 end
 end
 
-
-
-def joke()
-response = open('http://tambal.azurewebsites.net/joke/random').read
-response = JSON.parse(response)
-response["joke"]
-end
 
 def ifWin(user)
  if $scores[user]>=5
@@ -762,7 +613,7 @@ else
 wea = Weather.lookup(580778, Weather::Units::CELSIUS)
 weatherT =wea.title + "\n" + wea.condition.temp.to_s + " degrés, " + wea.condition.text
 weatherT = weatherT + "\n\n *Prévision* : \n"
-weatherT = weatherT +  wea.forecasts[0].day + " :point_right: " + wea.forecasts[0].text + ", " + wea.forecasts[0].low.to_s + "/" + wea.forecasts[0].high.to_s + " degrés\n"  
+weatherT = weatherT +  wea.forecasts[0].day + " :point_right: " + wea.forecasts[0].text + ", " + wea.forecasts[0].low.to_s + "/" + wea.forecasts[0].high.to_s + " degrés\n"
 weatherT = weatherT +  wea.forecasts[1].day + " :point_right: " + wea.forecasts[1].text + ", " + wea.forecasts[1].low.to_s + "/" + wea.forecasts[1].high.to_s + " degrés\n"
 weatherT = weatherT +  wea.forecasts[2].day + " :point_right: " + wea.forecasts[2].text + ", " + wea.forecasts[2].low.to_s + "/" + wea.forecasts[2].high.to_s + " degrés\n"
 weatherT = weatherT +  wea.forecasts[3].day + " :point_right: " + wea.forecasts[3].text + ", " + wea.forecasts[3].low.to_s + "/" + wea.forecasts[3].high.to_s + " degrés\n"
@@ -831,21 +682,16 @@ def man()
 "* Si Rob ne trouve pas de gif correspondant à votre recherche, vous aurez un gif de boobs parceque c'est toujours sympa*\n\n"\
 " *FAP TIME :sweat_drops:* \n"\
 ":point_right: En manque d'inspiration pour le fap time ? :\n"\
-"_Rob fapfap_\n\n"\
-" *BATAILLE * \n"\
-":point_right: Pour intialiser une partie :\n"\
-"_Rob bataille init_\n"\
-":point_right: Pour tirer une carte :\n"\
-"_Rob bataille joue_\n"
+"_Rob fapfap_\n"
 end
 
 
 def how_forme()
  puts "[LOG] ma forme blabla"
  if $forme >= 0.5
- 
+
  ($forme*100).to_s + " :sunglasses:"
- else 
+ else
  ($forme*100).to_s + " :cry:"
  end
 end
@@ -919,44 +765,6 @@ def get_channel_name(channel_id)
     puts "Error fetching channel name: #{response["error"]}" unless response["error"].nil?
   end
   channel_name
-end
-
-
-def string_difference_percent(a, b)
-  longer = [a.size, b.size].max
-  same = a.each_char.zip(b.each_char).select { |a,b| a == b }.size
-  (longer - same) / a.size.to_f
-end
-
-def import_history(channel_id, latest = nil, user_id = nil, oldest = nil)
-  uri = "https://slack.com/api/channels.history?token=#{ENV["API_TOKEN"]}&channel=#{channel_id}&count=1000"
-  uri += "&latest=#{latest}" unless latest.nil?
-  uri += "&oldest=#{oldest}" unless oldest.nil?
-  request = HTTParty.get(uri)
-  response = JSON.parse(request.body)
-  if response["ok"]
-    # Find all messages that are plain messages (no subtype), are not hidden, are not from a bot (integrations, etc.) and are not cfbot commands
-    messages = response["messages"].find_all{ |m| m["subtype"].nil? && m["hidden"] != true && m["bot_id"].nil? && !m["user"].nil? && !m["text"].match(settings.reply_regex) && !m["text"].match(settings.ignore_regex) }
-    # Filter by user id, if necessary
-    messages = messages.find_all{ |m| m["user"] == user_id } unless user_id.nil?
-
-    if messages.size > 0
-      puts "Importing #{messages.size} messages from #{DateTime.strptime(messages.first["ts"],"%s").strftime("%c")}" if messages.size > 0
-      $redis.pipelined do
-        messages.each do |m|
-          store_markov(m["text"])
-        end
-      end
-    end
-
-    # If there are more messages in the API call, make another call, starting with the timestamp of the last message
-    if response["has_more"] && !response["messages"].last["ts"].nil?
-      latest = response["messages"].last["ts"]
-      import_history(channel_id, latest, user_id, oldest)
-    end
-  else
-    puts "Error fetching channel history: #{response["error"]}" unless response["error"].nil?
-  end
 end
 
 
