@@ -1,4 +1,3 @@
-
 # encoding: utf-8
 require "sinatra"
 require "json"
@@ -46,35 +45,59 @@ $nombre = 0
 $try = 0
 $deck_id = nil
 $isGame = false
-$_1337 = "win mother fucker"
-app = "win"
+$listPlay = Array.new
+
+$word_list = ["Uranium","Arme","Pouvoir","Jockey","Tableau","beurre","potage","pomme", "poire", "train", "citron", "avocat","cuisine","chapeau", "oranges","langue","chut","voile","blondinnet","photographe","graphiste","processing","rouge","vernis","voiture","bouche","amitie","bijoux","joyeux","planant","evasif","hilarant","bonnet","rire","pantalon","echarpe","saleté","jeu","Donald","Marsupilami","Barbapapa","code","mort", "armoire", "boucle","buisson","bureau","chaise","carton","couteau","fichier","garage","glace","journal","kiwi","lampe","liste","montagne","remise","sandale","taxi","vampire","volant","MAISON","ÉBÉNISTE","CARTABLE","ÉTHIOPIE","ÉVÉNEMENT","ENRHUMÉ","ÉBOULEMENT","CYBERNÉTIQUE","DACTYLOGRAPHIE","CORPORATION","CELLOPHANE","BUANDERIE","BÉNÉDICTION","BELVÉDÈRE","ARBORICULTURE","ANGUILLE","OBSTACLE","ACCESSOIRE","ACADÉMIQUE","MOINEAU","MILITAIRE","MODESTEMENT","MISÉRICORDE","MERGUEZ","JADIS","JAUNISSEMENT","JAVELOT","IRRÉVOCABLE","IVRESSE","INVENTION","INCURSION","HARMONICA","HAMSTER","HABITATION","GUIRLANDE","GUIMAUVE","ROBINETTERIE","RIZIÈRE","ROCAILLE","SCÈNE","sALOPETTE","PROVERBE","PROSTERNATION","PROLONGEMENT","PROMISCUITÉ","PROCESSUS","RÉVOCABLE","RICHESSE","RICOCHET","RIVE","ROMBIÈRE","VAGUEMENT","VEINARD","VERNISSAGE","WHISKY","XYLOPHONE","YOGHOURT","ZÈLE","ZODIAC","ZIZANIE"]
+$word = ""
+$isPendu = false
+$penduE = 7
 $profil = {
   'U02QQPAD7' => 'Luc',
-  'U056J5QAT' => 'Jules',
   'U036R6849' => 'Leo',
+  'U02P1BK81' => 'Remi',
   'U055HN762' => 'Vince',
-  'U02P1BK81' => 'Remi'
+  'U02QSQC5R' => 'Quentin',
+  'U056J5QAT' => 'Jules'
 }
 
 $lastFap = {
  'U02QQPAD7' => Time.new(2002),
-  'U056J5QAT' => Time.new(2002),
   'U036R6849' => Time.new(2002),
+  'U02P1BK81' => Time.new(2002),
   'U055HN762' => Time.new(2002),
-  'U02P1BK81' => Time.new(2002)
+  'U02QSQC5R' => Time.new(2002),
+  'U056J5QAT' => Time.new(2002)
 }
 
 $scores = {
 'Jules' => 0,
-'Luc' => 0,
+'Remi' => 0,
 'Leo' => 0,
+'Luc' => 0,
 'Vince' => 0,
-'Remi' => 0
+'Quentin' => 0
 }
+
+
+
 
 get "/" do
   "hi."
 end
+
+
+#get "/meme" do
+#str =""
+#response = open('http://memegen.link/templates/').read
+#response = JSON.parse(response)
+#puts response.class
+#x = response.map { |key, value| value }
+#for y in x
+#str = str + '<h1>' + y.split('/')[-1] + '</h1>'
+#str = str + '<img src="http://memegen.link/'+  y.split('/')[-1] +'/louka-casse-couille.jpg">'
+#end
+#body str
+#end
 
 get "/markov" do
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"]
@@ -105,6 +128,7 @@ end
 post "/markov" do
   begin
     response = ""
+puts "zboub"
     if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
        !params[:text].nil? &&
@@ -137,9 +161,28 @@ post "/markov" do
 
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        !params[:text].nil? &&
-       params[:text].match("!(G|g)if")
+       params[:text].match("!( |)(G|g)if")
       #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
       reply = gif(params[:text])
+      response = json_response_for_slack(reply)
+    end
+
+
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       !params[:text].nil? &&
+       params[:text].match("!meme")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = meme(params[:text])
+      response = json_response_for_slack(reply)
+    end
+
+if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+      params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("((S|s)alut)|((b|B)onjour)|((H|h)ello)|((c|C)oucou)")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = hello()
       response = json_response_for_slack(reply)
     end
 
@@ -169,13 +212,42 @@ post "/markov" do
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
        !params[:text].nil? &&
+       params[:text].match("(R|r)ob pendu")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+/).first.to
+      $word = $word_list.sample.downcase
+      $wordC = $word.chars.to_a 
+      reply = startP($word)
+      response = json_response_for_slack(reply)
+    end
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(L|l):") &&
+       $isPendu == true
+      reply = penduPlay(params[:text])
+      response = json_response_for_slack(reply)
+    end
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(M|m)ot:") &&
+       $isPendu == true
+      reply = propos(params[:text])
+      response = json_response_for_slack(reply)
+    end
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
        params[:text].match("(N|n)b:") &&
        $isGame == true
       #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+/).first.to$
       reply = game(params[:text])
       response = json_response_for_slack(reply)
     end
-
+  
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
        !params[:text].nil? &&
@@ -218,6 +290,15 @@ post "/markov" do
     end
 
 
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob ((p|P)ierre|(p|P)apier|(C|c)iseau(x|))")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\$
+       reply = ppc(params[:text])
+       response = json_response_for_slack(reply)
+    end
+
 
   if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
@@ -232,11 +313,13 @@ post "/markov" do
   s = $reponse.delete(' ').downcase()
   s.delete!("\n")
   s.gsub!(/[éèêë]/,'e')
-  s.gsub!(/[^0-9A-Za-z]/, '')
+s.gsub!(/[âàä]/,'a')
+ s.gsub!(/[^0-9A-Za-z]/, '')
   puts "la reponse attendu est " + s
   text = params[:text].delete(' ').downcase()
   text.delete!("\n")
   text.gsub!(/[éèêë]/,'e')
+  text.gsub!(/[âàä]/,'a')
   text.gsub!(/[^0-9A-Za-z]/, '')
   puts "Et tu as dis : " + text
   puts text==s
@@ -321,18 +404,17 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
     unless params[:text].nil? ||
            params[:text].match(settings.ignore_regex) ||
            params[:user_name].match(settings.ignore_regex) ||
-           params[:user_id] == "" ||
            params[:user_id] == "USLACKBOT" ||
+           params[:user_id] == "" ||
            params[:token] != ENV["OUTGOING_WEBHOOK_TOKEN"] ||
            $isQuizz == true
 
-      puts "ici"
+
       # Store the text if someone is not manually invoking a reply
       # and if the selected user is defined and matches
       if !ENV["SLACK_USER"].nil?
         if !params[:text].match(settings.reply_regex) && (ENV["SLACK_USER"] == params[:user_name] || ENV["SLACK_USER"] == params[:user_id])
-            puts "win si ici"
-            $redis.pipelined do
+          $redis.pipelined do
             store_markov(params[:text])
           end
         end
@@ -365,6 +447,7 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
 
   status 200
   body response
+
 end
 
 def store_markov(text)
@@ -441,14 +524,97 @@ else
 end
 end
 
+def hello()
+hello = ["Hello","Salut mofo","Salut bg","Coucou :heart:","Hi babe","Salut salut les voisinous","Aurevoir"]
+return hello.sample
+end
+
+def startP(word)
+$blank =""
+$listPlay = Array.new
+$penduE = 7
+str = "Ok c'est parti :\n"
+(0..(word.length-1)).each do
+$blank += "-"
+end
+$isPendu = true
+return str + $blank
+end
+
+def penduPlay(text)
+puts $wordC
+letter = (text.partition(':').last)
+letter = letter.downcase
+if letter.length ==1
+ $listPlay.push(letter)
+ if $wordC.index(letter) != nil
+ #p =  $wordC.index(letter)
+ #$blank[p]=letter
+ p = $wordC.each_index.select{|i| $wordC[i] == letter}
+ for po in p
+ $blank[po]=letter
+ end 
+ if $blank == $word
+ $isPendu = false
+ $listPlay = Array.new
+ $penduE = 7
+ return "Bien ouej magueule!"
+ else
+ return $blank + "\n lettre jouée : " + $listPlay.to_s
+ end
+ else
+ $penduE -=1
+ return draw($penduE)
+ end
+else
+"Une lettre à la fois fdp"
+end
+end
+
+def propos(text)
+letter = (text.partition(':').last)
+if letter.downcase == $word.downcase
+$listPlay = Array.new
+$isPendu = false
+$penduE = 7
+"Bien ouej magueule!"
+else
+$penduE -=1
+return draw($penduE)
+end
+
+
+end
+
+def draw(t)
+output = ""
+ ascii = <<-eos
+    _____
+    |    #{t<7 ? '|':' '}
+    |    #{t<6 ? 'O':' '}
+    |   #{t<2 ? '/':' '}#{t<5 ? '|':' '}#{t<1 ? '\\':' '}
+    |   #{t<4 ? '/':' '} #{t<3 ? '\\':' '}
+    |
+    ===
+    eos
+output << ascii
+if t< 1
+$listPlay = Array.new
+$isPendu = false
+$penduE = 7
+return output + "\n*Loose* :poop:\n Le mot était " + $word
+else
+return output + "\n" + $blank + "\n lettre jouée : " + $listPlay.to_s
+end
+end
 
 def fap(user) 
 now = Time.now
-if (now.hour > 9 && now.hour < 18)
+puts now.hour
+if (now.hour >= 7 && now.hour <= 16)
 "Pas de fap en pleine journée"
 else
 diff = ((now-$lastFap[user])).to_i
-puts diff
 if diff>600
  $lastFap[user]=Time.now
   if user == 'U0E760J3G'
@@ -470,6 +636,162 @@ else
 end
 end
 end
+
+
+
+def meme(text)
+url = "http://memegen.link/templates/"
+t = text.partition('!meme').last
+if t.strip == "templates"
+"10 Guy `tenguy`\n"\
+"Afraid to Ask Andy `afraid`\n"\
+"An Older Code Sir, But It Checks Out `older`\n"\
+"Ancient Aliens Guy `aag`\n"\
+"At Least You Tried `tried`\n"\
+"Baby Insanity Wolf `biw`\n"\
+"Bad Luck Brian `blb`\n"\
+"But That's None of My Business `kermit`\n"\
+"Butthurt Dweller `bd`\n"\
+"Captain Hindsight `ch`\n"\
+"Comic Book Guy `cbg`\n"\
+"Condescending Wonka `wonka`\n"\
+"Confession Bear `cb`\n"\
+"Conspiracy Keanu `keanu`\n"\
+"Dating Site Murderer `dsm`\n"\
+"Do It Live! `live`\n"\
+"Do You Want Ants? `ants`\n"\
+"Doge `doge`\n"\
+"Drake Always On Beat `alwaysonbeat`\n"\
+"Ermahgerd `ermg`\n"\
+"First World Problems `fwp`\n"\
+"Forever Alone `fa`\n"\
+"Foul Bachelor Frog `fbf`\n"\
+"Fuck Me, Right? `fmr`\n"\
+"Futurama Fry `fry`\n"\
+"Good Guy Greg `ggg`\n"\
+"Hipster Barista `hipster`\n"\
+"I Can Has Cheezburger? `icanhas`\n"\
+"I Feel Like I'm Taking Crazy Pills `crazypills`\n"\
+"I Immediately Regret This Decision! `regret`\n"\
+"I Should Buy a Boat Cat `boat`\n"\
+"I Would Be So Happy `sohappy`\n"\
+"I am the Captain Now `captain`\n"\
+"Inigo Montoya `inigo`\n"\
+"Insanity Wolf `iw`\n"\
+"It's A Trap! `ackbar`\n"\
+"It's Happening `happening`\n"\
+"It's Simple, Kill the Batman `joker`\n"\
+"Jony Ive Redesigns Things `ive`\n"\
+"Laughing Lizard `ll`\n"\
+"Matrix Morpheus `morpheus`\n"\
+"Milk Was a Bad Choice `badchoice`\n"\
+"Minor Mistake Marvin `mmm`\n"\
+"Nothing To Do Here `jetpack`\n"\
+"Oh, Is That What We're Going to Do Today? `red`\n"\
+"One Does Not Simply Walk into Mordor `mordor`\n"\
+"Oprah You Get a Car `oprah`\n"\
+"Overlay Attached Girlfriend `oag`\n"\
+"Pepperidge Farm Remembers `remembers`\n"\
+"Philosoraptor `philosoraptor`\n"\
+"Probably Not a Good Idea `jw`\n"\
+"Sad Barack Obama `sad-obama`\n"\
+"Sad Bill Clinton `sad-clinton`\n"\
+"Sad Frog / Feels Bad Man `sadfrog`\n"\
+"Sad George Bush `sad-bush`\n"\
+"Sad Joe Biden `sad-biden`\n"\
+"Sad John Boehner `sad-boehner`\n"\
+"Sarcastic Bear `sarcasticbear`\n"\
+"Schrute Facts `dwight`\n"\
+"Scumbag Brain `sb`\n"\
+"Scumbag Steve `ss`\n"\
+"Sealed Fate `sf`\n"\
+"See? Nobody Cares `dodgson`\n"\
+"Shut Up and Take My Money! `money`\n"\
+"So Hot Right Now `sohot`\n"\
+"Socially Awesome Awkward Penguin `awesome-awkward`\n"\
+"Socially Awesome Penguin `awesome`\n"\
+"Socially Awkward Awesome Penguin `awkward-awesome`\n"\
+"Socially Awkward Penguin `awkward`\n"\
+"Stop Trying to Make Fetch Happen `fetch`\n"\
+"Success Kid `success`\n"\
+"Super Cool Ski `Instructor ski`\n"\
+"That Would Be Great `officespace`\n"\
+"The Most Interesting Man in the World `interesting`\n"\
+"The Rent Is Too Damn High `toohigh`\n"\
+"This is Bull, Shark `bs`\n"\
+"Why Not Both? `both`\n"\
+"Winter is coming `winter`\n"\
+"X all the Y `xy`\n"\
+"X, X Everywhere `buzz`\n"\
+"Xzibit Yo Dawg `yodawg`\n"\
+"Y U NO Guy `yuno`\n"\
+"Y'all Got Any More of Them `yallgot`\n"\
+"You Should Feel Bad `bad`\n"\
+"You Sit on a Throne of Lies `elf`\n"\
+"You Were the Chosen One! `chosen`"
+else
+template = (t.partition(':').first).strip
+text = (t.partition(':').last).strip
+puts "template :" + template
+puts "text : " + text
+text.gsub!(' ','_') 
+text.gsub!(/[éèêë]/,'e')
+text.gsub!(/[àâä]/,'a')
+url + template + '/' + text + '.jpg'
+end
+end
+
+def ppc(text)
+ppc = (text.partition('Rob').last)
+r = SecureRandom.random_number(3)
+if ppc.match("(p|P)ierre")
+u = 1
+elsif ppc.match("(P|p)apier")
+u = 2
+else
+u = 3
+end
+
+if r==1
+rt = "Pierre"
+elsif r==2
+rt = "Papier"
+else
+rt = "Ciseaux"
+end
+
+if r==1 && u==1
+w = 0
+elsif r==1 && u==2
+w = 1
+elsif r==1 && u==3
+w = 2
+elsif r==2 && u==1
+w = 2
+elsif r==2 && u==2
+w =0
+elsif r==2 && u==3
+w = 1
+elsif r==3 && u==1
+w = 1
+elsif r==3 && u==2
+w = 2
+else
+w = 0
+end
+
+if w==0
+st = "Match nul"
+elsif w==1
+st = "Bien ouej mofo"
+else
+st = "Sorry mofo" 
+end
+
+"Tu as dis" + ppc + " et j'ai dis " + rt + "\n" + st
+end
+
+
 
 def game(text)
 nbP = (text.partition(':').last).to_i
@@ -534,12 +856,12 @@ response = open('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag='
 response = JSON.parse(response)
 if response["data"].empty? != true
 puts "il existe"
-response["data"]["fixed_height_small_url"]
+response["data"]["fixed_width_downsampled_url"]
 else
 puts "jtrouve pas"
 boob = open('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=boobs').read
 boob = JSON.parse(boob)
-"Je trouve rien correspondant à ta recherche, voilà des boobs :\n" + boob["data"]["fixed_height_small_url"]
+"Je trouve rien correspondant à ta recherche, voilà des boobs :\n" + boob["data"]["fixed_width_downsampled_url"]
 end
 end
 
@@ -556,14 +878,9 @@ end
 def resetScore()
 $scores = {
 'Jules' => 0,
-'Benji' => 0,
-'Adrien' => 0,
-'Damien' => 0,
-'Ami noir' => 0,
-'Loulou' => 0,
-'Vince' => 0,
-'Tibo' => 0,
-'Yoo' => 0
+'Leo' => 0,
+'Luc' => 0,
+'Remi' => 0
 }
 end
 
@@ -615,6 +932,9 @@ def quizz()
 filename = 'questions'
 line_count = `wc -l "#{filename}"`.strip.split(' ')[0].to_i
 x = SecureRandom.random_number(line_count-1)
+target = open('rand', 'a')
+ra = x.to_s + "\n"
+target.write(ra)
 puts "rand : " + x.to_s
 line = IO.readlines(filename)[x]
 tab = line.partition("->")
@@ -671,7 +991,21 @@ def man()
 "* Si Rob ne trouve pas de gif correspondant à votre recherche, vous aurez un gif de boobs parceque c'est toujours sympa*\n\n"\
 " *FAP TIME :sweat_drops:* \n"\
 ":point_right: En manque d'inspiration pour le fap time ? :\n"\
-"_Rob fapfap_\n"
+"_Rob fapfap_\n\n"\
+" *MEME GENERATOR* \n"\
+":point_right: Pour générer son propre meme :\n"\
+"_`!*meme [template]: [text]`_\n"\
+":point_right: Pour avoir la liste des templates disponibles :\n"\
+"_`!*meme templates`_\n"\
+"_Pour le texte utiliser '/' pour le retour à la ligne_\n\n"\
+" *Jeu du pendu*\n"\
+":point_right: Pour lancer une partie :\n"\
+"_Rob pendu_\n"\
+":point_right: Pour proposer une lettre :\n"\
+"_l:[lettre]_\n"\
+":point_right: Pour proposer un mot :\n"\
+"_mot:[mot]_"
+
 end
 
 
