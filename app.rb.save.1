@@ -1,4 +1,3 @@
-
 # encoding: utf-8
 require "sinatra"
 require "json"
@@ -50,23 +49,7 @@ $isGame = false
 $listPlay = Array.new
 $pokId = 0
 $pName = ""
-$pAttaque = ""
-$pAttaquant = ""
-$pAskAttaque = false
-$pokemonV = ""
-$pokemonS = ""
-$arV = Array.new
-$arS = Array.new
-$hpV = 0
-$hpS = 0
-$vCh = false
-$sCh = false
-$pBataille = false
-$attaqueNameV = {}
-$attaqueNameS = {}
-
 $word_list = ["Uranium","Arme","Pouvoir","Jockey","Tableau","beurre","potage","pomme", "poire", "train", "citron", "avocat","cuisine","chapeau", "oranges","langue","chut","voile","blondinnet","photographe","graphiste","processing","rouge","vernis","voiture","bouche","amitie","bijoux","joyeux","planant","evasif","hilarant","bonnet","rire","pantalon","echarpe","saleté","jeu","Donald","Marsupilami","Barbapapa","code","mort", "armoire", "boucle","buisson","bureau","chaise","carton","couteau","fichier","garage","glace","journal","kiwi","lampe","liste","montagne","remise","sandale","taxi","vampire","volant","MAISON","EBENISTE","CARTABLE","ETHIOPIE","EVENEMENT","ENRHUME","EBOULEMENT","CYBERNETIQUE","DACTYLOGRAPHIE","CORPORATION","CELLOPHANE","BUANDERIE","BENEDICTION","BELVEDERE","ARBORICULTURE","ANGUILLE","OBSTACLE","ACCESSOIRE","ACADEMIQUE","MOINEAU","MILITAIRE","MODESTEMENT","MISERICORDE","MERGUEZ","JADIS","JAUNISSEMENT","JAVELOT","IRREVOCABLE","IVRESSE","INVENTION","INCURSION","HARMONICA","HAMSTER","HABITATION","GUIRLANDE","GUIMAUVE","ROBINETTERIE","RIZIERE","ROCAILLE","SCENE","sALOPETTE","PROVERBE","PROSTERNATION","PROLONGEMENT","PROMISCUITE","PROCESSUS","REVOCABLE","RICHESSE","RICOCHET","RIVE","ROMBIERE","VAGUEMENT","VEINARD","VERNISSAGE","WHISKY","XYLOPHONE","YOGHOURT","ZELE","ZODIAC","ZIZANIE"]
-$userList = ["Adrien","Benji","Damien","Jules","Ami noir","Loulou","Vince","Tibo","Yoo","Julestest"]
 $word = ""
 $isPendu = false
 $penduE = 7
@@ -79,8 +62,7 @@ $profil = {
   'U0BQC7PMJ' => 'Loulou',
   'U0B1MTGLU' => 'Vince',
   'U0E760J3G' => 'Tibo',
-  'U0G7H58NL' => 'Yoo',
-  'U1KK54ZRP' => 'Julestest'
+  'U0G7H58NL' => 'Yoo'
 }
 
 $lastFap = {
@@ -157,6 +139,7 @@ end
 post "/markov" do
   begin
     response = ""
+puts "zboub"
     if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        params[:user_id] != "USLACKBOT" &&
        !params[:text].nil? &&
@@ -222,6 +205,37 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
       response = json_response_for_slack(reply)
     end
 
+  
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       rand <= 
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = pokemonPop()
+      response = json_response_for_slack(reply)
+    end
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob pokeball")
+       usert = params[:user_id]
+       user =  $profil[usert]
+      reply = pokemonCapture(user)
+      response = json_response_for_slack(reply)
+    end
+
+
+
+
+  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
+       params[:user_id] != "USLACKBOT" &&
+       !params[:text].nil? &&
+       params[:text].match("(R|r)ob pokedex")
+      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
+      reply = pokemonInfo()
+      response = json_response_for_slack(reply)
+    end
 
 
 
@@ -426,7 +440,8 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
        reply = parlepd()
        response = json_response_for_slack(reply)
     end
- 
+
+
     # Ignore if text is a cfbot command, or a bot response, or the outgoing integration token doesn't match
     unless params[:text].nil? ||
            params[:text].match(settings.ignore_regex) ||
@@ -462,86 +477,11 @@ if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
       if (!$redis.exists("snarkov:shush") &&
          params[:user_id] != "WEBFORM" &&
          response == "" &&
-        (rand <= $forme || params[:text].match(settings.reply_regex)))
+        (
+rand <= $forme || params[:text].match(settings.reply_regex)))
                 reply = build_markov
                 response = json_response_for_slack(reply)
       end
-   
-
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       rand <= 0.02 &&
-       $pokId == 0
-      #time = params[:text].scan(/\d+/).first.nil? ? 60 : params[:text].scan(/\d+$
-      reply = pokemonPop()
-      response = json_response_for_slack(reply)
-end
-
-
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(P|p)kmn pokeball")
-       usert = params[:user_id]
-       user =  $profil[usert]
-      reply = pokemonCapture(user)
-      response = json_response_for_slack(reply)
-    end
-
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(P|p)kmn pokedex")
-      reply = pokemonInfo(params[:text])
-      response = json_response_for_slack(reply)
-    end
-
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(p|P)kmn attaque")
-       usert = params[:user_id]
-       user =  $profil[usert]
-      reply = pokemonAttaque(user,(params[:text]))
-      response = json_response_for_slack(reply)
-    end
- 
-  if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("((O|o)ui)|((N|n)on)")
-       usert = params[:user_id]
-       user =  $profil[usert]
-       if user == $pAttaque && $pAskAttaque
-      reply = pokemonBataille((params[:text]))
-      response = json_response_for_slack(reply)
-       end
-    end
-
-    if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       $pBataille &&  
-       params[:text].match("(p|P)kmn")
-       usert = params[:user_id]
-       user =  $profil[usert]
-      reply = pokemonChoose(user,(params[:text]))
-      response = json_response_for_slack(reply)
-    end
-
-   
-    if params[:token] == ENV["OUTGOING_WEBHOOK_TOKEN"] &&
-       params[:user_id] != "USLACKBOT" &&
-       !params[:text].nil? &&
-       params[:text].match("(p|P)kmn end")
-      reply = endBattle()
-      response = json_response_for_slack(reply)
-    end
-
-
-
-  
     end
   rescue => error
     puts "[ERROR] #{error}"
@@ -722,190 +662,8 @@ $pokId = x
 "*Un " + $pName + " sauvage apparait !*\n" + pPicture 
 end
 
-def endBattle()
-$pName = ""
-$pAttaque = ""
-$pAttaquant = ""
-$pAskAttaque = false
-$pokemonV = ""
-$pokemonS = ""
-$arV = Array.new
-$arS = Array.new
-$hpV = 0
-$hpS = 0
-$vCh = false
-$sCh = false
-$pBataille = false
-$attaqueNameV = {}
-$attaqueNameS = {}
-return "\nLe combat est fini"
-end
-
-def dead(who)
-file = File.read('pokedex.json')
-arr = JSON.parse(file)
-if who == "1" #Attaquant
-pokemon = arr[$pAttaquant]["pokemons"]
-name = open('http://pokeapi.co/api/v1/pokemon/' + $pokemonV.downcase).read
-id = JSON.parse(name)
-id = id['national_id']
-puts "je vais supprimer " + $pokemonV + id.to_s +  " de " + pokemon.to_s
-arr[$pAttaquant]["pokemons"].delete(id)
-target = open('pokedex.json', 'w')
-target.write(arr.to_json)
-target.close
-else
-pokemon = arr[$pAttaque]["pokemons"]
-name = open('http://pokeapi.co/api/v1/pokemon/' + $pokemonS.downcase).read
-id = JSON.parse(name)
-id = id['national_id']
-puts "je vais supprimer " + $pokemonS + id.to_s + "de " + pokemon.to_s
-arr[$pAttaque]["pokemons"].delete(id)
-target = open('pokedex.json', 'w')
-target.write(arr.to_json)
-target.close
-end
-end
-
-def pokemonChoose(user,text)
-if $vCh && $sCh
- if user == $pAttaquant && $aqui == 0 
-attaqueChoose = text.partition('pkmn').last.strip.capitalize
- if $attaqueNameV.include? attaqueChoose
-    api =""
-    api =  $attaqueNameV[attaqueChoose]
-    name = open('http://pokeapi.co' + api).read
-    name = JSON.parse(name)
-    power = name['power']/2
-    str = "*" + $pAttaquant + " utilise " + name['name'] + " sur " + $pokemonS + " (-" + power.to_s + "pv)*\n" 
-    if $hpS <= power
-      dead("2")
-      str += "\n" + $pokemonS + " est mort...\n" + $pAttaquant + " remporte le combat! :trophy:" + endBattle().to_s
-      return str
-    else
-     $hpS -= power
-     $aqui = 1
-     return str + " _Il lui reste " + $hpS.to_s + " pv..._"
-     end
- else
-    return "Tu possèdes pas cette attaque"
- end
-  elsif user == $pAttaque && $aqui == 1
-   attaqueChoose = text.partition('pkmn').last.strip.capitalize
- if $attaqueNameS.include? attaqueChoose
-    api =""
-    api =  $attaqueNameS[attaqueChoose]
-    name = open('http://pokeapi.co' + api).read
-    name = JSON.parse(name)
-    power = name['power']/2
-    str = "*" + $pAttaque + " utilise " + name['name'] + " sur " + $pokemonV + "(-" + power.to_s + "pv)*\n"
-    if $hpV <= power
-      dead("1")
-      str += "\n" + $pokemonV + " est mort...\n" + $pAttaque + "remporte le combat! :trophy:" + endBattle().to_s
-      return str
-    else
-     $hpV -= power
-     $aqui = 0
-     return str + " _Il lui reste " + $hpV.to_s + " pv..._"
-     end
-  else
-    return "Tu possèdes pas cette attaque"
- end
-
-  else
-    return "C'est pas à toi de jouer mofo!"
- end
-else
-attaqueV = Array.new
-attaqueS = Array.new
-listAttaqueV = Array.new
-listAttaqueS = Array.new
-if user == $pAttaquant
-pokemonChoose = text.partition('pkmn').last.strip.downcase
- if $arV.include? pokemonChoose.capitalize
-  puts "pokemon choisis : " + pokemonChoose
-  pokInfo =  open('http://pokeapi.co/api/v1/pokemon/' + pokemonChoose).read
-  pokInfo = JSON.parse(pokInfo)
-  listAttaqueV = pokInfo['moves']
-  for i in (0..3) do
-   att = listAttaqueV.sample
-   puts att.to_s
-   attaqueV.push(att['resource_uri'])
-  end
-  $hpV = pokInfo['hp']
-  attaqueV.each { |n|
-  x = open('http://pokeapi.co' + n.to_s).read
-  x = JSON.parse(x)
-  $attaqueNameV[x['name']]=n
-  }
-  $vCh = true
-  $pokemonV = pokemonChoose
-  $aqui = 0
-  return $pAttaquant + " a choisis " + pokemonChoose.capitalize + "(" + $hpV.to_s + " pv)\nAttaques : " + $attaqueNameV.to_s  
- else
-  return "Tu possèdes pas ce pokémon mofo"
- end
-end
-if user == $pAttaque
-pokemonChoose = text.partition('kmn').last.strip.downcase
- if $arS.include? pokemonChoose.capitalize
-
-pokInfo =  open('http://pokeapi.co/api/v1/pokemon/' + pokemonChoose).read
-pokInfo = JSON.parse(pokInfo)
-listAttaqueS = pokInfo['moves']
-for i in (0..3) do
-att = listAttaqueS.sample
-attaqueS.push(att['resource_uri'])
-end
-$hpS = pokInfo['hp']
- attaqueS.each { |n|
- x = open('http://pokeapi.co' + n.to_s).read
- x = JSON.parse(x)
- $attaqueNameS[x['name']]=n
- }
-$sCh = true
-$pokemonS = pokemonChoose
-$aqui=0
-return $pAttaque + "a choisis " + pokemonChoose.capitalize + "(" + $hpS.to_s + " pv)\nAttaques : " + $attaqueNameS.to_s
-else
- return "Tu possèdes pas ce pokémon mofo"
- end
-end
-end
-end
-
-def pokemonAttaque(user,text)
-vs = text.partition('attaque').last.strip.capitalize
-file = File.read('pokedex.json')
-arr = JSON.parse(file)
-if $userList.include? vs
- if vs != user.strip.capitalize
-  pokemon = arr[user]["pokemons"]
-  if pokemon.any?
-   pokemonVS = arr[vs]["pokemons"]
-   if pokemonVS.any?
-    $pAttaque = vs
-    $pAttaquant = user.capitalize
-    $pAskAttaque = true
-    return "@" + vs + ", " + user + " te défie dans un combat de pokémons, acceptes-tu ? (oui/non)"
-   else
-    return "Tu peux pas le défier il à pas de pokémons ce mofo"
-   end
-  else
-   return "Va capturer des pokémons avant de faire le thug"
-  end  
- else
-  return "Tu peux pas te défier toi même mofos"
- end
-else
- return "Tu veux défier qui ?" + $userList.to_s
-end
-end
-
 def pokemonCapture(user)
 if $pokId != 0
-puts "ABC"
-chance = 50.0
 file = File.read('pokedex.json')
 arr = JSON.parse(file)
 pokeball = arr[user]["pokeball"]
@@ -914,98 +672,25 @@ if pokeball > 0
  if  arr[user]["pokemons"].include? $pokId
   return "T'as déjà ce pokémon mofo"
  else
-   life = open('http://pokeapi.co/api/v1/pokemon/' + $pokId.to_s).read
-   life = JSON.parse(life)
-   hp = life["hp"]
-   if hp < 50
-    chance = 80
-   elsif hp < 100
-    chance = 65
-   elsif hp < 150
-    chance = 45
-   elsif hp < 200
-    chance = 35
-   elsif  hp <300
-    chance = 25
-   else
-    chance = 10
-   end
-   x = rand
-   puts (x).to_s + "et rand = " + (chance/100.0).to_s 
-   if x < chance/100.0
-   arr[user]["pokemons"].push($pokId-1)
+   arr[user]["pokemons"].push($pokId)
    arr[user]["pokeball"] -= 1
-   $pokId = 0
-   puts "EFG" 
+   $pokId = 0 
    target = open('pokedex.json', 'w')
    target.write(arr.to_json)
-   target.close
-   return "Félication, tu as capturé un " + $pName.to_s + "!\n" 
-   else
-   arr[user]["pokeball"] -= 1
-   $pokId = 0
-   target = open('pokedex.json', 'w')
-   target.write(arr.to_json)
-   target.close
-   return "_Le pokémon à pris la fuite ..._"
-   end 
+   return "Félication, tu as capturé un " + $pName + "!\n"  
  end
 else
-return  "_T'as plus de pokeball mofo_"
+ "T'as plus de pokeball mofo"
 end
 else
-return "_Il n'y a rien à capturer ..._"
+"Il n'y a rien à capturer ..."
 end
 end
 
-def pokemonBataille(text)
-if text.strip.downcase == "oui"
- file = File.read('pokedex.json')
- arr = JSON.parse(file)
- pokedexS = arr[$pAttaque]["pokemons"]
- puts "J'ai accepté le combat hein"
- pokedexS.each { |n|
- x = open('http://pokeapi.co/api/v1/pokemon/' + n.to_s).read
- x = JSON.parse(x)
- $arS.push(x['name'])
- }
- pokedexV = arr[$pAttaquant]["pokemons"]
- pokedexV.each { |n|
- x = open('http://pokeapi.co/api/v1/pokemon/' + n.to_s).read
- x = JSON.parse(x)
- $arV.push(x['name'])
- }
- $pBataille = true
- return "*Ok la bataille commence!*\nPokemon de " + $pAttaquant + ": " + $arV.to_s + "\nPokemon de " + $pAttaque + ":" + $arS.to_s + "\n*Choisissez votre pokémon!*"
-else
-$pAttaque = ""
-$pAttaquant = ""
-$pAskAttaque = false
-return "Ok petite bite, tu t'échappes"
-end
-end
-
-
-def pokemonInfo(text)
-user = text.partition('pokedex').last.strip.capitalize
-if $userList.include? user
+def pokemonInfo()
 file = File.read('pokedex.json')
 arr = JSON.parse(file)
-str = "*Pokedex de " + user + "*\n\n"
-mypokedex = arr[user]["pokemons"]
-mypokedex.each { |n|
-x = open('http://pokeapi.co/api/v1/pokemon/' + n.to_s).read
-s = open('http://pokeapi.co/api/v1/sprite/' +(n+1).to_s).read
-s = JSON.parse(s)
-x = JSON.parse(x)
-  
-str += "*" + x["name"] + "*\n" + "http://pokeapi.co"+s["image"] + "\n\n" 
-}
-str += "_Il te reste " + arr[user]["pokeball"].to_s + " pokeballs!_"
-else
-str = "Liste des joueurs : " + $userList.to_s
-end
-return str
+return arr
 end
 
 
@@ -1410,17 +1095,7 @@ def man()
 ":point_right: Pour proposer une lettre :\n"\
 "_l:[lettre]_\n"\
 ":point_right: Pour proposer un mot :\n"\
-"_mot:[mot]_\n\n"\
-" *POKEMON*\n"\
-":point_right: Pour capturer un pokemon :\n"\
-"_pkmn pokeball_\n"\
-":point_right: Pour voir le pokedex d'un joueur (c'est long donc patientez wllh) :\n"\
-"_pkmn pokedex [user]_\n"\
-"*5 Pokeballs par jours*"\
-":point_right: Pour attaquer un dresseur :\n"\
-"_pkmn attaque [dresseur]_\n"\
-":point_right: Pour arreter un combat :\n"\
-"_pkmn end_\n"
+"_mot:[mot]_"
 
 end
 
