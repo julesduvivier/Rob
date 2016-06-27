@@ -114,4 +114,29 @@ _!meme templates_
 
 *_mot:[mot]_*
 
+### **POKEMON**
+
+:point_right: Pour capturer un pokemon :
+
+*_pkmn pokeball_*
+
+*_pkmn masterball_*
+
+:point_right: Pour voir le pokedex d'un joueur :
+
+*_pkmn pokedex [user]_*
+
+:point_right: Pour attaquer un dresseur :
+
+*_pkmn attaque [dresseur]_*
+
+:point_right: Pour arreter un combat :
+
+*_pkmn end_*
+
+:point_right: Pour libérer un pokémon :
+
+*_pkmn free [name]_*
+
+*5 Pokeballs et 1 masterball par jour*
 
