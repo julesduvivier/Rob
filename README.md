@@ -81,12 +81,6 @@ Lorsqu'une question de quizz est en cours, Rob est mute et ne stock plus nos pé
 
  Si Rob ne trouve pas de gif correspondant à votre recherche, vous aurez un gif de boobs parceque c'est toujours sympa 
 
-### **FAP TIME** :sweat_drops:
-
-:point_right: En manque d'inspiration pour le fap time ? :
-
-_Rob fapfap_
-
 ### **MEME GENERATOR**
 
 :point_right: Pour générer son propre meme :
